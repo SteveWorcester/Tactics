@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class MoveMeleeUnit : MonoBehaviour
 {
     // Turn counter per square moved or per move action (bool? + counter)
 
