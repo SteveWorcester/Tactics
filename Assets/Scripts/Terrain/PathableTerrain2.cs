@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathableTerrain : MonoBehaviour
+public class PathableTerrain2 : MonoBehaviour
 {
-    // regular movement? difficult movement? add to turn counter? reduce move by X instead of block?
-    // LOS block bool?
-
     // Start is called before the first frame update
     void Start()
     {

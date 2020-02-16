@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour
+public class PathableTerrain1 : MonoBehaviour
 {
-    // melee attack damage
-    // add to turn counter  
-    // 
+    // regular movement? difficult movement? add to turn counter? reduce move by X instead of block?
+    // LOS block bool?
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +16,6 @@ public class MeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // attack
+        
     }
 }
