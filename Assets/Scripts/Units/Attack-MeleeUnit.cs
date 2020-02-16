@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class MeleeAttack : MonoBehaviour
 {
+    // melee attack damage
+    // add to turn counter  
+    // 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,6 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // attack
     }
 }
