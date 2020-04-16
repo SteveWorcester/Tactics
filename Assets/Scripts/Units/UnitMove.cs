@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveMeleeUnit : MonoBehaviour
+public class UnitMove : MonoBehaviour
 {
+    protected void Init()
+    {
+
+    }
     // Turn counter per square moved or per move action (bool? + counter)
 
     // Start is called before the first frame update
