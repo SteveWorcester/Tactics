@@ -17,8 +17,11 @@ Overview
 			Move
 				Can be performed one time per turn
 				Limited by a max range: 3
+				Limited by a max height: 3
 				Can be stopped at any point up to the max range.
 				Can be undone if an action (attack or ability) has not been performed afterwards.
+				Characters cannot move to an adjacent cell that is too high above their currently occupied cell.
+				In cases where the player moves across 3 cells, only the height of the previous cell is taken into account.
 			Attack
 				Can be performed one time per turn.
 				Limited by a max range: 1
@@ -40,7 +43,7 @@ Appendices
 	Art Specific
 		Placeholder Art until MVP is completed
 	Design Specific
-		Gameplay Field
+		Gameplay Field UI
 			Game Field - Contains graphical representations of the terrain, characters, and reflects selected menu options
 			Side UI Element - Contains status and health information for all fielded characters, colored to denote team, and ordered as a timer.
 			Bottom UI Element - Contains selected character information with more detail than side UI element.
@@ -49,6 +52,8 @@ Appendices
 			Rotate functionality.
 			tilt functionality?
 		Menus
+			Main Menu
+			Character Status
 		Character Jobs?  Classes?
 			Scout
 				Fast moving
@@ -67,6 +72,22 @@ Appendices
 				Observant
 				Crowd Controller
 				Support
+		Terrain
+			General
+				Terrain has a location X,Y location based on its position on the map.
+				Terrain has a Height statistic based on its relative height.  
+					Base height is 0.  
+					a Height of 1 is 1 unit above.
+					a Height of -1 is 1 unit below base height.
+			Terrain Types
+				Standard
+					Costs 1 move to move over.
+					Only one unit can occupy a cell at a time.
+				Flooded
+					Flooded cells block the Attack action.
+				Difficult Terrain
+					Costs 1 additional move to move off of that cell.  
+					Moving onto a difficult terrain cell does not cost additional move.
 References
 	Mechanical Reference
 		FFT
