@@ -82,7 +82,8 @@ public class TerrainGeneric : MonoBehaviour
 
     public void MarkTileAsAdjacent(Vector3 direction, float unitJumpHeight)
     {
-        Vector3 halfExtents = new Vector3(0.25f, (1 + unitJumpHeight)/2.0f, .25f);
+        // tiles are currently 1x1x1 size. if this size changes, then halfExtents will have to change. If this ever changes, fix it programatically 
+        Vector3 halfExtents = new Vector3(0.5f, (1 + unitJumpHeight)/2.0f, .5f); 
         Collider[] tileFinders = Physics.OverlapBox(transform.position + direction, halfExtents);
 
         foreach (Collider finder in tileFinders)
@@ -90,8 +91,11 @@ public class TerrainGeneric : MonoBehaviour
             TerrainGeneric terrain = GetComponent<TerrainGeneric>();
             if (terrain != null && terrain.PathableTile)
             {
-                // INCOMPLETE - CHECK FOR THINGS ON THE TILE
-                AdjacencyList.Add(terrain);
+                RaycastHit tileOccupied;
+                if (!Physics.Raycast(terrain.transform.position, Vector3.up, out tileOccupied, 1.0f))
+                {
+                    AdjacencyList.Add(terrain);
+                }
             }
         }
     }
