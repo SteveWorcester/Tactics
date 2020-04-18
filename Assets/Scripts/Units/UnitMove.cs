@@ -6,23 +6,23 @@ using UnityEngine;
 public class UnitMove : MonoBehaviour
 {
 
-
     //==========Do not change these variables=============
     [HideInInspector]
-    public float halfUnitHeight = 0; 
+    public float halfUnitHeight = 0;
+    protected float _unitMoveSpeed = 2;
 
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
     protected TerrainGeneric _currentTile;
 
+    [HideInInspector]
+    public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
     protected Vector3 moveHeading = new Vector3();
 
     //=====================================================
 
-
-    // Turn counter per square moved or per move action (bool? + counter)
 
     void Start()
     {
@@ -34,6 +34,38 @@ public class UnitMove : MonoBehaviour
     {
 
     }
+
+    public void Move()
+    {
+        if (_movePath.Count > 0)
+        {
+            TerrainGeneric nextTile = _movePath.Peek();
+            Vector3 moveTarget = nextTile.transform.position;
+
+            moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
+
+            if (Vector3.Distance(transform.position, moveTarget) >= .005f)
+            {
+                SetHeadingDirection(moveTarget);
+                SetMoveVelocity();
+                transform.forward = moveHeading;
+                transform.position = moveVelocity * Time.deltaTime;
+            }
+            else
+            {
+                // you got to the tile
+                transform.position = moveTarget;
+                _movePath.Pop();
+            }
+        }
+        else
+        {
+            ClearSelectableTiles();
+            currentlyMoving = false;
+        }
+    }
+
+    #region Tile-specific
 
     public void SetCurrentTile()
     {
@@ -66,7 +98,7 @@ public class UnitMove : MonoBehaviour
         foreach (var tile in allTiles)
         {
             TerrainGeneric checkTile = tile.GetComponent<TerrainGeneric>();
-            checkTile.FindAdjacentTiles(jumpHeight);
+            checkTile.FindAdjacentTiles(jumpHeight, checkTile.IsPathable);
         }
     }
 
@@ -100,4 +132,68 @@ public class UnitMove : MonoBehaviour
             }
         }
     }
+
+    public void ClearSelectableTiles()
+    {
+        if (_currentTile != null)
+        {
+            _currentTile.UnitLocation = false;
+            _currentTile = null;
+            
+        }
+        foreach (TerrainGeneric tile in _selectableTiles)
+        {
+            tile.ResetTile();
+        }
+        _selectableTiles.Clear();
+    }
+
+    #endregion
+
+    #region Move-specific
+
+    private void SetMoveVelocity()
+    {
+        moveVelocity = moveHeading * _unitMoveSpeed;
+    }
+
+    protected void CheckMouseToMove()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Ray mouseCheck = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit tileCheck;
+            if (Physics.Raycast(mouseCheck, out tileCheck) && tileCheck.collider.tag.Equals("Terrain Tile"))
+            {
+                TerrainGeneric clickedTile = tileCheck.collider.GetComponent<TerrainGeneric>();
+                if (clickedTile.SelectableTile)
+                {
+                    SetMovementPath(clickedTile);
+                }
+            }
+        }
+    }
+
+    public void SetMovementPath(TerrainGeneric tile)
+    {
+        _movePath.Clear();
+        tile.TargetLocation = true;
+        currentlyMoving = true;
+
+        TerrainGeneric nextTile = tile;
+        while (nextTile != null)
+        {
+            _movePath.Push(nextTile);
+            nextTile = nextTile.ParentTile;
+        }
+    }
+
+    private void SetHeadingDirection(Vector3 targetDirection)
+    {
+        moveHeading = targetDirection - transform.position;
+        moveHeading.Normalize();
+    }
+
+    #endregion
 }

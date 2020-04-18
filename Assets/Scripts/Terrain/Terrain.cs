@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Terrain : TerrainGeneric
 {
-    // Start is called before the first frame update
+    public float MoveDifficulty = 1.0f;
+    public bool BlocksLineOfSight = false;
+    public bool Pathable = true;
+
     void Start()
     {
-        
+        IsPathable = Pathable;
     }
 
-    // Update is called once per frame
     void Update()
     {
         

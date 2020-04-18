@@ -5,18 +5,29 @@ using UnityEngine;
 public class MeleeMove : UnitMove
 {
     // Edit these defaults
-    public int Move = 5;
-    public float MoveSpeed = 2.0f;
+    public int MoveDistance = 5;
+    public float MoveSpeed = 2.0f; // how fast the unit traverses the map. This has nothing to do with turn order speed.
     public float JumpHeight = 2.0f;
-    
+
+    // TODOs
+    // Turn counter per move action
+
     void Start()
     {
-              
+        _unitMoveSpeed = MoveSpeed;
     }
 
     void Update()
     {
-        base.SetAdjacencyList(JumpHeight);
-        base.SetSelectableTiles(JumpHeight, Move);
+        SetAdjacencyList(JumpHeight);
+        if (!currentlyMoving)
+        {
+            SetSelectableTiles(JumpHeight, MoveDistance);
+            CheckMouseToMove();
+        }
+        else
+        {
+            // move();
+        }
     }
 }

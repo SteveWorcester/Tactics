@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainGeneric : MonoBehaviour
+public abstract class TerrainGeneric : MonoBehaviour
 {
-
-    // Designer playground
-    public float MoveDifficulty = 1.0f;
-    public float TileHeight = 1.0f;
-    public bool BlocksLineOfSight = false;
-    public bool PathableTile = true; 
     // nice to have: pass-through occupied tile mechanic    
 
     //=========================Do not edit these vars=========================== 
-    // Tile highlighting and selection
+    // Tile highlighting and selection 
+
     [HideInInspector]
     public bool UnitLocation = false;
     [HideInInspector]
@@ -21,9 +16,11 @@ public class TerrainGeneric : MonoBehaviour
     [HideInInspector]
     public bool SelectableTile = false;
     [HideInInspector]
-    public int Distance = 0;
+    public bool IsPathable = true;
 
     // BFS VARS - DO NOT REMOVE/MODIFY
+    [HideInInspector]
+    public int Distance = 0;
     [HideInInspector]
     public List<TerrainGeneric> AdjacencyList = new List<TerrainGeneric>();
     [HideInInspector]
@@ -35,8 +32,6 @@ public class TerrainGeneric : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"==MAPPING TILE ADJACENCY== \nCurrent Tile: {this.name}");
-        AdjacencyList.ForEach(tile => Debug.Log($"Adjacent to {this.name}: {tile.name}"));
     }
 
     void Update()
@@ -70,7 +65,7 @@ public class TerrainGeneric : MonoBehaviour
         ParentTile = null;
     }
 
-    public void FindAdjacentTiles(float unitJumpHeight)
+    public void FindAdjacentTiles(float unitJumpHeight, bool isPathable)
     {
         ResetTile();
 
@@ -89,7 +84,7 @@ public class TerrainGeneric : MonoBehaviour
         foreach (Collider finder in tileFinders)
         {
             TerrainGeneric terrain = GetComponent<TerrainGeneric>();
-            if (terrain != null && terrain.PathableTile)
+            if (terrain != null && IsPathable)
             {
                 RaycastHit tileOccupied;
                 if (!Physics.Raycast(terrain.transform.position, Vector3.up, out tileOccupied, 1.0f))
