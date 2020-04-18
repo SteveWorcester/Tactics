@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeUnit : MonoBehaviour
+public class UnitAttack : MonoBehaviour
 {
-    // health
-    // speed
-    // movement range
-    // damage
-    // turn counter
+    // melee attack damage
+    // add to turn counter  
+    // 
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +17,6 @@ public class MeleeUnit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // attack
     }
 }
