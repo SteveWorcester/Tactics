@@ -321,6 +321,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-3_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &15357900 stripped
@@ -335,29 +340,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 15357899}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &15357902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15357901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &15357903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +430,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-3_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &21863626 stripped
@@ -462,29 +449,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 21863625}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &21863628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21863627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &21863629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +705,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &46263214 stripped
@@ -755,29 +724,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 46263213}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &46263216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46263215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &46263217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,6 +929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-8_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1052,29 +1003,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 53386135}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &53386138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53386137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &53386139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-6_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1330,29 +1263,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 88419096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &88419099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88419098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &88419100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,6 +1389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-7_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &104402009 stripped
@@ -1493,29 +1408,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 104402008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &104402011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104402010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &104402012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,6 +1442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: G-2_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -1620,29 +1517,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 111411253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &111411256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111411255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &111411257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,6 +1736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-9_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &132074504 stripped
@@ -1876,29 +1755,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 132074503}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &132074506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132074505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &132074507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +1789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: I-4_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -2003,29 +1864,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 133771207}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &133771210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133771209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &133771211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,6 +1954,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-0_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &140825337 stripped
@@ -2130,29 +1973,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 140825336}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &140825339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140825338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &140825340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2187,6 +2007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: H-9_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -2257,29 +2082,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 166063952}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &166063955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166063954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &166063956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2314,6 +2116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: B-5_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -2384,29 +2191,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 178588042}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &178588045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178588044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &178588046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,6 +2432,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-0_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &199674804 stripped
@@ -2662,29 +2451,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 199674803}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &199674806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199674805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &199674807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,6 +2572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-3_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &240205120 stripped
@@ -2820,29 +2591,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 240205119}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &240205122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240205121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &240205123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2933,6 +2681,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-8_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &258976641 stripped
@@ -2947,29 +2700,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 258976640}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &258976643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258976642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &258976644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,6 +3059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-7_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &307913409 stripped
@@ -3343,29 +3078,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 307913408}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &307913411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307913410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &307913412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,6 +3337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-8_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &325256921 stripped
@@ -3639,29 +3356,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 325256920}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &325256923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325256922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &325256924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3752,6 +3446,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-5_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &332061001 stripped
@@ -3766,29 +3465,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 332061000}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &332061003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332061002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &332061004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3823,6 +3499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: G-0_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -3893,29 +3574,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 336539912}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &336539915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336539914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &336539916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4048,6 +3706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-1_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4117,29 +3780,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 393662337}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &393662340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393662339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &393662341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4270,6 +3910,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-4_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &408737804 stripped
@@ -4284,29 +3929,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 408737803}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &408737806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408737805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &408737807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,6 +4164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-8_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4611,29 +4238,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 427818013}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &427818016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427818015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &427818017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4724,6 +4328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-2_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &438334887 stripped
@@ -4738,29 +4347,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 438334886}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &438334889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438334888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &438334890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4851,6 +4437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-4_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &448326454 stripped
@@ -4865,29 +4456,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 448326453}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &448326456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448326455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &448326457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4963,6 +4531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-3_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5032,29 +4605,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 476317590}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &476317593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476317592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &476317594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5242,6 +4792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-0_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &479665980 stripped
@@ -5256,29 +4811,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 479665979}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &479665982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479665981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &479665983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5369,6 +4901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-1_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &484707013 stripped
@@ -5383,29 +4920,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 484707012}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &484707015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484707014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &484707016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5538,6 +5052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-0_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5607,29 +5126,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 504515578}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &504515581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &504515582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5908,6 +5404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-3_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5977,29 +5478,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 547441594}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &547441597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547441596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &547441598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6108,6 +5586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-8_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6177,29 +5660,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 560577344}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &560577347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560577346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &560577348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6234,6 +5694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: G-6_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -6304,29 +5769,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 564477845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &564477848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564477847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &564477849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6361,6 +5803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: C-2_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -6431,29 +5878,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 574439521}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &574439524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574439523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &574439525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,6 +6231,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-5_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6876,29 +6305,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 635731519}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &635731522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635731521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &635731523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7142,6 +6548,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-0_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &678829839 stripped
@@ -7156,29 +6567,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 678829838}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &678829841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678829840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &678829842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7213,6 +6601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: E-6_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -7283,29 +6676,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 698431236}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &698431239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698431238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &698431240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7340,6 +6710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: D-7_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -7410,29 +6785,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 720301322}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &720301325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720301324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &720301326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7523,6 +6875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-1_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &725449484 stripped
@@ -7537,29 +6894,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 725449483}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &725449486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725449485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &725449487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7734,6 +7068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-9_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7803,29 +7142,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 792526901}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &792526904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792526903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &792526905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7916,6 +7232,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-0_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &795490848 stripped
@@ -7930,29 +7251,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 795490847}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &795490850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795490849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &795490851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8103,6 +7401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-3_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &796621938 stripped
@@ -8117,29 +7420,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 796621937}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &796621940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796621939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &796621941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8230,6 +7510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: I-9_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &823885927 stripped
@@ -8244,29 +7529,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 823885926}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &823885929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823885928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &823885930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8357,6 +7619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-9_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &835908795 stripped
@@ -8371,29 +7638,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 835908794}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &835908797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835908796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &835908798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8428,6 +7672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: E-8_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -8498,29 +7747,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 846972376}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &846972379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846972378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &846972380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8611,6 +7837,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-4_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &861836435 stripped
@@ -8625,29 +7856,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 861836434}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &861836437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861836436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &861836438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8851,6 +8059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-4_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &897786129 stripped
@@ -8865,29 +8078,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 897786128}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &897786131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897786130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &897786132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8922,7 +8112,7 @@ GameObject:
   - component: {fileID: 913800410}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9018,6 +8208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-9_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &916563919 stripped
@@ -9032,29 +8227,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 916563918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &916563921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916563920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &916563922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9264,6 +8436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-7_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9333,29 +8510,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 939895063}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &939895066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939895065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &939895067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9508,6 +8662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-5_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &941604830 stripped
@@ -9522,29 +8681,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 941604829}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &941604832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941604831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &941604833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9635,6 +8771,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &941766661 stripped
@@ -9649,29 +8790,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 941766660}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &941766663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941766662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &941766664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9706,6 +8824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: C-8_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -9776,29 +8899,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 951470560}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &951470563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951470562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &951470564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10002,6 +9102,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-7_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10071,29 +9176,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 976006127}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &976006130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976006129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &976006131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10404,6 +9486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-9_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10473,29 +9560,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1018057214}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1018057217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018057216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1018057218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10530,6 +9594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F-1_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -10600,29 +9669,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1029358415}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1029358418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029358417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1029358419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10694,6 +9740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-9_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10763,29 +9814,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1048103531}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1048103534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048103533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1048103535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10876,6 +9904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1084867670 stripped
@@ -10890,29 +9923,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1084867669}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1084867672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084867671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1084867673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10947,6 +9957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: E-0_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -11017,29 +10032,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1089077986}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1089077989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089077988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1089077990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11360,6 +10352,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-7_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1127577745 stripped
@@ -11374,29 +10371,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1127577744}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1127577747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127577746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1127577748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11487,6 +10461,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-2_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1132020840 stripped
@@ -11501,29 +10480,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1132020839}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1132020842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132020841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1132020843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11717,6 +10673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-0_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11786,29 +10747,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1196774351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1196774354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196774353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1196774355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11904,6 +10842,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-6_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11973,29 +10916,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1230640249}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1230640252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230640251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1230640253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12086,6 +11006,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-5_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1245848165 stripped
@@ -12100,29 +11025,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1245848164}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1245848167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245848166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1245848168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12213,6 +11115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-8_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1247813087 stripped
@@ -12227,29 +11134,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1247813086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1247813089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247813088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1247813090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12284,6 +11168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'B-3_TerrainCell_White '
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -12354,29 +11243,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1264745778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1264745781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264745780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1264745782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12411,6 +11277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: J-7_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -12481,29 +11352,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1277738742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277738745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277738744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1277738746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12691,6 +11539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-5_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1341789541 stripped
@@ -12705,29 +11558,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1341789540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1341789543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341789542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1341789544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12762,6 +11592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: B-1_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -12832,29 +11667,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1349211393}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1349211396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349211395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1349211397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12889,6 +11701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: H-5_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -12959,29 +11776,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1374654958}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1374654961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374654960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1374654962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13016,6 +11810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: I-6_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -13086,29 +11885,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1397140196}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1397140199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397140198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1397140200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13391,6 +12167,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1426101627 stripped
@@ -13405,29 +12186,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1426101626}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1426101629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426101628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1426101630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13714,6 +12472,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-2_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1459558985 stripped
@@ -13728,29 +12491,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1459558984}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1459558987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459558986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1459558988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14027,6 +12767,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-1_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1481309459 stripped
@@ -14041,29 +12786,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1481309458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1481309461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481309460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1481309462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14098,6 +12820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: J-1_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -14168,29 +12895,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1502171594}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1502171597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502171596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1502171598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14523,6 +13227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-5_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14592,29 +13301,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1560267340}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1560267343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560267342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1560267344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14878,6 +13564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-4_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1576870576 stripped
@@ -14892,29 +13583,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1576870575}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1576870578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576870577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1576870579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15107,6 +13775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-4_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15176,29 +13849,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1629008092}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1629008095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629008094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1629008096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15264,6 +13914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F-3_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -15334,29 +13989,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1646631762}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1646631765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646631764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1646631766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15391,6 +14023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: J-3_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -15461,29 +14098,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1647797326}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1647797329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647797328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1647797330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15619,6 +14233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-4_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15688,29 +14307,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1700690823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1700690826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700690825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1700690827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15801,6 +14397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-1_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1712420327 stripped
@@ -15815,29 +14416,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1712420326}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1712420329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712420328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1712420330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15872,6 +14450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: E-2_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -15942,29 +14525,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1723599354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1723599357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723599356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1723599358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15999,6 +14559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: D-5_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -16069,29 +14634,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1731945917}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1731945920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731945919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1731945921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16244,6 +14786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-2_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1743824553 stripped
@@ -16258,29 +14805,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1743824552}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1743824555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743824554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1743824556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16450,6 +14974,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-9_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1775739058 stripped
@@ -16464,29 +14993,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1775739057}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1775739060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775739059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1775739061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16709,6 +15215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-4_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16778,29 +15289,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1822318846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1822318849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822318848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1822318850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17035,6 +15523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-7_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17104,29 +15597,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1832325758}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1832325761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832325760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1832325762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17217,6 +15687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-5_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1849593627 stripped
@@ -17231,29 +15706,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1849593626}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1849593629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849593628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1849593630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17441,6 +15893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-3_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1862649058 stripped
@@ -17455,29 +15912,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1862649057}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1862649060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862649059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1862649061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17681,6 +16115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: E-1_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1878093257 stripped
@@ -17695,29 +16134,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1878093256}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1878093259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878093258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1878093260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18068,6 +16484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1890557089 stripped
@@ -18082,29 +16503,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1890557088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1890557091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890557090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1890557092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18195,6 +16593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H-8_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1914199292 stripped
@@ -18209,29 +16612,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1914199291}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1914199294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914199293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1914199295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18266,6 +16646,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: D-1_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -18336,29 +16721,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1922825043}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1922825046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1922825045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1922825047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18527,6 +16889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: J-8_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1937752452 stripped
@@ -18541,29 +16908,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1937752451}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1937752454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937752453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1937752455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18638,6 +16982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: F-9_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18707,29 +17056,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1946362120}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1946362123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946362122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1946362124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18820,6 +17146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-7_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1949146923 stripped
@@ -18834,29 +17165,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1949146922}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1949146925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949146924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1949146926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19065,6 +17373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: B-2_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1968819676 stripped
@@ -19079,29 +17392,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1968819675}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1968819678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968819677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1968819679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19136,6 +17426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: I-2_TerrainCell_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
       objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
@@ -19206,29 +17501,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1970068554}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1970068557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970068556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &1970068558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19413,6 +17685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A-2_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19482,29 +17759,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2005291121}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2005291124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005291123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &2005291125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19734,6 +17988,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-0_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19803,29 +18062,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2025892544}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2025892547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025892546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &2025892548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19940,6 +18176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: C-4_TerrainCell_White
       objectReference: {fileID: 0}
+    - target: {fileID: 350082352004690303, guid: e723ac4105b864647b3a2e25c42404ec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20009,29 +18250,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2035296359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2035296362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035296361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &2035296363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20122,6 +18340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: G-7_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7587300977130618225, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain Tile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &2080879175 stripped
@@ -20136,29 +18359,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2080879174}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2080879177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080879176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca3f7601ddf7dd4c91bb557257b7496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDifficulty: 0
-  TileHeight: 0
-  BlocksLineOfSight: 0
-  PathableTile: 1
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
 --- !u!114 &2080879178
 MonoBehaviour:
   m_ObjectHideFlags: 0
