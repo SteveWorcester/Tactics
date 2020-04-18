@@ -23,7 +23,7 @@ public class TerrainGeneric : MonoBehaviour
     [HideInInspector]
     public int Distance = 0;
 
-    // BFS vars (creating adjacency list)
+    // BFS VARS - DO NOT REMOVE/MODIFY
     [HideInInspector]
     public List<TerrainGeneric> AdjacencyList = new List<TerrainGeneric>();
     [HideInInspector]
