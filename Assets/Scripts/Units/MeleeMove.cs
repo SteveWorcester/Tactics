@@ -15,6 +15,8 @@ public class MeleeMove : UnitMove
     void Start()
     {
         _unitMoveSpeed = MoveSpeed;
+        allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
+        halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
     }
 
     void Update()

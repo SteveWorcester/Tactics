@@ -26,8 +26,7 @@ public class UnitMove : MonoBehaviour
 
     void Start()
     {
-        allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
-        halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
+
     }
 
     void Update()
