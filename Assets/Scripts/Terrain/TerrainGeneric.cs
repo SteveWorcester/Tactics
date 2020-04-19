@@ -30,28 +30,25 @@ public abstract class TerrainGeneric : MonoBehaviour
 
     //==========================================================================
 
-    void Start()
-    {
-    }
-
     void Update()
     {
-        if (UnitLocation)
-        {
-            GetComponent<Renderer>().material.color = Color.cyan;
-        }
-        else if (TargetLocation)
-        {
-            GetComponent<Renderer>().material.color = Color.blue;
-        }
-        else if (SelectableTile)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-        }
+            if (UnitLocation)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+            }
+            else if (TargetLocation)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            }
+            else if (SelectableTile)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            }
+            else
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.white;
+            }
+
     }
 
     public void ResetTile()

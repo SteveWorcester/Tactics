@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terrain : TerrainGeneric
+public class TerrainBasic : TerrainGeneric
 {
     public float MoveDifficulty = 1.0f;
     public bool BlocksLineOfSight = false;
@@ -11,10 +11,5 @@ public class Terrain : TerrainGeneric
     void Start()
     {
         IsPathable = Pathable;
-    }
-
-    void Update()
-    {
-        
     }
 }
