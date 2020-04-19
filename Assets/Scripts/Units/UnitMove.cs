@@ -23,17 +23,6 @@ public class UnitMove : MonoBehaviour
 
     //=====================================================
 
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public void Move()
     {
         if (_movePath.Count > 0)

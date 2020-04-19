@@ -30,10 +30,6 @@ public abstract class TerrainGeneric : MonoBehaviour
 
     //==========================================================================
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if (UnitLocation)
