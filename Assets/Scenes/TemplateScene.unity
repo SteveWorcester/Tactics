@@ -203,7 +203,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7049023}
-  - component: {fileID: 7049024}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -231,29 +230,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7049024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7049022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &15357899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,7 +420,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37270191}
-  - component: {fileID: 37270192}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -472,29 +447,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &37270192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37270190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &40100054
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +608,6 @@ GameObject:
   - component: {fileID: 46985423}
   - component: {fileID: 46985425}
   - component: {fileID: 46985424}
-  - component: {fileID: 46985426}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -719,29 +670,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46985422}
   m_CullTransparentMesh: 0
---- !u!114 &46985426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46985422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &49489767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,7 +1782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 193712842}
   - component: {fileID: 193712843}
-  - component: {fileID: 193712844}
   m_Layer: 5
   m_Name: CharacterHealthSlider
   m_TagString: Untagged
@@ -1934,29 +1861,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &193712844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193712841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &199674803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2674,7 +2578,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321384796}
-  - component: {fileID: 321384797}
   m_Layer: 5
   m_Name: Side-4
   m_TagString: Untagged
@@ -2704,29 +2607,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -212}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &321384797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321384795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &325256920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2963,7 +2843,6 @@ GameObject:
   - component: {fileID: 391867679}
   - component: {fileID: 391867681}
   - component: {fileID: 391867680}
-  - component: {fileID: 391867682}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -3026,29 +2905,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391867678}
   m_CullTransparentMesh: 0
---- !u!114 &391867682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391867678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &393662337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3250,7 +3106,6 @@ GameObject:
   - component: {fileID: 420315000}
   - component: {fileID: 420315002}
   - component: {fileID: 420315001}
-  - component: {fileID: 420315003}
   m_Layer: 5
   m_Name: CharacterNameText
   m_TagString: Untagged
@@ -3319,29 +3174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420314999}
   m_CullTransparentMesh: 0
---- !u!114 &420315003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420314999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &421098307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,7 +3185,6 @@ GameObject:
   - component: {fileID: 421098308}
   - component: {fileID: 421098310}
   - component: {fileID: 421098309}
-  - component: {fileID: 421098311}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3416,29 +3247,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421098307}
   m_CullTransparentMesh: 0
---- !u!114 &421098311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421098307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &427818013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3790,7 +3598,6 @@ GameObject:
   - component: {fileID: 478877648}
   - component: {fileID: 478877650}
   - component: {fileID: 478877649}
-  - component: {fileID: 478877651}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3853,29 +3660,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478877647}
   m_CullTransparentMesh: 0
---- !u!114 &478877651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 478877647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &479665979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4037,7 +3821,6 @@ GameObject:
   - component: {fileID: 485408911}
   - component: {fileID: 485408913}
   - component: {fileID: 485408912}
-  - component: {fileID: 485408914}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -4100,29 +3883,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485408910}
   m_CullTransparentMesh: 0
---- !u!114 &485408914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485408910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &504515578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4209,7 +3969,6 @@ GameObject:
   - component: {fileID: 519235549}
   - component: {fileID: 519235551}
   - component: {fileID: 519235550}
-  - component: {fileID: 519235552}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -4272,29 +4031,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519235548}
   m_CullTransparentMesh: 0
---- !u!114 &519235552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519235548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &538212063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,7 +4561,6 @@ GameObject:
   - component: {fileID: 577116844}
   - component: {fileID: 577116846}
   - component: {fileID: 577116845}
-  - component: {fileID: 577116847}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -4888,29 +4623,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577116843}
   m_CullTransparentMesh: 0
---- !u!114 &577116847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577116843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &597297761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5040,7 +4752,6 @@ GameObject:
   - component: {fileID: 631505385}
   - component: {fileID: 631505387}
   - component: {fileID: 631505386}
-  - component: {fileID: 631505388}
   m_Layer: 5
   m_Name: CharacterNameText
   m_TagString: Untagged
@@ -5109,29 +4820,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631505384}
   m_CullTransparentMesh: 0
---- !u!114 &631505388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631505384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &635731519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5707,7 +5395,6 @@ GameObject:
   - component: {fileID: 773103421}
   - component: {fileID: 773103423}
   - component: {fileID: 773103422}
-  - component: {fileID: 773103424}
   m_Layer: 5
   m_Name: CharacterNameText
   m_TagString: Untagged
@@ -5776,29 +5463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773103420}
   m_CullTransparentMesh: 0
---- !u!114 &773103424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773103420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &792526901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5958,7 +5622,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 796404059}
-  - component: {fileID: 796404060}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -5986,29 +5649,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &796404060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796404058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &796621937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6394,7 +6034,6 @@ GameObject:
   m_Component:
   - component: {fileID: 866919392}
   - component: {fileID: 866919393}
-  - component: {fileID: 866919394}
   m_Layer: 5
   m_Name: CharacterHealthSlider
   m_TagString: Untagged
@@ -6474,29 +6113,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &866919394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866919391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &897786128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6698,7 +6314,6 @@ GameObject:
   - component: {fileID: 918929130}
   - component: {fileID: 918929132}
   - component: {fileID: 918929131}
-  - component: {fileID: 918929133}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -6761,29 +6376,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918929129}
   m_CullTransparentMesh: 0
---- !u!114 &918929133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918929129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &924462999
 GameObject:
   m_ObjectHideFlags: 0
@@ -6945,7 +6537,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 941085657}
-  - component: {fileID: 941085658}
   m_Layer: 5
   m_Name: Side-1
   m_TagString: Untagged
@@ -6975,29 +6566,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -53}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &941085658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941085656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &941604829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7589,7 +7157,6 @@ GameObject:
   - component: {fileID: 988099420}
   - component: {fileID: 988099422}
   - component: {fileID: 988099421}
-  - component: {fileID: 988099423}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -7652,29 +7219,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988099419}
   m_CullTransparentMesh: 0
---- !u!114 &988099423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988099419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &997498148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7684,7 +7228,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 997498149}
-  - component: {fileID: 997498150}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -7712,29 +7255,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &997498150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997498148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1007105329
 GameObject:
   m_ObjectHideFlags: 0
@@ -8353,7 +7873,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1093140772}
   - component: {fileID: 1093140773}
-  - component: {fileID: 1093140774}
   m_Layer: 5
   m_Name: CharacterHealthSlider
   m_TagString: Untagged
@@ -8433,29 +7952,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1093140774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093140771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1122140514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8886,7 +8382,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225308387}
-  - component: {fileID: 1225308388}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -8914,29 +8409,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1225308388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225308386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1230640249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9323,7 +8795,6 @@ GameObject:
   - component: {fileID: 1333019696}
   - component: {fileID: 1333019698}
   - component: {fileID: 1333019697}
-  - component: {fileID: 1333019699}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -9386,29 +8857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333019695}
   m_CullTransparentMesh: 0
---- !u!114 &1333019699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333019695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1341789540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10024,7 +9472,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454124220}
-  - component: {fileID: 1454124221}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -10052,29 +9499,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1454124221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454124219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1458666638
 GameObject:
   m_ObjectHideFlags: 0
@@ -10086,7 +9510,6 @@ GameObject:
   - component: {fileID: 1458666639}
   - component: {fileID: 1458666641}
   - component: {fileID: 1458666640}
-  - component: {fileID: 1458666642}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -10149,29 +9572,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458666638}
   m_CullTransparentMesh: 0
---- !u!114 &1458666642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458666638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1459558984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10257,7 +9657,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1464238125}
   - component: {fileID: 1464238126}
-  - component: {fileID: 1464238127}
   m_Layer: 5
   m_Name: CharacterHealthSlider
   m_TagString: Untagged
@@ -10337,29 +9736,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1464238127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464238124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1472545685
 GameObject:
   m_ObjectHideFlags: 0
@@ -10632,7 +10008,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1521039048}
-  - component: {fileID: 1521039049}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -10660,29 +10035,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1521039049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521039047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1525882811
 GameObject:
   m_ObjectHideFlags: 0
@@ -11042,7 +10394,6 @@ GameObject:
   - component: {fileID: 1571564452}
   - component: {fileID: 1571564454}
   - component: {fileID: 1571564453}
-  - component: {fileID: 1571564455}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -11105,29 +10456,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571564451}
   m_CullTransparentMesh: 0
---- !u!114 &1571564455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571564451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1576870575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11212,7 +10540,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605166747}
-  - component: {fileID: 1605166748}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -11240,29 +10567,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1605166748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605166746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1610058460
 GameObject:
   m_ObjectHideFlags: 0
@@ -11274,7 +10578,6 @@ GameObject:
   - component: {fileID: 1610058461}
   - component: {fileID: 1610058463}
   - component: {fileID: 1610058462}
-  - component: {fileID: 1610058464}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -11337,29 +10640,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610058460}
   m_CullTransparentMesh: 0
---- !u!114 &1610058464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610058460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1629008092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11625,7 +10905,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1648288969}
-  - component: {fileID: 1648288970}
   m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
@@ -11653,29 +10932,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1648288970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648288968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1658543421
 GameObject:
   m_ObjectHideFlags: 0
@@ -12025,7 +11281,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741992679}
-  - component: {fileID: 1741992680}
   m_Layer: 5
   m_Name: Side-3
   m_TagString: Untagged
@@ -12055,29 +11310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -159}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1741992680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741992678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1743824552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12580,7 +11812,6 @@ GameObject:
   - component: {fileID: 1825217090}
   - component: {fileID: 1825217092}
   - component: {fileID: 1825217091}
-  - component: {fileID: 1825217093}
   m_Layer: 5
   m_Name: PhysicalStrength
   m_TagString: Untagged
@@ -12648,29 +11879,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825217089}
   m_CullTransparentMesh: 0
---- !u!114 &1825217093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825217089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1831547097
 GameObject:
   m_ObjectHideFlags: 0
@@ -12682,7 +11890,6 @@ GameObject:
   - component: {fileID: 1831547098}
   - component: {fileID: 1831547100}
   - component: {fileID: 1831547099}
-  - component: {fileID: 1831547101}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -12745,29 +11952,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831547097}
   m_CullTransparentMesh: 0
---- !u!114 &1831547101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831547097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1832325758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12929,7 +12113,6 @@ GameObject:
   - component: {fileID: 1858372938}
   - component: {fileID: 1858372940}
   - component: {fileID: 1858372939}
-  - component: {fileID: 1858372941}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -12992,29 +12175,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858372937}
   m_CullTransparentMesh: 0
---- !u!114 &1858372941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858372937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1862649057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13100,7 +12260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1876129745}
   - component: {fileID: 1876129746}
-  - component: {fileID: 1876129747}
   m_Layer: 5
   m_Name: CharacterHealthSlider
   m_TagString: Untagged
@@ -13180,29 +12339,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1876129747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876129744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1878093256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13287,7 +12423,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1884503646}
-  - component: {fileID: 1884503647}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -13315,29 +12450,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1884503647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884503645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1885382244
 GameObject:
   m_ObjectHideFlags: 0
@@ -13349,7 +12461,6 @@ GameObject:
   - component: {fileID: 1885382245}
   - component: {fileID: 1885382247}
   - component: {fileID: 1885382246}
-  - component: {fileID: 1885382248}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -13412,29 +12523,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885382244}
   m_CullTransparentMesh: 0
---- !u!114 &1885382248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885382244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &1890352269
 GameObject:
   m_ObjectHideFlags: 0
@@ -13446,7 +12534,6 @@ GameObject:
   - component: {fileID: 1890352270}
   - component: {fileID: 1890352272}
   - component: {fileID: 1890352271}
-  - component: {fileID: 1890352273}
   m_Layer: 5
   m_Name: CharacterNameText
   m_TagString: Untagged
@@ -13515,29 +12602,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890352269}
   m_CullTransparentMesh: 0
---- !u!114 &1890352273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890352269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &1890557088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14608,7 +13672,6 @@ GameObject:
   - component: {fileID: 2012272278}
   - component: {fileID: 2012272280}
   - component: {fileID: 2012272279}
-  - component: {fileID: 2012272281}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -14671,29 +13734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012272277}
   m_CullTransparentMesh: 0
---- !u!114 &2012272281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012272277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &2018628384
 GameObject:
   m_ObjectHideFlags: 0
@@ -14705,7 +13745,6 @@ GameObject:
   - component: {fileID: 2018628385}
   - component: {fileID: 2018628387}
   - component: {fileID: 2018628386}
-  - component: {fileID: 2018628388}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -14768,29 +13807,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018628384}
   m_CullTransparentMesh: 0
---- !u!114 &2018628388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018628384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1001 &2025892544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15106,7 +14122,6 @@ GameObject:
   - component: {fileID: 2083280905}
   - component: {fileID: 2083280907}
   - component: {fileID: 2083280906}
-  - component: {fileID: 2083280908}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -15169,29 +14184,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083280904}
   m_CullTransparentMesh: 0
---- !u!114 &2083280908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083280904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &2086380798
 GameObject:
   m_ObjectHideFlags: 0
@@ -15201,7 +14193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086380799}
-  - component: {fileID: 2086380800}
   m_Layer: 5
   m_Name: Side-2
   m_TagString: Untagged
@@ -15231,29 +14222,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3, y: -106}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2086380800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086380798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
 --- !u!1 &2110526722
 GameObject:
   m_ObjectHideFlags: 0
@@ -15265,7 +14233,6 @@ GameObject:
   - component: {fileID: 2110526723}
   - component: {fileID: 2110526725}
   - component: {fileID: 2110526724}
-  - component: {fileID: 2110526726}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -15328,26 +14295,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110526722}
   m_CullTransparentMesh: 0
---- !u!114 &2110526726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110526722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e64b6a63a2913747afbea100e176d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitLocation: 0
-  TargetLocation: 0
-  SelectableTile: 0
-  IsPathable: 1
-  Distance: 0
-  AdjacencyList: []
-  VisitedTile: 0
-  ParentTile: {fileID: 0}
-  MoveDifficulty: 1
-  BlocksLineOfSight: 0
-  Pathable: 1
