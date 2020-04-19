@@ -5,7 +5,7 @@ Overview
 			Hotseat Multiplayer functionality - no AI
 			Each friendly Character can take one move action and one attack action per player turn.
 		Turn flow
-			“Start of turn” banner appears, notifying player that it’s their turn.  Banner then disappears.
+			(strike from mvp?)“Start of turn” banner appears, notifying player that it’s their turn.  Banner then disappears.
 			The active character is highlighted, and available options are presented.
 			An action must be taken with that character (even if that option is “pass”?)
 			Once actions have been expended, or pass has been selected, return to #1.
@@ -13,15 +13,15 @@ Overview
 			Players take turns for their Characters until only one team remains
 		Playable character
 			Character Active State
-				Characters that have a move or attack left are highlighted, or have a different appearance.
+				(strike from mvp? there is no such thing as "none left", just a turn counter)Characters that have a move or attack left are highlighted, or have a different appearance.
 			Move
 				Can be performed one time per turn
 				Limited by a max range: 3
 				Limited by a max height: 3
-				Can be stopped at any point up to the max range.
-				Can be undone if an action (attack or ability) has not been performed afterwards.
+				(strike from mvp?)Can be stopped at any point up to the max range.
+				(strike from mvp?)Can be undone if an action (attack or ability) has not been performed afterwards.
 				Characters cannot move to an adjacent cell that is too high above their currently occupied cell.
-				In cases where the player moves across 3 cells, only the height of the previous cell is taken into account.
+				(please explain this in jump height and fall height - confusing. is this an engineering recommendation or a design implementation?) In cases where the player moves across 3 cells, only the height of the previous cell is taken into account.
 			Attack
 				Can be performed one time per turn.
 				Limited by a max range: 1
