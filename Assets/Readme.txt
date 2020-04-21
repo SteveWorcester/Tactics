@@ -5,7 +5,7 @@ Overview
 			Hotseat Multiplayer functionality - no AI
 			Each friendly Character can take one move action and one attack action per player turn.
 		Turn flow
-			(strike from mvp?)“Start of turn” banner appears, notifying player that it’s their turn.  Banner then disappears.
+			A simple text only “Start of turn” banner appears.  The banner has the controlling Player name (or number?) and the character identifier.  Banner then disappears.
 			The active character is highlighted, and available options are presented.
 			An action must be taken with that character (even if that option is “pass”?)
 			Once actions have been expended, or pass has been selected, return to #1.
@@ -13,15 +13,17 @@ Overview
 			Players take turns for their Characters until only one team remains
 		Playable character
 			Character Active State
-				(strike from mvp? there is no such thing as "none left", just a turn counter)Characters that have a move or attack left are highlighted, or have a different appearance.
+				On a characters turn (when their initiative value is the lowest), they are given a Move command and an Attack command.  They are the active character until these actions are taken (or until Pass is selected, forfeiting the remaining )
 			Move
 				Can be performed one time per turn
 				Limited by a max range: 3
 				Limited by a max height: 3
-				(strike from mvp?)Can be stopped at any point up to the max range.
-				(strike from mvp?)Can be undone if an action (attack or ability) has not been performed afterwards.
+				Move can target a cell 1, 2 or 3 cells away from the currently occupied cell, and will move the active character to that position.
 				Characters cannot move to an adjacent cell that is too high above their currently occupied cell.
-				(please explain this in jump height and fall height - confusing. is this an engineering recommendation or a design implementation?) In cases where the player moves across 3 cells, only the height of the previous cell is taken into account.
+				A character can only move to a cell if its height is equal to or less than the hight limit to their move.
+				A character cannot move to a cell that is outside of their movement range.
+				A character cannot move to a cell that has a height difference of greater than the max height from the previous cell.
+				A character can move to a cell that is lower than the currently occupied cell, regardless of height.
 			Attack
 				Can be performed one time per turn.
 				Limited by a max range: 1
