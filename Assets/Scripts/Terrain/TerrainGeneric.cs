@@ -48,7 +48,6 @@ public abstract class TerrainGeneric : MonoBehaviour
             {
                 gameObject.GetComponent<Renderer>().material.color = Color.white;
             }
-
     }
 
     public void ResetTile()
@@ -75,12 +74,12 @@ public abstract class TerrainGeneric : MonoBehaviour
     public void MarkTileAsAdjacent(Vector3 direction, float unitJumpHeight)
     {
         // tiles are currently 1x1x1 size. if this size changes, then halfExtents will have to change. If this ever changes, fix it programatically 
-        Vector3 halfExtents = new Vector3(0.5f, (1 + unitJumpHeight)/2.0f, .5f); 
+        Vector3 halfExtents = new Vector3(0.25f, (1 + unitJumpHeight)/2.0f, .25f); 
         Collider[] tileFinders = Physics.OverlapBox(transform.position + direction, halfExtents);
 
         foreach (Collider finder in tileFinders)
         {
-            TerrainGeneric terrain = GetComponent<TerrainGeneric>();
+            TerrainGeneric terrain = finder.GetComponent<TerrainGeneric>();
             if (terrain != null && IsPathable)
             {
                 RaycastHit tileOccupied;

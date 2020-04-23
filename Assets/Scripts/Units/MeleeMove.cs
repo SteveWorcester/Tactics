@@ -29,7 +29,7 @@ public class MeleeMove : UnitMove
         }
         else
         {
-            // move();
+            Move();
         }
     }
 }
