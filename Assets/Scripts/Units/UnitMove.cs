@@ -94,6 +94,7 @@ public class UnitMove : MonoBehaviour
     {
         SetAdjacencyList(jumpHeight);
         SetCurrentTile();
+        
 
         // BFS Algorithm - B.readth F.irst S.earch to find selectable tiles.
         Queue<TerrainGeneric> process = new Queue<TerrainGeneric>();
@@ -158,6 +159,7 @@ public class UnitMove : MonoBehaviour
                 if (clickedTile.SelectableTile)
                 {
                     SetMovementPath(clickedTile);
+                    currentlyMoving = true;
                 }
             }
         }
