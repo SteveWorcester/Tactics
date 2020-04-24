@@ -22,29 +22,32 @@ public class UnitMove : MonoBehaviour
     protected Vector3 moveHeading = new Vector3();
 
     //=====================================================
-
-    public void Move()
+    
+    public void Init()
     {
+        allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
+        halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
+    }            
+    
+    public void Move()
+    {     
         if (_movePath.Count > 0)
         {
-            TerrainGeneric nextTile = _movePath.Peek();
+            TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
-
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-
             if (Vector3.Distance(transform.position, moveTarget) >= .005f)
             {
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
                 transform.forward = moveHeading;
-                transform.position = moveVelocity * Time.deltaTime;
+                transform.position += moveVelocity * Time.deltaTime;
             }
             else
-            {
-                // you got to the tile
+            {                
                 transform.position = moveTarget;
                 _movePath.Pop();
-            }
+             }
         }
         else
         {
@@ -52,6 +55,7 @@ public class UnitMove : MonoBehaviour
             currentlyMoving = false;
         }
     }
+    
 
     #region Tile-specific
 
@@ -159,7 +163,6 @@ public class UnitMove : MonoBehaviour
                 if (clickedTile.SelectableTile)
                 {
                     SetMovementPath(clickedTile);
-                    currentlyMoving = true;
                 }
             }
         }
@@ -168,8 +171,7 @@ public class UnitMove : MonoBehaviour
     public void SetMovementPath(TerrainGeneric tile)
     {
         _movePath.Clear();
-        tile.TargetLocation = true;
-        currentlyMoving = true;
+        tile.TargetLocation = true;        
 
         TerrainGeneric nextTile = tile;
         while (nextTile != null)
@@ -177,6 +179,7 @@ public class UnitMove : MonoBehaviour
             _movePath.Push(nextTile);
             nextTile = nextTile.ParentTile;
         }
+        currentlyMoving = true;
     }
 
     private void SetHeadingDirection(Vector3 targetDirection)
