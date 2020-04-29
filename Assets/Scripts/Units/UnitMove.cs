@@ -21,8 +21,11 @@ public class UnitMove : MonoBehaviour
     protected Vector3 moveVelocity = new Vector3();
     protected Vector3 moveHeading = new Vector3();
 
+    [HideInInspector]
+    public float FullTurnCounter;
+
     //=====================================================
-    
+
     public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
