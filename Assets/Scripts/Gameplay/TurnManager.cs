@@ -55,7 +55,6 @@ public class TurnManager : MonoBehaviour
     {
         UnitMove currentUnit = UnitTurnOrder.Dequeue().Value;
         Debug.Log($"Ending turn for {currentUnit}");
-        currentUnit.EndTurn();
     }
 
     public static void AddUnitToGame(string tag, UnitMove unitMove)
