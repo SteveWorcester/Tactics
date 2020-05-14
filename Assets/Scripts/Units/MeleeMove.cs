@@ -8,9 +8,7 @@ public class MeleeMove : UnitMove
     public int MoveDistance = 5;
     public float MoveSpeed = 2.0f; // how fast the unit traverses the map. This has nothing to do with turn order speed.
     public float JumpHeight = 2.0f;
-
-    // TODOs
-    // Turn counter per move action
+    public float TurnOrderSpeed = 10;
 
     void Start()
     {
@@ -21,6 +19,10 @@ public class MeleeMove : UnitMove
 
     void Update()
     {
+        if (!CurrentlyTakingTurn)
+        {
+            return;
+        }
         SetAdjacencyList(JumpHeight);
         if (!currentlyMoving)
         {
