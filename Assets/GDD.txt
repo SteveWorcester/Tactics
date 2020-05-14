@@ -10,30 +10,64 @@ Overview
 			An action must be taken with that character (even if that option is “pass”?)
 			Once actions have been expended, or pass has been selected, return to #1.
 		Game Flow
-			Players take turns for their Characters until only one team remains
+			Players take turns for their Characters until only one team remains.
 		Playable character
 			Character Active State
-				On a characters turn (when their initiative value is the lowest), they are given a Move command and an Attack command.  They are the active character until these actions are taken (or until Pass is selected, forfeiting the remaining )
+				At the start of a match, characters are added into the initiative order list with the value 0.
+				The character with the lowest initiative value is set to an active state.
+				While in an active state, a character can move, use an ability/attack, or pass.
+				When a character becomes active, the tiles around the character will change color to denote a valid movable range.
+				The active character maintains this active state until these actions are taken (or until Pass is selected, forfeiting any remaining actions)
 			Move
-				Can be performed one time per turn
-				Limited by a max range: 3
-				Limited by a max height: 3
-				Move can target a cell 1, 2 or 3 cells away from the currently occupied cell, and will move the active character to that position.
-				Characters cannot move to an adjacent cell that is too high above their currently occupied cell.
-				A character can only move to a cell if its height is equal to or less than the hight limit to their move.
-				A character cannot move to a cell that is outside of their movement range.
-				A character cannot move to a cell that has a height difference of greater than the max height from the previous cell.
-				A character can move to a cell that is lower than the currently occupied cell, regardless of height.
+				An active character can move one time during their initiative.
+				A move is performed by left clicking on a valid terrain tile.
+				Move is limited by distance
+					Limited by a max range: 4
+					A character cannot move to a cell that is outside of their movement range.
+					Move can target a cell 1, 2 or 3 cells away from the currently occupied cell, and will move the active character to that position.
+				Move is limited by height of adjacent tiles.
+					Limited by a max height: 3
+					A character can only move to a cell if its height is equal to or less than the hight limit to their move.
+					Characters cannot move to an adjacent cell that is too high above their currently occupied cell.
+					Every cell that the active character moves to recalculates adjacent height requirements so that they can move to cells within their max height limit every cell that is moved.
+					A character can move to a cell that is lower than the currently occupied cell, regardless of height.
+				After a move is performed, the player may select a facing direction for the character.
 			Attack
 				Can be performed one time per turn.
-				Limited by a max range: 1
-				Attacks can be launched at a space on the board - and deal damage to targets occuping that space.
-				Deals health damage to a target.
-			Pass?
+				Attacks can be triggered from the space currently occupied by the active character - and deal damage to targets occuping that space.
+				If an attack hits a target, 
+				Attacks are limited by distance
+					Limited by a max range: 1
+					(Post MVP) - Some weapons may change this value
+				Attacks are limited by height
+					Limited by a max height difference of 3
+					(Post MVP) - Some weapons may change this value
+				Successful attacks deal damage to a target.
+					(Post MVP) - Damage types
+					Damage delt is always a set "simple" value					
+			Pass
 				Ends turn for that character.
+				Adds a small value to the initiative counter.
 		Game Field
 			Pathable Terrain - characters can be directed to move over this type of terrain.
+			Hindering Terrain - Characters can move onto this type of terrain, but have their attacks and abilities locked while standing on it.
 			Non-pathable terrain - characters will move up against this terrain, but cannot move through it.
+		UI
+			Side panel - Occupies the right hand side of the screen.
+				Features turn order - The top unit listed is the active character, the second entry is the next character that will be active.
+				Character Unitpanel
+					Character Status and health
+					Player Color background.
+					Reactive mouse-over - When the player hovers the mouse over a unit on the sidebar, it highlights the pawn in the field.
+					(Post MVP) - When turns transition, there is an animation of the top Unitpanel moving to its location in the list.
+			Bottom Panel - Occupies the bottom of the screen.
+				Displays the currently Active Character's Unitpanel
+				Buttons for actions that can be taken.
+					Can this be simplified based on intuitive logic?
+		UX
+			Game is played exclusively with the mouse.
+				HotSeat gameplay isn't the best for this.  
+				Let's learn some netcode or get a prefab?
 	Gameplay Loops
 		Post MVP
 	Narrative
