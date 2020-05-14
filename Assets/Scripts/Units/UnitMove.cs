@@ -22,24 +22,29 @@ public class UnitMove : MonoBehaviour
     protected Vector3 moveHeading = new Vector3();
 
     [HideInInspector]
-    public float FullTurnCounter;
+    public float FullTurnCounter = 1;
+    [HideInInspector]
+    public bool CurrentlyTakingTurn = false;
 
-    //=====================================================
+//=====================================================
 
-    public void Init()
+public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
         halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
+        TurnManager.AddUnitToGame(gameObject.tag, this);
     }
     
     public void BeginTurn()
     {
-
+        FullTurnCounter += 1;
+        CurrentlyTakingTurn = true;
     }
 
     public void EndTurn()
     {
-        
+        CurrentlyTakingTurn = false;
+        TurnManager.EndTurn();
     }
 
     public void Move()
@@ -66,6 +71,8 @@ public class UnitMove : MonoBehaviour
         {
             ClearSelectableTiles();
             currentlyMoving = false;
+
+            EndTurn();
         }
     }
     

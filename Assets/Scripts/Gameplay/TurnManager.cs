@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
-    static List<KeyValuePair<string, UnitMove>> AllUnits = new List<KeyValuePair<string, UnitMove>>();
-    static Queue<string> UnitKey = new Queue<string>();
-    static Queue<UnitMove> UnitTurnOrder = new Queue<UnitMove>();
+
+    // ==========Do not change these variables=============
+    [HideInInspector]
+    public static List<KeyValuePair<string, UnitMove>> AllUnits = new List<KeyValuePair<string, UnitMove>>();
+    [HideInInspector]
+    public static Queue<KeyValuePair<string, UnitMove>> UnitTurnOrder = new Queue<KeyValuePair<string, UnitMove>>();
+    private static bool _creatingTurnQueue = false;
+    //=====================================================
 
     void Start()
     {
@@ -15,48 +22,48 @@ public class TurnManager : MonoBehaviour
 
     void Update()
     {
-        if (UnitTurnOrder.Count < AllUnits.)
+        if (UnitTurnOrder.Count < AllUnits.Count && !_creatingTurnQueue)
         {
             CreateTurnQueue();
+        }
+        else if (UnitTurnOrder.Count == AllUnits.Count && !_creatingTurnQueue)
+        {
+            StartTurn();
         }
     }
 
     static void CreateTurnQueue()
     {
-        UnitTurnOrder.;
-        AllUnits.ForEach(c => c.Value.FullTurnCounter)
-        List<UnitMove> teamList = AllUnits[UnitKey.Peek()];
-        foreach (var unit in teamList)
-        {
-            UnitTurnOrder.Enqueue(unit);
-        }
+        Debug.Log("Creating Turn Queue...");
+        _creatingTurnQueue = true;
 
-        // StartTurn();
+        UnitTurnOrder.Clear();
+        AllUnits.Sort((KeyValuePair<string, UnitMove> unit1, KeyValuePair<string, UnitMove> unit2) => unit1.Value.FullTurnCounter.CompareTo(unit2.Value.FullTurnCounter));
+        AllUnits.ForEach(u => UnitTurnOrder.Enqueue(u));
+
+        _creatingTurnQueue = false;        
     }
 
-    static void StartTurn()
+    public static void StartTurn()
     {
-        if (UnitTurnOrder.Count < AllUnits.Count)
-        {
-            UnitTurnOrder.Peek().BeginTurn();
-        }
+        var nextUnit = UnitTurnOrder.Peek();
+        Debug.Log($"Starting turn.\nPlayer Tag: {nextUnit.Key}\nUnit: {nextUnit.Value.ToString()}");
+        nextUnit.Value.BeginTurn();
     }
 
-    static void EndTurn()
+    public static void EndTurn()
     {
-        UnitMove currentUnit = UnitTurnOrder.Dequeue();
+        UnitMove currentUnit = UnitTurnOrder.Dequeue().Value;
+        Debug.Log($"Ending turn for {currentUnit}");
         currentUnit.EndTurn();
-
-        string unitFinished = UnitKey.Dequeue();
-        UnitKey.Enqueue(unitFinished);
-        CreateTurnQueue();
     }
 
-    public static void AddUnitToGame(UnitMove unit)
+    public static void AddUnitToGame(string tag, UnitMove unitMove)
     {
-        if (!AllUnits.Key.Equals(unit.tag) && !AllUnits.Value.Equals(unit))
+        KeyValuePair<string, UnitMove> unitToAdd = new KeyValuePair<string, UnitMove>(tag, unitMove);
+        if (!AllUnits.Contains(unitToAdd))
         {
-
+            AllUnits.Add(unitToAdd);
         }
     }
 }

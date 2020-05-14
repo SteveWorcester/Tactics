@@ -19,6 +19,10 @@ public class MeleeMove : UnitMove
 
     void Update()
     {
+        if (!CurrentlyTakingTurn)
+        {
+            return;
+        }
         SetAdjacencyList(JumpHeight);
         if (!currentlyMoving)
         {
