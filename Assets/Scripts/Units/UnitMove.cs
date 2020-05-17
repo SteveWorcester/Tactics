@@ -65,7 +65,7 @@ public void Init()
             {                
                 transform.position = moveTarget;
                 _movePath.Pop();
-             }
+            }
         }
         else
         {
