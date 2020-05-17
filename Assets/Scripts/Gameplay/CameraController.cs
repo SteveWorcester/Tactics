@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class CameraController : MonoBehaviour
 {   
     // modify these
-    public float cameraTransitionTimeInSeconds = 1f;
+    public float cameraTransitionTimeInSeconds = .25f;
     public float zoomForwardBackwardChange = 2f;
     public float zoomUpDownChange = 2f;
     
@@ -20,12 +20,12 @@ public class CameraController : MonoBehaviour
     }
     void Update()
     {
-    
-        if ((zoomedOut == true) && (Input.GetAxis("Mouse ScrollWheel") > 0))
+
+        if ((Input.GetAxis("Mouse ScrollWheel") > 0) || (Input.GetKeyDown(KeyCode.KeypadPlus)) && (zoomedOut == true))
         {
             ZoomIn();
         }
-        if ((zoomedOut == false) && (Input.GetAxis("Mouse ScrollWheel") < 0) )
+        if ((Input.GetAxis("Mouse ScrollWheel") < 0) || (Input.GetKeyDown(KeyCode.KeypadMinus)) && (zoomedOut == false))
         {
             ZoomOut();
         }
