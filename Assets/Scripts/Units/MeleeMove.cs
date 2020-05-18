@@ -6,7 +6,7 @@ public class MeleeMove : UnitMove
 {
     // Edit these defaults
     public int MoveDistance = 5;
-    public float MoveSpeed = 2.0f; // how fast the unit traverses the map. This has nothing to do with turn order speed.
+    public float MoveSpeed = 10.0f; // how fast the unit traverses the map. This has nothing to do with turn order speed.
     public float JumpHeight = 2.0f;
     public float TurnOrderSpeed = 10;
 
