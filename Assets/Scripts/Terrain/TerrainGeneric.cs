@@ -34,7 +34,7 @@ public abstract class TerrainGeneric : MonoBehaviour
     {
             if (UnitLocation)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
             }
             else if (TargetLocation)
             {
@@ -42,7 +42,7 @@ public abstract class TerrainGeneric : MonoBehaviour
             }
             else if (SelectableTile)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+                gameObject.GetComponent<Renderer>().material.color = Color.cyan;
             }
             else
             {
