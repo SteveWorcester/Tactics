@@ -26,9 +26,9 @@ public class UnitMove : MonoBehaviour
     [HideInInspector]
     public bool CurrentlyTakingTurn = false;
 
-//=====================================================
+    //=====================================================
 
-public void Init()
+    public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
         halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
