@@ -105,9 +105,9 @@ GameObject:
   - component: {fileID: 4579958489226321318}
   - component: {fileID: 4579958489226321317}
   - component: {fileID: 4579958489226321316}
-  - component: {fileID: 4579958489226321319}
+  - component: {fileID: 7211123534500507024}
   m_Layer: 0
-  m_Name: PlayerCapsule
+  m_Name: PlayerPrefab
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +189,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4579958489226321319
+--- !u!114 &7211123534500507024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,6 +203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfUnitHeight: 0
   currentlyMoving: 0
+  FullTurnCounter: 1
+  CurrentlyTakingTurn: 0
   MoveDistance: 5
-  MoveSpeed: 2
+  MoveSpeed: 10
   JumpHeight: 2
+  TurnOrderSpeed: 10
