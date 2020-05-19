@@ -54,7 +54,7 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= .005f)
+            if (Vector3.Distance(transform.position, moveTarget) >= .05f)
             {
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
