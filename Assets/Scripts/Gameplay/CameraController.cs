@@ -12,40 +12,60 @@ public class CameraController : MonoBehaviour
     public float zoomUpDownChange = 2f;
 
     public float rotateTransitionTimeInSeconds = .25f;
-    public float rotateDegrees = 45f; 
-    
+    public float rotateDegrees = 45f;
+
+    public float tiltTransitionTimeInSeconds = .25f;
+    public float tiltDegrees = 15f;
+
+    public KeyCode HotkeyZoomIn = KeyCode.KeypadPlus;
+    public KeyCode HotkeyZoomOut = KeyCode.KeypadMinus;
+    public KeyCode HotkeyRotateCameraRight = KeyCode.Period;
+    public KeyCode HotkeyRotateCameraLeft = KeyCode.Comma;
+    public KeyCode HotkeyTiltCameraUp = KeyCode.PageUp;
+    public KeyCode HotkeyTiltCameraDown = KeyCode.PageDown;    
+
     // ======do not modify these=====
     private bool zoomedOut = false;
     private Vector3 newZoomCameraLocation;
 
     private Quaternion currentCameraRotationLocation;
     private Quaternion newCameraRotationLocation;
-    private bool currentlyRotating = false;
+
+    private bool tiltedUp = false;
+    private Quaternion currentCameraTiltLocation;
+    private Quaternion newCameraTiltLocation;
     // ==============================
     private void Start()
     {
         ZoomOut();
+        TiltDown();
     }
     void Update()
     {
 
-        if ((Input.GetAxis("Mouse ScrollWheel") > 0) || (Input.GetKeyDown(KeyCode.KeypadPlus)) && (zoomedOut == true))
+        if ((Input.GetAxis("Mouse ScrollWheel") > 0) || (Input.GetKeyDown(HotkeyZoomIn)) && (zoomedOut == true))
         {
             ZoomIn();
         }
-        if ((Input.GetAxis("Mouse ScrollWheel") < 0) || (Input.GetKeyDown(KeyCode.KeypadMinus)) && (zoomedOut == false))
+        if ((Input.GetAxis("Mouse ScrollWheel") < 0) || (Input.GetKeyDown(HotkeyZoomOut)) && (zoomedOut == false))
         {
             ZoomOut();
         }
-        if (Input.GetKeyDown(KeyCode.Comma) && currentlyRotating == false)
+        if (Input.GetKeyDown(HotkeyRotateCameraLeft))
         {
-            currentlyRotating = true;
             RotateLeft();
         }
-        if (Input.GetKeyDown(KeyCode.Period) && currentlyRotating == false)
+        if (Input.GetKeyDown(HotkeyRotateCameraRight))
         {
-            currentlyRotating = true;
             RotateRight();
+        }
+        if (Input.GetKeyDown(HotkeyTiltCameraUp) && tiltedUp == false)
+        {
+            TiltUp();
+        }
+        if (Input.GetKeyDown(HotkeyTiltCameraDown) && tiltedUp == true)
+        {
+            TiltDown();
         }
     }
 
@@ -82,6 +102,7 @@ public class CameraController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(startingPosition, endingPosition, t / durationOfMove);
             yield return 0;
         }
+        endingPosition.Normalize();
         transform.rotation = endingPosition;
     }
 
@@ -123,7 +144,6 @@ public class CameraController : MonoBehaviour
         newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y + rotateDegrees, transform.rotation.z);
 
         StartCoroutine(SlerpFromTo(currentCameraRotationLocation, newCameraRotationLocation, rotateTransitionTimeInSeconds));
-        currentlyRotating = false;
     }
 
     public void RotateRight()
@@ -133,7 +153,30 @@ public class CameraController : MonoBehaviour
         newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y - rotateDegrees, transform.rotation.z);
 
         StartCoroutine(SlerpFromTo(currentCameraRotationLocation, newCameraRotationLocation, rotateTransitionTimeInSeconds));
-        currentlyRotating = false;
+    }
+
+    #endregion
+
+    #region Tilt
+
+    public void TiltUp()
+    {
+        Debug.Log("Tilting camera up");
+        tiltedUp = true;
+        currentCameraTiltLocation = transform.rotation;
+        newCameraTiltLocation = currentCameraTiltLocation * Quaternion.Euler(transform.rotation.x + tiltDegrees, transform.rotation.y, transform.rotation.z);
+
+        StartCoroutine(SlerpFromTo(currentCameraTiltLocation, newCameraTiltLocation, tiltTransitionTimeInSeconds));
+    }
+
+    public void TiltDown()
+    {
+        Debug.Log("Tilting camera down");
+        tiltedUp = false;
+        currentCameraTiltLocation = transform.rotation;
+        newCameraTiltLocation = currentCameraTiltLocation * Quaternion.Euler(transform.rotation.x - tiltDegrees, transform.rotation.y, transform.rotation.z);
+
+        StartCoroutine(SlerpFromTo(currentCameraTiltLocation, newCameraTiltLocation, tiltTransitionTimeInSeconds));
     }
 
     #endregion
