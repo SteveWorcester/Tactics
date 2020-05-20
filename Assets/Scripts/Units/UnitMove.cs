@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,8 +24,11 @@ public class UnitMove : MonoBehaviour
     public float FullTurnCounter = 1;
     [HideInInspector]
     public bool CurrentlyTakingTurn = false;
-
     //=====================================================
+    private void Start()
+    {
+        
+    }
 
     public void Init()
     {
@@ -38,7 +40,7 @@ public class UnitMove : MonoBehaviour
     public void BeginTurn()
     {
         FullTurnCounter += 1;
-        CurrentlyTakingTurn = true;
+        CurrentlyTakingTurn = true;        
     }
 
     public void EndTurn()

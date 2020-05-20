@@ -15,6 +15,7 @@ public class CameraController : MonoBehaviour
     public float tiltDegrees = 15f;
 
     public float panSensitivity = 1f;
+    public float panToUnitTimeInSeconds = .25f;
 
     public KeyCode HotkeyZoomIn = KeyCode.KeypadPlus;
     public KeyCode HotkeyZoomOut = KeyCode.KeypadMinus;
@@ -122,6 +123,11 @@ public class CameraController : MonoBehaviour
         transform.rotation = endingPosition;
     }
 
+    public void PanCameraToLocation(Vector3 location)
+    { 
+        StartCoroutine(LerpFromTo(gameObject.transform.position, location, panToUnitTimeInSeconds));
+    }
+
     #region Zoom
 
     public void ZoomOut()
@@ -132,7 +138,6 @@ public class CameraController : MonoBehaviour
         var newCameraDownLocation = -Vector3.down * zoomUpDownChange;
         newZoomCameraLocation = newCameraForwardLocation + newCameraDownLocation;
         
-
         StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));
         zoomedOut = true;
     }
