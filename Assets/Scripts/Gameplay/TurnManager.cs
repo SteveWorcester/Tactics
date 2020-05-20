@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using TMPro;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -13,15 +11,21 @@ public class TurnManager : MonoBehaviour
     [HideInInspector]
     public static Queue<KeyValuePair<string, UnitMove>> UnitTurnOrder = new Queue<KeyValuePair<string, UnitMove>>();
     private static bool _creatingTurnQueue = false;
+    private static bool turnInProgress = false;
+    public static CameraController MainCamera;
     //=====================================================
 
     void Start()
     {
-        
+        MainCamera = GameObject.FindObjectOfType<CameraController>();
     }
 
     void Update()
     {
+        if (turnInProgress)
+        {
+            return;
+        }
         if (UnitTurnOrder.Count < AllUnits.Count && !_creatingTurnQueue)
         {
             CreateTurnQueue();
@@ -46,15 +50,19 @@ public class TurnManager : MonoBehaviour
 
     public static void StartTurn()
     {
+        turnInProgress = true;
         var nextUnit = UnitTurnOrder.Peek();
+        MainCamera.PanCameraToLocation(nextUnit.Value.transform.position);
         Debug.Log($"Starting turn.\nPlayer Tag: {nextUnit.Key}\nUnit: {nextUnit.Value.ToString()}");
         nextUnit.Value.BeginTurn();
     }
 
     public static void EndTurn()
     {
+        
         UnitMove currentUnit = UnitTurnOrder.Dequeue().Value;
         Debug.Log($"Ending turn for {currentUnit}");
+        turnInProgress = false;        
     }
 
     public static void AddUnitToGame(string tag, UnitMove unitMove)
