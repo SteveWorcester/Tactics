@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Net.Http.Headers;
 using UnityEngine;
-using UnityEngine.Animations;
-using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {   
@@ -17,12 +14,15 @@ public class CameraController : MonoBehaviour
     public float tiltTransitionTimeInSeconds = .25f;
     public float tiltDegrees = 15f;
 
+    public float panSensitivity = 1f;
+
     public KeyCode HotkeyZoomIn = KeyCode.KeypadPlus;
     public KeyCode HotkeyZoomOut = KeyCode.KeypadMinus;
     public KeyCode HotkeyRotateCameraRight = KeyCode.Period;
     public KeyCode HotkeyRotateCameraLeft = KeyCode.Comma;
     public KeyCode HotkeyTiltCameraUp = KeyCode.PageUp;
-    public KeyCode HotkeyTiltCameraDown = KeyCode.PageDown;    
+    public KeyCode HotkeyTiltCameraDown = KeyCode.PageDown;
+    public int HotkeyPanCameraMouseButton = 2; // 0=LMB; 1=RMB; 2=MMB
 
     // ======do not modify these=====
     private bool zoomedOut = false;
@@ -34,6 +34,8 @@ public class CameraController : MonoBehaviour
     private bool tiltedUp = false;
     private Quaternion currentCameraTiltLocation;
     private Quaternion newCameraTiltLocation;
+
+    private Vector3 mousePanStartLocation;
     // ==============================
     private void Start()
     {
@@ -67,6 +69,20 @@ public class CameraController : MonoBehaviour
         {
             TiltDown();
         }
+    }
+        
+    void LateUpdate()
+    { 
+        if (Input.GetMouseButtonDown(HotkeyPanCameraMouseButton))
+        {
+            mousePanStartLocation = Input.mousePosition;
+        }
+        if (!Input.GetMouseButton(HotkeyPanCameraMouseButton)) return;
+        
+        var relativeMousePosition = Camera.main.ScreenToViewportPoint(Input.mousePosition - mousePanStartLocation);
+        var move = new Vector3(relativeMousePosition.x * panSensitivity, 0, relativeMousePosition.y * panSensitivity);
+        
+        transform.Translate(move, Space.World);   
     }
 
     /// <summary>
