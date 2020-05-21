@@ -325,12 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfUnitHeight: 0
   currentlyMoving: 0
-  FullTurnCounter: 1
-  CurrentlyTakingTurn: 0
-  MoveDistance: 5
+  unitCharacter: {fileID: 0}
   MoveSpeed: 5
-  JumpHeight: 2
-  TurnOrderSpeed: 10
 --- !u!4 &21784689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4579958489226321315, guid: a0257c20a01e9364a9275d792a81ae34,
@@ -5777,7 +5773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670587746}
   m_LocalRotation: {x: 0.38268322, y: -0, z: -0, w: 0.9238797}
-  m_LocalPosition: {x: 6.73, y: 6, z: -5}
+  m_LocalPosition: {x: 0, y: 6, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1643173254}
@@ -11706,9 +11702,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbce5c57196aa4449f230efdfddedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransitionTimeInSeconds: 0.25
+  zoomTransitionTimeInSeconds: 0.25
   zoomForwardBackwardChange: 2
   zoomUpDownChange: 2
+  rotateTransitionTimeInSeconds: 0.25
+  rotateDegrees: 45
+  tiltTransitionTimeInSeconds: 0.25
+  tiltDegrees: 15
+  panSensitivity: 1
+  panToUnitTimeInSeconds: 0.25
+  HotkeyZoomIn: 270
+  HotkeyZoomOut: 269
+  HotkeyRotateCameraRight: 46
+  HotkeyRotateCameraLeft: 44
+  HotkeyTiltCameraUp: 280
+  HotkeyTiltCameraDown: 281
+  HotkeyPanCameraMouseButton: 2
 --- !u!1001 &1646631762
 PrefabInstance:
   m_ObjectHideFlags: 0
