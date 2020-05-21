@@ -114,6 +114,16 @@ MonoBehaviour:
   AdjacencyList: []
   VisitedTile: 0
   ParentTile: {fileID: 0}
+  isUnitLocationColor: {r: 0, g: 0, b: 0, a: 0}
+  isTargetLocationColor: {r: 0, g: 0, b: 0, a: 0}
+  isMoveSelectableColor: {r: 0, g: 0, b: 0, a: 0}
+  isPathableColor: {r: 0, g: 0, b: 0, a: 0}
+  isNotSpecialColor: {r: 0, g: 0, b: 0, a: 0}
   MoveDifficulty: 1
   BlocksLineOfSight: 0
   Pathable: 1
+  UnitLocationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  TargetLocationColor: {r: 0, g: 0, b: 1, a: 1}
+  MoveSelectableTileColor: {r: 0, g: 1, b: 1, a: 1}
+  IsUnpathableColor: {r: 1, g: 1, b: 1, a: 1}
+  NotSpecialColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
