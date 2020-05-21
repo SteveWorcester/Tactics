@@ -4,21 +4,47 @@ using UnityEngine;
 
 public class UnitCharacter : MonoBehaviour
 {
-    // health
-    // speed
-    // movement range
-    // damage
-    // turn counter
+    [HideInInspector]
+    protected UnitMove unitMove;
 
-    // Start is called before the first frame update
-    void Start()
+    [HideInInspector]
+    public float _CurrentHealth;
+    [HideInInspector]
+    public float _Speed;
+    [HideInInspector]
+    public float _DamageResistance;
+    [HideInInspector]
+    public float _DamageBonus;
+    [HideInInspector]
+    public float _FullTurnCounter;
+    [HideInInspector]
+    public bool _CurrentlyTakingTurn = false;
+    [HideInInspector]
+    public bool _HasMovedThisTurn = false;
+    [HideInInspector]
+    public float _JumpHeight;
+    [HideInInspector]
+    public bool _HasAttackedThisTurn = true; // temporarily true until attacks have been added.
+
+    public void Init()
     {
-        
+        unitMove = gameObject.GetComponent<UnitMove>();
+        // UnitAttack attack = GetComponent<UnitAttack>(); this will be added to AddUnitToGame
+        TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BeginTurn()
     {
-        
+        Debug.Log($"UnitCharacter starting turn for {this.tag}");
+        _FullTurnCounter += 1;        
+        _HasMovedThisTurn = false;
+        // _HasAttackedThisTurn = false;
+        _CurrentlyTakingTurn = true;
+    }
+
+    public void EndTurn()
+    {
+        _CurrentlyTakingTurn = false;
+        TurnManager.EndTurn();
     }
 }

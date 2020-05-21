@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -7,9 +8,9 @@ public class TurnManager : MonoBehaviour
 
     // ==========Do not change these variables=============
     [HideInInspector]
-    public static List<KeyValuePair<string, UnitMove>> AllUnits = new List<KeyValuePair<string, UnitMove>>();
+    public static List<Tuple<string, UnitCharacter>> AllUnits = new List<Tuple<string, UnitCharacter>>();
     [HideInInspector]
-    public static Queue<KeyValuePair<string, UnitMove>> UnitTurnOrder = new Queue<KeyValuePair<string, UnitMove>>();
+    public static Queue<Tuple<string, UnitCharacter>> UnitTurnOrder = new Queue<Tuple<string, UnitCharacter>>();
     private static bool _creatingTurnQueue = false;
     private static bool turnInProgress = false;
     public static CameraController MainCamera;
@@ -22,15 +23,15 @@ public class TurnManager : MonoBehaviour
 
     void Update()
     {
-        if (turnInProgress)
+        if (turnInProgress || _creatingTurnQueue)
         {
             return;
         }
-        if (UnitTurnOrder.Count < AllUnits.Count && !_creatingTurnQueue)
+        if (UnitTurnOrder.Count < AllUnits.Count)
         {
             CreateTurnQueue();
         }
-        else if (UnitTurnOrder.Count == AllUnits.Count && !_creatingTurnQueue)
+        if (UnitTurnOrder.Count == AllUnits.Count)
         {
             StartTurn();
         }
@@ -42,8 +43,8 @@ public class TurnManager : MonoBehaviour
         _creatingTurnQueue = true;
 
         UnitTurnOrder.Clear();
-        AllUnits.Sort((KeyValuePair<string, UnitMove> unit1, KeyValuePair<string, UnitMove> unit2) => unit1.Value.FullTurnCounter.CompareTo(unit2.Value.FullTurnCounter));
-        AllUnits.ForEach(u => UnitTurnOrder.Enqueue(u));
+        AllUnits.Sort((unit1, unit2) => unit1.Item2._FullTurnCounter.CompareTo(unit2.Item2._FullTurnCounter));
+        AllUnits.ForEach(unit => UnitTurnOrder.Enqueue(unit));
 
         _creatingTurnQueue = false;        
     }
@@ -52,22 +53,25 @@ public class TurnManager : MonoBehaviour
     {
         turnInProgress = true;
         var nextUnit = UnitTurnOrder.Peek();
-        MainCamera.PanCameraToLocation(nextUnit.Value.transform.position);
-        Debug.Log($"Starting turn.\nPlayer Tag: {nextUnit.Key}\nUnit: {nextUnit.Value.ToString()}");
-        nextUnit.Value.BeginTurn();
+        MainCamera.PanCameraToLocation(nextUnit.Item2.transform.position);
+        Debug.Log($"TurnManager starting turn." +
+            $"\nPlayer Tag: {nextUnit.Item1}");
+
+        nextUnit.Item2.BeginTurn();
     }
 
     public static void EndTurn()
     {
         
-        UnitMove currentUnit = UnitTurnOrder.Dequeue().Value;
-        Debug.Log($"Ending turn for {currentUnit}");
+        var currentUnit = UnitTurnOrder.Dequeue();
+        Debug.Log($"Ending turn for \n{currentUnit.Item1}\n{currentUnit.Item2}");
         turnInProgress = false;        
     }
 
-    public static void AddUnitToGame(string tag, UnitMove unitMove)
+    public static void AddUnitToGame(string unitTag, UnitCharacter unitCharacter)
     {
-        KeyValuePair<string, UnitMove> unitToAdd = new KeyValuePair<string, UnitMove>(tag, unitMove);
+        var unitToAdd = Tuple.Create(unitTag, unitCharacter);
+        
         if (!AllUnits.Contains(unitToAdd))
         {
             AllUnits.Add(unitToAdd);
