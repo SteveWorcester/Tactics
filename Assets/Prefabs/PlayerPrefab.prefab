@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 4579958489226321317}
   - component: {fileID: 4579958489226321316}
   - component: {fileID: 7211123534500507024}
+  - component: {fileID: -1651686464592406313}
+  - component: {fileID: 7057606813284863052}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player1
@@ -203,9 +205,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfUnitHeight: 0
   currentlyMoving: 0
-  FullTurnCounter: 1
-  CurrentlyTakingTurn: 0
-  MoveDistance: 5
+  unitCharacter: {fileID: 0}
   MoveSpeed: 10
+--- !u!114 &-1651686464592406313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579958489226321314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22f3a2cf23c32e4db3892f5b77ee38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7057606813284863052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579958489226321314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ced876f1e7e9a4787d0594c376be48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CurrentHealth: 0
+  _Speed: 0
+  _DamageResistance: 0
+  _DamageBonus: 0
+  _FullTurnCounter: 0
+  _CurrentlyTakingTurn: 0
+  _HasMovedThisTurn: 0
+  _JumpHeight: 0
+  _HasAttackedThisTurn: 1
+  StartingHealth: 10
+  Speed: 10
+  DamageBonus: 0
+  DamageResistance: 0
+  StartingTurnCounterAdd: 10
   JumpHeight: 2
-  TurnOrderSpeed: 10
+  MoveDistance: 5
