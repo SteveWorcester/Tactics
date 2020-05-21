@@ -131,27 +131,27 @@ public class CameraController : MonoBehaviour
     #region Zoom
 
     public void ZoomOut()
-    {        
+    {
+        zoomedOut = true;
         Debug.Log("Zooming camera out");
         var currentPos = transform.position;
         var newCameraForwardLocation = -Vector3.forward * zoomForwardBackwardChange;
         var newCameraDownLocation = -Vector3.down * zoomUpDownChange;
         newZoomCameraLocation = newCameraForwardLocation + newCameraDownLocation;
         
-        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));
-        zoomedOut = true;
+        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));        
     }
     
     public void ZoomIn()
-    {        
+    {
+        zoomedOut = false;
         Debug.Log("Zooming camera in");
         var currentPos = transform.position;
         var newCameraForwardLocation = Vector3.forward * zoomForwardBackwardChange;
         var newCameraDownLocation = Vector3.down * zoomUpDownChange;
         newZoomCameraLocation = newCameraForwardLocation + newCameraDownLocation;        
 
-        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));
-        zoomedOut = false;
+        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));        
     }
 
     #endregion

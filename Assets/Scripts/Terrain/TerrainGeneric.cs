@@ -27,25 +27,42 @@ public abstract class TerrainGeneric : MonoBehaviour
     [HideInInspector]
     public TerrainGeneric ParentTile = null;
 
+    // Tile Colors
+    [HideInInspector]
+    public Color isUnitLocationColor;
+    [HideInInspector]
+    public Color isTargetLocationColor;
+    [HideInInspector]
+    public Color isMoveSelectableColor;
+    [HideInInspector]
+    public Color isPathableColor;
+    [HideInInspector]
+    public Color isNotSpecialColor;
+
+
     //==========================================================================
 
     void Update()
     {
             if (UnitLocation)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+                gameObject.GetComponent<Renderer>().material.color = isUnitLocationColor;
             }
             else if (TargetLocation)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                gameObject.GetComponent<Renderer>().material.color = isTargetLocationColor;
             }
             else if (SelectableTile)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+                gameObject.GetComponent<Renderer>().material.color = isMoveSelectableColor;
+            }
+            else if (!IsPathable)
+            {
+            gameObject.GetComponent<Renderer>().material.color = isPathableColor;
             }
             else
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.white;
+                gameObject.GetComponent<Renderer>().material.color = isNotSpecialColor;
             }
     }
 
