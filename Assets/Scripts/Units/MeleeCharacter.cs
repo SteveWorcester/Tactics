@@ -8,17 +8,22 @@ public class MeleeCharacter : UnitCharacter
     public float Speed = 10; // higher = faster turn counter
     public float DamageBonus = 0;
     public float DamageResistance = 0; // flat negative to all damage.
-    public float StartingTurnCounterAdd = 10; // adds *once* at the beginning of the game
     public float JumpHeight = 2.0f;
     public int MoveDistance = 5;
+    
+    public float StartingOfGameTurnCounter = 10; // adds *once* at the beginning of the game
+    public float TurnCostToMove = 20f;
+    public float TurnCostToStartTurn = 10f;
 
     void Start()
     {
+        _TurnCostStart = TurnCostToStartTurn;
+        _TurnCostMove = TurnCostToMove;
         _CurrentHealth = StartingHealth;
         _Speed= Speed;
         _DamageResistance= DamageResistance;
-        _FullTurnCounter= StartingTurnCounterAdd;
-        _DamageBonus = DamageBonus;
+        _FullTurnCounter= StartingOfGameTurnCounter;
+        _DamageBonus = DamageBonus;        
         Init();
     }
 
@@ -28,17 +33,14 @@ public class MeleeCharacter : UnitCharacter
         {
             return;
         }
-        Debug.Log($"SPAM OK: Currently taking turn: {_CurrentlyTakingTurn} {this.tag} :: {this}");
         if (!unitMove.currentlyMoving && !_HasMovedThisTurn)
         {
-            Debug.Log($"SPAM OK: checking mouse to move...");
             unitMove.SetAdjacencyList(_JumpHeight);
             unitMove.SetSelectableTiles(JumpHeight, MoveDistance);
             unitMove.CheckMouseToMove();
         }
         if (unitMove.currentlyMoving)
         {
-            Debug.Log($"SHORT SPAM OK: Moving....");
             unitMove.Move();
         }
         if (_HasMovedThisTurn)  // and has attacked this turn....

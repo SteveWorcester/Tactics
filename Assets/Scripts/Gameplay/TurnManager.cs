@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
+    // Edit these
+    public float turnSpeedSensitivityMultiplier = 1f;
 
     // ==========Do not change these variables=============
     [HideInInspector]
@@ -14,6 +17,7 @@ public class TurnManager : MonoBehaviour
     private static bool _creatingTurnQueue = false;
     private static bool turnInProgress = false;
     public static CameraController MainCamera;
+    private bool RunningTurnCountdown = false;
     //=====================================================
 
     void Start()
@@ -23,18 +27,37 @@ public class TurnManager : MonoBehaviour
 
     void Update()
     {
-        if (turnInProgress || _creatingTurnQueue)
+        if (turnInProgress || _creatingTurnQueue || RunningTurnCountdown)
         {
             return;
         }
         if (UnitTurnOrder.Count < AllUnits.Count)
-        {
+        {            
             CreateTurnQueue();
+            TurnCountdown();
         }
         if (UnitTurnOrder.Count == AllUnits.Count)
         {
             StartTurn();
         }
+    }
+
+    private void TurnCountdown()
+    {
+        RunningTurnCountdown = true;
+        while (AllUnits.First().Item2._FullTurnCounter > 0)
+        {
+            foreach (var unit in AllUnits)
+            {
+                var countdownUnit = unit.Item2._Speed * turnSpeedSensitivityMultiplier;
+                unit.Item2._FullTurnCounter -= countdownUnit;
+                if (unit.Item2._FullTurnCounter < 0)
+                {
+                    unit.Item2._FullTurnCounter = 0;
+                }
+            }
+        }
+        RunningTurnCountdown = false;
     }
 
     static void CreateTurnQueue()
