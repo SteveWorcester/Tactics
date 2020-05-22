@@ -18,11 +18,20 @@ public class TurnManager : MonoBehaviour
     private static bool turnInProgress = false;
     public static CameraController MainCamera;
     private bool RunningTurnCountdown = false;
+    [HideInInspector]
+    public static int _TurnCounter = 1;
     //=====================================================
 
     void Start()
     {
-        MainCamera = GameObject.FindObjectOfType<CameraController>();
+        MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
+        Init();
+    }
+
+    void Init()
+    {
+        MainCamera.ZoomOut();
+        MainCamera.TiltDown();
     }
 
     void Update()
@@ -31,12 +40,15 @@ public class TurnManager : MonoBehaviour
         {
             return;
         }
-        if (UnitTurnOrder.Count < AllUnits.Count)
-        {            
+        else if (UnitTurnOrder.Count < AllUnits.Count)
+        {
             CreateTurnQueue();
             TurnCountdown();
         }
-        if (UnitTurnOrder.Count == AllUnits.Count)
+    }
+    private void LateUpdate()
+    {
+        if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
         {
             StartTurn();
         }
@@ -44,6 +56,7 @@ public class TurnManager : MonoBehaviour
 
     private void TurnCountdown()
     {
+        Debug.Log($"TurnManager running turn countdown...");
         RunningTurnCountdown = true;
         while (AllUnits.First().Item2._FullTurnCounter > 0)
         {
@@ -62,7 +75,7 @@ public class TurnManager : MonoBehaviour
 
     static void CreateTurnQueue()
     {
-        Debug.Log("Creating Turn Queue...");
+        Debug.Log("TurnManager Creating Turn Queue...");
         _creatingTurnQueue = true;
 
         UnitTurnOrder.Clear();
@@ -75,20 +88,20 @@ public class TurnManager : MonoBehaviour
     public static void StartTurn()
     {
         turnInProgress = true;
-        var nextUnit = UnitTurnOrder.Peek();
-        MainCamera.PanCameraToLocation(nextUnit.Item2.transform.position);
+        var nextUnit = UnitTurnOrder.Peek();        
         Debug.Log($"TurnManager starting turn." +
             $"\nPlayer Tag: {nextUnit.Item1}");
-
         nextUnit.Item2.BeginTurn();
+        Debug.Log($"auto-panning camera to {nextUnit.Item2}");
+        MainCamera.PanCameraToLocation(nextUnit.Item2.transform.position);
     }
 
     public static void EndTurn()
-    {
-        
+    {        
         var currentUnit = UnitTurnOrder.Dequeue();
-        Debug.Log($"Ending turn for \n{currentUnit.Item1}\n{currentUnit.Item2}");
-        turnInProgress = false;        
+        Debug.Log($"TurnManager Ending turn for \n{currentUnit.Item1}\n{currentUnit.Item2}");
+        _TurnCounter++;
+        turnInProgress = false;
     }
 
     public static void AddUnitToGame(string unitTag, UnitCharacter unitCharacter)

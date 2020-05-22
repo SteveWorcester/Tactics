@@ -13,12 +13,13 @@ public class UnitMove : MonoBehaviour
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
-    protected TerrainGeneric _currentTile;
+    public TerrainGeneric _currentTile;
 
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
-    protected Vector3 moveHeading = new Vector3();
+    public Vector3 moveHeading = new Vector3();
+    protected bool _hasMoved = false;
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
@@ -29,7 +30,23 @@ public class UnitMove : MonoBehaviour
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
         halfUnitHeight = gameObject.GetComponent<Collider>().bounds.extents.y;
         unitCharacter = gameObject.GetComponent<UnitCharacter>();
-    } 
+    }
+
+    public void StartMovePhase()
+    {
+        Debug.Log("UnitMove starting move phase");
+        _hasMoved = false;
+        unitCharacter._InMovePhase = true;
+    }
+
+    public void EndMovePhase()
+    {
+        Debug.Log($"unit moved: {unitCharacter}. changing to character control.");
+        unitCharacter._FullTurnCounter += (unitCharacter._TurnCostMove);
+        unitCharacter._MovesLeftThisTurn--;
+        SetCurrentTile();
+        unitCharacter._InMovePhase = false;
+    }
 
     public void Move()
     {     
@@ -55,8 +72,7 @@ public class UnitMove : MonoBehaviour
         {
             ClearSelectableTiles();
             currentlyMoving = false;
-
-            unitCharacter._HasMovedThisTurn = true;
+            _hasMoved = true;
         }
     }
     
@@ -149,7 +165,7 @@ public class UnitMove : MonoBehaviour
 
     #region Move-specific
 
-    private void SetMoveVelocity()
+    public void SetMoveVelocity()
     {
         moveVelocity = moveHeading * _unitMoveSpeed;
     }
@@ -186,7 +202,7 @@ public class UnitMove : MonoBehaviour
         currentlyMoving = true;
     }
 
-    private void SetHeadingDirection(Vector3 targetDirection)
+    public void SetHeadingDirection(Vector3 targetDirection)
     {
         moveHeading = targetDirection - transform.position;
         moveHeading.Normalize();
