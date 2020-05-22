@@ -4,26 +4,41 @@ using UnityEngine;
 
 public class MeleeCharacter : UnitCharacter
 {
+    public KeyCode HotkeyMove = KeyCode.M;
+    public KeyCode HotkeyAttack = KeyCode.A;
+    public KeyCode HotkeyEndTurn = KeyCode.E;
+
     public float StartingHealth = 10;
     public float Speed = 10; // higher = faster turn counter
     public float DamageBonus = 0;
     public float DamageResistance = 0; // flat negative to all damage.
     public float JumpHeight = 2.0f;
     public int MoveDistance = 5;
-    
+    public int AttacksPerTurn = 1;
+    protected int MovesPerTurn = 1;
+
     public float StartingOfGameTurnCounter = 10; // adds *once* at the beginning of the game
     public float TurnCostToMove = 20f;
     public float TurnCostToStartTurn = 10f;
 
+    public bool InAttackPhase = false;
+    public bool InMovePhase = false;
+
+    public bool HasAttacked = false;
+    public bool HasMoved = false;
+
     void Start()
     {
+        _AvailableAttacksPerTurn = AttacksPerTurn;
+        _AvailableMovesPerTurn = MovesPerTurn;
         _TurnCostStart = TurnCostToStartTurn;
         _TurnCostMove = TurnCostToMove;
         _CurrentHealth = StartingHealth;
         _Speed= Speed;
         _DamageResistance= DamageResistance;
         _FullTurnCounter= StartingOfGameTurnCounter;
-        _DamageBonus = DamageBonus;        
+        _DamageBonus = DamageBonus;
+        _MoveDistance = MoveDistance;
         Init();
     }
 
@@ -33,22 +48,21 @@ public class MeleeCharacter : UnitCharacter
         {
             return;
         }
-        if (!unitMove.currentlyMoving && !_HasMovedThisTurn)
+        if (_InMovePhase || _InAttackPhase)
         {
-            unitMove.SetAdjacencyList(_JumpHeight);
-            unitMove.SetSelectableTiles(JumpHeight, MoveDistance);
-            unitMove.CheckMouseToMove();
+            return;
         }
-        if (unitMove.currentlyMoving)
+        if (Input.GetKeyUp(HotkeyMove) && _MovesLeftThisTurn > 0)
         {
-            unitMove.Move();
+            unitMove.StartMovePhase();
         }
-        if (_HasMovedThisTurn)  // and has attacked this turn....
+        if (Input.GetKeyUp(HotkeyAttack) && _AttacksLeftThisTurn > 0)
         {
-            Debug.Log($"Ending turn for {this.tag} :: {this}.");
+            unitAttack.StartAttackPhase();
+        }
+        if (Input.GetKeyUp(HotkeyEndTurn))
+        {
             EndTurn();
         }
     }
-
-
 }

@@ -40,8 +40,7 @@ public class CameraController : MonoBehaviour
     // ==============================
     private void Start()
     {
-        ZoomOut();
-        TiltDown();
+
     }
     void Update()
     {

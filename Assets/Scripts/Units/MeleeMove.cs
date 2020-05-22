@@ -15,4 +15,26 @@ public class MeleeMove : UnitMove
         halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
         Init();
     }
+
+    private void Update()
+    {
+        if (!unitCharacter._InMovePhase)
+        {
+            return;
+        }
+        if (!currentlyMoving)
+        {
+            SetAdjacencyList(unitCharacter._JumpHeight);
+            SetSelectableTiles(unitCharacter._JumpHeight, unitCharacter._MoveDistance);
+            CheckMouseToMove();
+        }
+        if (currentlyMoving)
+        {
+            Move();
+        }
+        if (_hasMoved)
+        {
+            EndMovePhase();
+        }
+    }
 }

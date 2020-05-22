@@ -6,56 +6,74 @@ public class UnitCharacter : MonoBehaviour
 {
     [HideInInspector]
     protected UnitMove unitMove;
+    [HideInInspector]
+    protected UnitAttack unitAttack;
 
     [HideInInspector]
     public float _CurrentHealth;
     [HideInInspector]
     public float _Speed;
     [HideInInspector]
+    public float _JumpHeight;
+    [HideInInspector]
+    public int _MoveDistance;
+    [HideInInspector]
     public float _DamageResistance;
     [HideInInspector]
     public float _DamageBonus;
     [HideInInspector]
     public float _FullTurnCounter;
+
+    [HideInInspector]
+    public float _TurnCostStart = 10f;
+    [HideInInspector]
+    public float _TurnCostMove = 20f;
+    [HideInInspector]
+    public float _TurnCostAbility;
+
+    [HideInInspector]
+    public int _AvailableAttacksPerTurn = 1;
+    [HideInInspector]
+    public int _AttacksLeftThisTurn;
+    [HideInInspector]
+    public int _AvailableMovesPerTurn = 1;
+    [HideInInspector]
+    public int _MovesLeftThisTurn;
+
     [HideInInspector]
     public bool _CurrentlyTakingTurn = false;
     [HideInInspector]
-    public bool _HasMovedThisTurn = false;
+    public bool _IsDead = false;
     [HideInInspector]
-    public float _JumpHeight;
+    public bool _InMovePhase = false;
     [HideInInspector]
-    public bool _HasAttackedThisTurn = true; // temporarily true until attacks have been added.
-    protected float _TurnCostStart = 10f;
-    protected float _TurnCostMove = 20f;
-    protected float _TurnCostAttack;
+    public bool _InAttackPhase = false;
+
 
     public void Init()
     {
         unitMove = gameObject.GetComponent<UnitMove>();
-        // UnitAttack attack = GetComponent<UnitAttack>(); this will be added to AddUnitToGame
+        unitAttack = GetComponent<UnitAttack>();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
     public void BeginTurn()
     {
         Debug.Log($"UnitCharacter starting turn for {this.tag}");
-        _FullTurnCounter += _TurnCostStart;        
-        _HasMovedThisTurn = false;
-        // _HasAttackedThisTurn = false;
+        _FullTurnCounter += _TurnCostStart;
+        _InMovePhase = false;
+        _InAttackPhase = false;
+        _AttacksLeftThisTurn = _AvailableAttacksPerTurn;
+        _MovesLeftThisTurn = _AvailableMovesPerTurn;
         _CurrentlyTakingTurn = true;
+        unitMove.SetCurrentTile();
     }
 
     public void EndTurn()
     {
-        if (_HasMovedThisTurn)
-        {
-            _FullTurnCounter += _TurnCostMove;
-        }
-        if (_HasAttackedThisTurn)
-        {
-            _FullTurnCounter += _TurnCostAttack;
-        }
         _CurrentlyTakingTurn = false;
+        unitAttack._currentTile.UnitLocation = false;
+        unitMove._currentTile.UnitLocation = false;
         Debug.Log($"{this.tag} unit ending turn with turn counter amount: {_FullTurnCounter}");
         TurnManager.EndTurn();
     }
