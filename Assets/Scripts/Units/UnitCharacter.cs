@@ -25,6 +25,9 @@ public class UnitCharacter : MonoBehaviour
     public float _JumpHeight;
     [HideInInspector]
     public bool _HasAttackedThisTurn = true; // temporarily true until attacks have been added.
+    protected float _TurnCostStart = 10f;
+    protected float _TurnCostMove = 20f;
+    protected float _TurnCostAttack;
 
     public void Init()
     {
@@ -36,7 +39,7 @@ public class UnitCharacter : MonoBehaviour
     public void BeginTurn()
     {
         Debug.Log($"UnitCharacter starting turn for {this.tag}");
-        _FullTurnCounter += 1;        
+        _FullTurnCounter += _TurnCostStart;        
         _HasMovedThisTurn = false;
         // _HasAttackedThisTurn = false;
         _CurrentlyTakingTurn = true;
@@ -44,7 +47,16 @@ public class UnitCharacter : MonoBehaviour
 
     public void EndTurn()
     {
+        if (_HasMovedThisTurn)
+        {
+            _FullTurnCounter += _TurnCostMove;
+        }
+        if (_HasAttackedThisTurn)
+        {
+            _FullTurnCounter += _TurnCostAttack;
+        }
         _CurrentlyTakingTurn = false;
+        Debug.Log($"{this.tag} unit ending turn with turn counter amount: {_FullTurnCounter}");
         TurnManager.EndTurn();
     }
 }
