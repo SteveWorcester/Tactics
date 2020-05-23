@@ -97,7 +97,7 @@ public class CameraController : MonoBehaviour
         var relativeMousePosition = Camera.main.ScreenToViewportPoint(Input.mousePosition - mousePanStartLocation);
         var move = new Vector3(relativeMousePosition.x * panSensitivity, 0, relativeMousePosition.y * panSensitivity);
         
-        transform.Translate(move, Space.World);   
+        transform.Translate(move, Space.Self);   
     }
 
     /// <summary>
