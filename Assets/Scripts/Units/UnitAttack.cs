@@ -15,7 +15,8 @@ public class UnitAttack : MonoBehaviour
 
     protected bool _IsCurrentlyAttacking = false;
     protected bool _AttackSelected = false;
-    protected bool _HasAttacked = false;
+    [HideInInspector]
+    public bool _HasAttacked = false;
 
     protected UnitCharacter unitCharacter;
     protected UnitMove unitMove;
@@ -23,7 +24,6 @@ public class UnitAttack : MonoBehaviour
 
     protected List<TerrainGeneric> _AttackableTiles = new List<TerrainGeneric>();
     protected GameObject[] _AllTiles;
-    public TerrainGeneric _currentTile;
 
     // ===========================================
 
@@ -124,17 +124,21 @@ public class UnitAttack : MonoBehaviour
         if (actualDamageDealt > 0)
         {
             enemy._CurrentHealth -= actualDamageDealt;
-        }        
+        }
+        if (enemy._CurrentHealth <= 0)
+        {
+            enemy._CurrentHealth = 0;
+        }
     }
 
     #region Tile finding/marking
 
     public void ClearAttackableTiles()
     {
-        if (_currentTile != null)
+        if (unitCharacter._currentTile != null)
         {
-            _currentTile.UnitLocation = false;
-            _currentTile = null;
+            unitCharacter._currentTile.UnitLocation = false;
+            unitCharacter._currentTile = null;
 
         }
         foreach (TerrainGeneric tile in _AttackableTiles)
@@ -175,8 +179,8 @@ public class UnitAttack : MonoBehaviour
 
     public void SetCurrentTile()
     {
-        _currentTile = GetTargetTile(gameObject);
-        _currentTile.UnitLocation = true;
+        unitCharacter._currentTile = GetTargetTile(gameObject);
+        unitCharacter._currentTile.UnitLocation = true;
     }
 
     public void SetAttackableTiles()
@@ -186,8 +190,8 @@ public class UnitAttack : MonoBehaviour
         SetCurrentTile();
 
         Queue<TerrainGeneric> process = new Queue<TerrainGeneric>();
-        process.Enqueue(_currentTile);
-        _currentTile.VisitedTile = true;
+        process.Enqueue(unitCharacter._currentTile);
+        unitCharacter._currentTile.VisitedTile = true;
 
         while (process.Count > 0)
         {

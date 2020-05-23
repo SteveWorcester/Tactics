@@ -45,15 +45,19 @@ public class UnitCharacter : MonoBehaviour
     [HideInInspector]
     public bool _IsDead = false;
     [HideInInspector]
+    private bool alreadyDied = false;
+    [HideInInspector]
     public bool _InMovePhase = false;
     [HideInInspector]
     public bool _InAttackPhase = false;
+    [HideInInspector]
+    public TerrainGeneric _currentTile;
 
 
     public void Init()
     {
         unitMove = gameObject.GetComponent<UnitMove>();
-        unitAttack = GetComponent<UnitAttack>();
+        unitAttack = gameObject.GetComponent<UnitAttack>();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
@@ -72,9 +76,19 @@ public class UnitCharacter : MonoBehaviour
     public void EndTurn()
     {
         _CurrentlyTakingTurn = false;
-        unitAttack._currentTile.UnitLocation = false;
-        unitMove._currentTile.UnitLocation = false;
+        _currentTile.UnitLocation = false;
+
         Debug.Log($"{this.tag} unit ending turn with turn counter amount: {_FullTurnCounter}");
         TurnManager.EndTurn();
+    }
+
+    public void ActivateDeath()
+    {
+        if (!alreadyDied)
+        {
+            var rotate90Degrees = new Vector3(transform.rotation.x + 90, transform.rotation.y, transform.rotation.z);
+            gameObject.transform.Rotate(rotate90Degrees, Space.Self);
+        }
+
     }
 }

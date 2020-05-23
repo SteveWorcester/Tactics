@@ -20,6 +20,8 @@ public class TurnManager : MonoBehaviour
     private bool RunningTurnCountdown = false;
     [HideInInspector]
     public static int _TurnCounter = 1;
+    [HideInInspector]
+    public static int _LivingUnits = 0;
     //=====================================================
 
     void Start()
@@ -80,7 +82,16 @@ public class TurnManager : MonoBehaviour
 
         UnitTurnOrder.Clear();
         AllUnits.Sort((unit1, unit2) => unit1.Item2._FullTurnCounter.CompareTo(unit2.Item2._FullTurnCounter));
-        AllUnits.ForEach(unit => UnitTurnOrder.Enqueue(unit));
+
+        _LivingUnits = 0;
+        foreach (var unit in AllUnits)
+        {
+            if (!unit.Item2._IsDead)
+            {
+                _LivingUnits++;
+                UnitTurnOrder.Enqueue(unit);
+            }
+        }
 
         _creatingTurnQueue = false;        
     }
@@ -110,6 +121,7 @@ public class TurnManager : MonoBehaviour
         
         if (!AllUnits.Contains(unitToAdd))
         {
+            _LivingUnits++;
             AllUnits.Add(unitToAdd);
         }
     }
