@@ -21,7 +21,8 @@ public class TurnManager : MonoBehaviour
     [HideInInspector]
     public static int _TurnCounter = 1;
     [HideInInspector]
-    public static int _LivingUnits = 0;
+    public static int _LivingUnits = 0;    
+    public UnitCharacter _CurrentlyActiveUnit;
     //=====================================================
 
     void Start()
