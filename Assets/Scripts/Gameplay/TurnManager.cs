@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
     // Edit these
     public float turnSpeedSensitivityMultiplier = 1f;
 
+    public Image winnerScreenImage;
+    public Image playerTurnBannerImage;
+    
+
     // ==========Do not change these variables=============
+    [HideInInspector]
+    public bool Quit = false;
+    [HideInInspector]
+    public bool GameHasBeenWon = false;
+    private List<string> playerTagCheckList = new List<string>();
     [HideInInspector]
     public static List<Tuple<string, UnitCharacter>> AllUnits = new List<Tuple<string, UnitCharacter>>();
     [HideInInspector]
@@ -39,21 +49,32 @@ public class TurnManager : MonoBehaviour
 
     void Update()
     {
-        if (turnInProgress || _creatingTurnQueue || RunningTurnCountdown)
+        if (!GameHasBeenWon)
         {
-            return;
+            if (turnInProgress || _creatingTurnQueue || RunningTurnCountdown)
+            {
+                return;
+            }
+            else if (UnitTurnOrder.Count < AllUnits.Count)
+            {
+                CreateTurnQueue();
+                CheckForWinCondition();
+                TurnCountdown();
+            }
         }
-        else if (UnitTurnOrder.Count < AllUnits.Count)
+        if (GameHasBeenWon)
         {
-            CreateTurnQueue();
-            TurnCountdown();
+            DisplayWinnerScreen();
         }
     }
     private void LateUpdate()
     {
-        if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
+        if (!GameHasBeenWon)
         {
-            StartTurn();
+            if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
+            {
+                StartTurn();
+            }
         }
     }
 
@@ -65,8 +86,7 @@ public class TurnManager : MonoBehaviour
         {
             foreach (var unit in AllUnits)
             {
-                var countdownUnit = unit.Item2._Speed * turnSpeedSensitivityMultiplier;
-                unit.Item2._FullTurnCounter -= countdownUnit;
+                unit.Item2._FullTurnCounter -= unit.Item2._Speed * turnSpeedSensitivityMultiplier;
                 if (unit.Item2._FullTurnCounter < 0)
                 {
                     unit.Item2._FullTurnCounter = 0;
@@ -93,8 +113,20 @@ public class TurnManager : MonoBehaviour
                 UnitTurnOrder.Enqueue(unit);
             }
         }
-
         _creatingTurnQueue = false;        
+    }
+
+    private void CheckForWinCondition()
+    {
+        var UnitCheckAgainst = UnitTurnOrder.First().Item1;
+        foreach (var unit in UnitTurnOrder)
+        {
+            if (!unit.Item1.Equals(UnitCheckAgainst))
+            {
+                return;
+            }
+        }
+        GameHasBeenWon = true;
     }
 
     public static void StartTurn()
@@ -126,4 +158,39 @@ public class TurnManager : MonoBehaviour
             AllUnits.Add(unitToAdd);
         }
     }
+
+    #region ClickableActions
+    
+    public void DisplayWinnerScreen()
+    {
+        StartCoroutine(FadeImage(false, winnerScreenImage));
+    }    
+
+    public void DisplayPlayerTurnBannerAndFade()
+    {        
+        StartCoroutine(FadeImage(false, playerTurnBannerImage));
+        StartCoroutine(FadeImage(true, playerTurnBannerImage));
+    }
+
+    #endregion
+
+    public IEnumerator<Coroutine> FadeImage(bool fadeAway, Image imageToFade)
+    {
+        if (fadeAway)
+        {
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                imageToFade.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+        else
+        {
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                imageToFade.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+    }    
 }
