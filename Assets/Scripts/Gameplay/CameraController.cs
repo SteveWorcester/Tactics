@@ -1,22 +1,11 @@
 ﻿using System.Collections;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-{   
+{
     // modify these
-    public float zoomTransitionTimeInSeconds = .25f;
-    public float zoomForwardBackwardChange = 2f;
-    public float zoomUpDownChange = 2f;
-
-    public float rotateTransitionTimeInSeconds = .25f;
-    public float rotateDegrees = 45f;
-
-    public float tiltTransitionTimeInSeconds = .25f;
-    public float tiltDegrees = 15f;
-
-    public float panSensitivity = 1f;
-    public float panToUnitTimeInSeconds = .25f;
-
+    [Header("Hotkeys")]
     public KeyCode HotkeyZoomIn = KeyCode.KeypadPlus;
     public KeyCode HotkeyZoomOut = KeyCode.KeypadMinus;
     public KeyCode HotkeyRotateCameraRight = KeyCode.Period;
@@ -24,6 +13,23 @@ public class CameraController : MonoBehaviour
     public KeyCode HotkeyTiltCameraUp = KeyCode.PageUp;
     public KeyCode HotkeyTiltCameraDown = KeyCode.PageDown;
     public int HotkeyPanCameraMouseButton = 2; // 0=LMB; 1=RMB; 2=MMB
+
+    [Header("Zoom")]
+    public float zoomTransitionTimeInSeconds = .25f;
+    public float zoomForwardBackwardChange = .1f;
+    public float zoomUpDownChange = .1f;
+
+    [Header("Rotation")]
+    public float rotateTransitionTimeInSeconds = .25f;
+    public float rotateDegrees = 45f;
+
+    [Header("Tilt")]
+    public float tiltTransitionTimeInSeconds = .25f;
+    public float tiltDegrees = 15f;
+
+    [Header("Pan")]
+    public float panSensitivity = 1f;
+    public float panToUnitTimeInSeconds = .25f;
 
     // ======do not modify these=====
     private bool zoomedOut = false;
@@ -37,37 +43,46 @@ public class CameraController : MonoBehaviour
     private Quaternion newCameraTiltLocation;
 
     private Vector3 mousePanStartLocation;
+    private Vector3 originalCameraLocation;
+    private Quaternion originalCameraRotation;
+    private Camera mainCamera;
     // ==============================
     private void Start()
     {
-
+        originalCameraLocation = transform.position;
+        originalCameraRotation = transform.rotation;
+        mainCamera = Camera.main;
     }
     void Update()
     {
 
-        if ((Input.GetAxis("Mouse ScrollWheel") > 0) || (Input.GetKeyDown(HotkeyZoomIn)) && (zoomedOut == true))
+        if (zoomedOut == true && (Input.GetAxis("Mouse ScrollWheel") > 0) || (Input.GetKeyDown(HotkeyZoomIn)))
         {
             ZoomIn();
         }
-        if ((Input.GetAxis("Mouse ScrollWheel") < 0) || (Input.GetKeyDown(HotkeyZoomOut)) && (zoomedOut == false))
+        if (zoomedOut == false && (Input.GetAxis("Mouse ScrollWheel") < 0) || (Input.GetKeyDown(HotkeyZoomOut)))
         {
             ZoomOut();
         }
-        if (Input.GetKeyDown(HotkeyRotateCameraLeft))
+        if (Input.GetKeyUp(HotkeyRotateCameraLeft))
         {
             RotateLeft();
         }
-        if (Input.GetKeyDown(HotkeyRotateCameraRight))
+        if (Input.GetKeyUp(HotkeyRotateCameraRight))
         {
             RotateRight();
         }
-        if (Input.GetKeyDown(HotkeyTiltCameraUp) && tiltedUp == false)
+        if (Input.GetKeyUp(HotkeyTiltCameraUp) && tiltedUp == false)
         {
             TiltUp();
         }
-        if (Input.GetKeyDown(HotkeyTiltCameraDown) && tiltedUp == true)
+        if (Input.GetKeyUp(HotkeyTiltCameraDown) && tiltedUp == true)
         {
             TiltDown();
+        }
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            ResetCameraPosition();
         }
     }
         
@@ -92,12 +107,12 @@ public class CameraController : MonoBehaviour
     /// <param name="endingPosition"></param>
     /// <param name="durationOfMove"></param>
     /// <returns></returns>
-    IEnumerator LerpFromTo(Vector3 startingPosition, Vector3 endingPosition, float durationOfMove)
+    IEnumerator LerpTo(Vector3 endingPosition, float durationOfMove)
     {
         Debug.Log("Lerping camera");
         for (float t = 0f; t < durationOfMove; t += Time.deltaTime)
         {
-            transform.position = Vector3.Lerp(startingPosition, endingPosition, t / durationOfMove);
+            transform.position = Vector3.Lerp(gameObject.transform.position, endingPosition, t / durationOfMove);
             yield return 0;
         }
         transform.position = endingPosition;
@@ -110,69 +125,79 @@ public class CameraController : MonoBehaviour
     /// <param name="endingPosition"></param>
     /// <param name="durationOfMove"></param>
     /// <returns></returns>
-    IEnumerator SlerpFromTo(Quaternion startingPosition, Quaternion endingPosition, float durationOfMove)
+    IEnumerator SLerpTo(Quaternion endingPosition, float durationOfMove)
     {
         Debug.Log("Slerping camera");
         for (float t = 0f; t < durationOfMove; t += Time.deltaTime)
         {
-            transform.rotation = Quaternion.Slerp(startingPosition, endingPosition, t / durationOfMove);
+            transform.rotation = Quaternion.Slerp(transform.rotation, endingPosition, t / durationOfMove);
             yield return 0;
         }
-        endingPosition.Normalize();
         transform.rotation = endingPosition;
     }
 
     public void PanCameraToLocation(Vector3 location)
     { 
-        StartCoroutine(LerpFromTo(gameObject.transform.position, location, panToUnitTimeInSeconds));
+        StartCoroutine(LerpTo(location, panToUnitTimeInSeconds));
+    }
+
+    public void ResetCameraPosition()
+    {
+        StartCoroutine(LerpTo(originalCameraLocation, zoomTransitionTimeInSeconds));
+        StartCoroutine(SLerpTo(originalCameraRotation, rotateTransitionTimeInSeconds));
     }
 
     #region Zoom
 
+    public Vector3 ZoomLocation()
+    {
+        var zoomVariable = zoomedOut ? -1 : 1;
+        var forward = transform.forward * zoomForwardBackwardChange * zoomVariable;
+        var down = -transform.up * zoomUpDownChange * zoomVariable;
+        return transform.position + forward + down;
+    }
+
     public void ZoomOut()
     {
         zoomedOut = true;
-        Debug.Log("Zooming camera out");
-        var currentPos = transform.position;
-        var newCameraForwardLocation = -Vector3.forward * zoomForwardBackwardChange;
-        var newCameraDownLocation = -Vector3.down * zoomUpDownChange;
-        newZoomCameraLocation = newCameraForwardLocation + newCameraDownLocation;
-        
-        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));        
+        StartCoroutine(LerpTo(ZoomLocation(), zoomTransitionTimeInSeconds));
     }
     
     public void ZoomIn()
     {
         zoomedOut = false;
-        Debug.Log("Zooming camera in");
-        var currentPos = transform.position;
-        var newCameraForwardLocation = Vector3.forward * zoomForwardBackwardChange;
-        var newCameraDownLocation = Vector3.down * zoomUpDownChange;
-        newZoomCameraLocation = newCameraForwardLocation + newCameraDownLocation;        
-
-        StartCoroutine(LerpFromTo(currentPos, newZoomCameraLocation, zoomTransitionTimeInSeconds));        
+        StartCoroutine(LerpTo(ZoomLocation(), zoomTransitionTimeInSeconds));        
     }
 
     #endregion
 
     #region Rotate
 
+    public Vector3 GetRotationQuat(bool turnRight)
+    {
+        Vector3 newLocation = transform.rotation.eulerAngles;
+        var rotateLeftOrRight = turnRight ? -1 : 1;
+        var yTwist = (transform.rotation.y + (rotateDegrees)) * rotateLeftOrRight;
+        newLocation.y += yTwist;
+        return newLocation;
+    }
+
     public void RotateLeft()
     {        
         Debug.Log("Rotating camera left");
-        currentCameraRotationLocation = transform.rotation;
-        newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y + rotateDegrees, transform.rotation.z);
+        //currentCameraRotationLocation = transform.rotation;
+        //newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y + rotateDegrees, transform.rotation.z);
 
-        StartCoroutine(SlerpFromTo(currentCameraRotationLocation, newCameraRotationLocation, rotateTransitionTimeInSeconds));
+        StartCoroutine(SLerpTo(Quaternion.Euler(GetRotationQuat(false)), rotateTransitionTimeInSeconds));
     }
 
     public void RotateRight()
     {
         Debug.Log("Rotating camera right");
-        currentCameraRotationLocation = transform.rotation;
-        newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y - rotateDegrees, transform.rotation.z);
+        //currentCameraRotationLocation = transform.rotation;
+        //newCameraRotationLocation = currentCameraRotationLocation * Quaternion.Euler(transform.rotation.x, transform.rotation.y - rotateDegrees, transform.rotation.z);
 
-        StartCoroutine(SlerpFromTo(currentCameraRotationLocation, newCameraRotationLocation, rotateTransitionTimeInSeconds));
+        StartCoroutine(SLerpTo(Quaternion.Euler(GetRotationQuat(true)), rotateTransitionTimeInSeconds));
     }
 
     #endregion
@@ -186,7 +211,7 @@ public class CameraController : MonoBehaviour
         currentCameraTiltLocation = transform.rotation;
         newCameraTiltLocation = currentCameraTiltLocation * Quaternion.Euler(transform.rotation.x + tiltDegrees, transform.rotation.y, transform.rotation.z);
 
-        StartCoroutine(SlerpFromTo(currentCameraTiltLocation, newCameraTiltLocation, tiltTransitionTimeInSeconds));
+        StartCoroutine(SLerpTo(newCameraTiltLocation, tiltTransitionTimeInSeconds));
     }
 
     public void TiltDown()
@@ -196,7 +221,7 @@ public class CameraController : MonoBehaviour
         currentCameraTiltLocation = transform.rotation;
         newCameraTiltLocation = currentCameraTiltLocation * Quaternion.Euler(transform.rotation.x - tiltDegrees, transform.rotation.y, transform.rotation.z);
 
-        StartCoroutine(SlerpFromTo(currentCameraTiltLocation, newCameraTiltLocation, tiltTransitionTimeInSeconds));
+        StartCoroutine(SLerpTo(newCameraTiltLocation, tiltTransitionTimeInSeconds));
     }
 
     #endregion
