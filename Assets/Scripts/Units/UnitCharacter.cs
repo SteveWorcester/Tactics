@@ -52,12 +52,13 @@ public class UnitCharacter : MonoBehaviour
     public bool _InAttackPhase = false;
     [HideInInspector]
     public TerrainGeneric _currentTile;
-
+    public TurnManager turnManager;
 
     public void Init()
     {
         unitMove = gameObject.GetComponent<UnitMove>();
         unitAttack = gameObject.GetComponent<UnitAttack>();
+        turnManager = GameObject.FindObjectOfType<TurnManager>();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
@@ -70,6 +71,7 @@ public class UnitCharacter : MonoBehaviour
         _AttacksLeftThisTurn = _AvailableAttacksPerTurn;
         _MovesLeftThisTurn = _AvailableMovesPerTurn;
         _CurrentlyTakingTurn = true;
+        turnManager._CurrentlyActiveUnit = this;
         unitMove.SetCurrentTile();
     }
 
