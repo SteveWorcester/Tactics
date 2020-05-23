@@ -21,6 +21,7 @@ public class UnitAttack : MonoBehaviour
     protected UnitCharacter unitCharacter;
     protected UnitMove unitMove;
     protected TerrainGeneric attackLocation;
+    protected bool isAttackLocationOccupied = false;
 
     protected List<TerrainGeneric> _AttackableTiles = new List<TerrainGeneric>();
     protected GameObject[] _AllTiles;
@@ -70,25 +71,25 @@ public class UnitAttack : MonoBehaviour
     public void UseAbility()
     {
         var enemyUnit = GetUnitOnTile(attackLocation);
-        _AttackSelected = false;
-        Vector3 attackDirection = new Vector3(attackLocation.transform.position.x, gameObject.transform.position.y, attackLocation.transform.position.z);
-        
-        if (Vector3.Distance(transform.position, enemyUnit.transform.position) >= abilityMinRange && Vector3.Distance(transform.position, enemyUnit.transform.position) <= abilityMaxRange)
+            _AttackSelected = false;
+            Vector3 attackDirection = new Vector3(attackLocation.transform.position.x, gameObject.transform.position.y, attackLocation.transform.position.z);
+        if (isAttackLocationOccupied)
         {
-            Debug.Log($"");
-            unitMove.SetHeadingDirection(attackDirection);
-            transform.forward = unitMove.moveHeading;
-            // ATTACK ANIMATION HERE
-            DealDamage(enemyUnit);
+            if (Vector3.Distance(transform.position, enemyUnit.transform.position) >= abilityMinRange && Vector3.Distance(transform.position, enemyUnit.transform.position) <= abilityMaxRange)
+            {
+                Debug.Log($"");
+                unitMove.SetHeadingDirection(attackDirection);
+                transform.forward = unitMove.moveHeading;
+                // ATTACK ANIMATION HERE
+                DealDamage(enemyUnit);
+            }
+            
+            Debug.Log($"Enemy health is now {enemyUnit._CurrentHealth}");            
         }
-
-        ClearAttackableTiles();
-       
-        _IsCurrentlyAttacking = false;
         unitCharacter._AttacksLeftThisTurn--;
-        Debug.Log($"Enemy health is now {enemyUnit._CurrentHealth}");
-
+        _IsCurrentlyAttacking = false;
         _HasAttacked = true;
+        ClearAttackableTiles();
     }
 
     public void EndAttackPhase()
@@ -106,8 +107,15 @@ public class UnitAttack : MonoBehaviour
         UnitCharacter unitOnTile;
 
         RaycastHit unitCheck;
-        Physics.Raycast(tile.transform.position, Vector3.up, out unitCheck, 4.0f);
-        unitCheck.collider.TryGetComponent<UnitCharacter>(out unitOnTile);
+        isAttackLocationOccupied = Physics.Raycast(tile.transform.position, Vector3.up, out unitCheck, 4.0f);
+        if (isAttackLocationOccupied)
+        {
+            unitCheck.collider.TryGetComponent<UnitCharacter>(out unitOnTile);            
+        }
+        else
+        {
+            unitOnTile = null;
+        }
         return unitOnTile;
     }
 
