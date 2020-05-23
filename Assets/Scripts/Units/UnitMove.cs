@@ -13,13 +13,13 @@ public class UnitMove : MonoBehaviour
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
-    public TerrainGeneric _currentTile;
 
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
     public Vector3 moveHeading = new Vector3();
-    protected bool _hasMoved = false;
+    [HideInInspector]
+    public bool _hasMoved = false;
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
@@ -81,8 +81,8 @@ public class UnitMove : MonoBehaviour
 
     public void SetCurrentTile()
     {
-        _currentTile = GetTargetTile(gameObject);
-        _currentTile.UnitLocation = true;
+        unitCharacter._currentTile = GetTargetTile(gameObject);
+        unitCharacter._currentTile.UnitLocation = true;
     }
 
     public TerrainGeneric GetTargetTile(GameObject target)
@@ -122,8 +122,8 @@ public class UnitMove : MonoBehaviour
 
         // BFS Algorithm - B.readth F.irst S.earch to find selectable tiles.
         Queue<TerrainGeneric> process = new Queue<TerrainGeneric>();
-        process.Enqueue(_currentTile);
-        _currentTile.VisitedTile = true;
+        process.Enqueue(unitCharacter._currentTile);
+        unitCharacter._currentTile.VisitedTile = true;
 
         while (process.Count > 0)
         {
@@ -148,10 +148,10 @@ public class UnitMove : MonoBehaviour
 
     public void ClearSelectableTiles()
     {
-        if (_currentTile != null)
+        if (unitCharacter._currentTile != null)
         {
-            _currentTile.UnitLocation = false;
-            _currentTile = null;
+            unitCharacter._currentTile.UnitLocation = false;
+            unitCharacter._currentTile = null;
             
         }
         foreach (TerrainGeneric tile in _selectableTiles)
