@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,37 +13,39 @@ public class UnitMove : MonoBehaviour
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
-    protected TerrainGeneric _currentTile;
 
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
-    protected Vector3 moveHeading = new Vector3();
+    public Vector3 moveHeading = new Vector3();
+    [HideInInspector]
+    public bool _hasMoved = false;
 
     [HideInInspector]
-    public float FullTurnCounter = 1;
-    [HideInInspector]
-    public bool CurrentlyTakingTurn = false;
+    public UnitCharacter unitCharacter;
+    //=====================================================
 
-//=====================================================
-
-public void Init()
+    public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
-        halfUnitHeight = GetComponent<Collider>().bounds.extents.y;
-        TurnManager.AddUnitToGame(gameObject.tag, this);
-    }
-    
-    public void BeginTurn()
-    {
-        FullTurnCounter += 1;
-        CurrentlyTakingTurn = true;
+        halfUnitHeight = gameObject.GetComponent<Collider>().bounds.extents.y;
+        unitCharacter = gameObject.GetComponent<UnitCharacter>();
     }
 
-    public void EndTurn()
+    public void StartMovePhase()
     {
-        CurrentlyTakingTurn = false;
-        TurnManager.EndTurn();
+        Debug.Log("UnitMove starting move phase");
+        _hasMoved = false;
+        unitCharacter._InMovePhase = true;
+    }
+
+    public void EndMovePhase()
+    {
+        Debug.Log($"unit moved: {unitCharacter}. changing to character control.");
+        unitCharacter._FullTurnCounter += (unitCharacter._TurnCostMove);
+        unitCharacter._MovesLeftThisTurn--;
+        SetCurrentTile();
+        unitCharacter._InMovePhase = false;
     }
 
     public void Move()
@@ -54,7 +55,7 @@ public void Init()
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= .005f)
+            if (Vector3.Distance(transform.position, moveTarget) >= .05f)
             {
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
@@ -71,8 +72,7 @@ public void Init()
         {
             ClearSelectableTiles();
             currentlyMoving = false;
-
-            EndTurn();
+            _hasMoved = true;
         }
     }
     
@@ -81,8 +81,8 @@ public void Init()
 
     public void SetCurrentTile()
     {
-        _currentTile = GetTargetTile(gameObject);
-        _currentTile.UnitLocation = true;
+        unitCharacter._currentTile = GetTargetTile(gameObject);
+        unitCharacter._currentTile.UnitLocation = true;
     }
 
     public TerrainGeneric GetTargetTile(GameObject target)
@@ -122,8 +122,8 @@ public void Init()
 
         // BFS Algorithm - B.readth F.irst S.earch to find selectable tiles.
         Queue<TerrainGeneric> process = new Queue<TerrainGeneric>();
-        process.Enqueue(_currentTile);
-        _currentTile.VisitedTile = true;
+        process.Enqueue(unitCharacter._currentTile);
+        unitCharacter._currentTile.VisitedTile = true;
 
         while (process.Count > 0)
         {
@@ -148,10 +148,10 @@ public void Init()
 
     public void ClearSelectableTiles()
     {
-        if (_currentTile != null)
+        if (unitCharacter._currentTile != null)
         {
-            _currentTile.UnitLocation = false;
-            _currentTile = null;
+            unitCharacter._currentTile.UnitLocation = false;
+            unitCharacter._currentTile = null;
             
         }
         foreach (TerrainGeneric tile in _selectableTiles)
@@ -165,12 +165,12 @@ public void Init()
 
     #region Move-specific
 
-    private void SetMoveVelocity()
+    public void SetMoveVelocity()
     {
         moveVelocity = moveHeading * _unitMoveSpeed;
     }
 
-    protected void CheckMouseToMove()
+    public void CheckMouseToMove()
     {
         if (Input.GetMouseButtonUp(0))
         {
@@ -202,7 +202,7 @@ public void Init()
         currentlyMoving = true;
     }
 
-    private void SetHeadingDirection(Vector3 targetDirection)
+    public void SetHeadingDirection(Vector3 targetDirection)
     {
         moveHeading = targetDirection - transform.position;
         moveHeading.Normalize();
