@@ -88,6 +88,7 @@ public class UnitCharacter : MonoBehaviour
         {
             var rotate90Degrees = new Vector3(transform.rotation.x + 90, transform.rotation.y, transform.rotation.z);
             gameObject.transform.Rotate(rotate90Degrees, Space.Self);
+            alreadyDied = true;
         }
 
     }
