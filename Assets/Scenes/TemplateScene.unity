@@ -325,6 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfUnitHeight: 0
   currentlyMoving: 0
+  moveHeading: {x: 0, y: 0, z: 0}
+  _hasMoved: 0
   unitCharacter: {fileID: 0}
   MoveSpeed: 5
 --- !u!4 &21784689 stripped
@@ -5822,6 +5824,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686c92c27e96256439d4e3db86d32ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnSpeedSensitivityMultiplier: 1
+  winnerScreenImage: {fileID: 0}
+  playerTurnBannerImage: {fileID: 0}
+  Quit: 0
+  GameHasBeenWon: 0
+  _CurrentlyActiveUnit: {fileID: 0}
 --- !u!1001 &678829838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10280,6 +10288,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-6_TerrainCell_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 7723904484564388217, guid: c63b0314676ade9478a55dd25ac96929,
+        type: 3}
+      propertyPath: Pathable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63b0314676ade9478a55dd25ac96929, type: 3}
 --- !u!4 &1426101627 stripped
@@ -11702,6 +11715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbce5c57196aa4449f230efdfddedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HotkeyZoomIn: 270
+  HotkeyZoomOut: 269
+  HotkeyRotateCameraRight: 46
+  HotkeyRotateCameraLeft: 44
+  HotkeyTiltCameraUp: 280
+  HotkeyTiltCameraDown: 281
+  HotkeyPanCameraMouseButton: 2
   zoomTransitionTimeInSeconds: 0.25
   zoomForwardBackwardChange: 2
   zoomUpDownChange: 2
@@ -11711,13 +11731,6 @@ MonoBehaviour:
   tiltDegrees: 15
   panSensitivity: 1
   panToUnitTimeInSeconds: 0.25
-  HotkeyZoomIn: 270
-  HotkeyZoomOut: 269
-  HotkeyRotateCameraRight: 46
-  HotkeyRotateCameraLeft: 44
-  HotkeyTiltCameraUp: 280
-  HotkeyTiltCameraDown: 281
-  HotkeyPanCameraMouseButton: 2
 --- !u!1001 &1646631762
 PrefabInstance:
   m_ObjectHideFlags: 0
