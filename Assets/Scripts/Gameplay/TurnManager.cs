@@ -19,6 +19,7 @@ public class TurnManager : MonoBehaviour
     public bool Quit = false;
     [HideInInspector]
     public bool GameHasBeenWon = false;
+    public bool GameDone = false;
     private List<string> playerTagCheckList = new List<string>();
     [HideInInspector]
     public static List<Tuple<string, UnitCharacter>> AllUnits = new List<Tuple<string, UnitCharacter>>();
@@ -62,9 +63,13 @@ public class TurnManager : MonoBehaviour
                 TurnCountdown();
             }
         }
-        if (GameHasBeenWon)
+        if (GameHasBeenWon && !GameDone)
         {
             DisplayWinnerScreen();
+        }
+        if (GameDone)
+        {
+            
         }
     }
     private void LateUpdate()
@@ -164,6 +169,7 @@ public class TurnManager : MonoBehaviour
     public void DisplayWinnerScreen()
     {
         StartCoroutine(FadeImage(false, winnerScreenImage));
+        GameDone = true;
     }    
 
     public void DisplayPlayerTurnBannerAndFade()
