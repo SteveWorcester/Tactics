@@ -138,7 +138,7 @@ public class UnitMove : MonoBehaviour
                     {
                         tile.ParentTile = t;
                         tile.VisitedTile = true;
-                        tile.Distance = 1 + t.Distance;
+                        tile.Distance = 1 + t.Distance + tile.addTileMoveDifficulty;
                         process.Enqueue(tile);
                     }
                 }
