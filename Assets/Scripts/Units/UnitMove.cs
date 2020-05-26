@@ -130,7 +130,7 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric t = process.Dequeue();
             _selectableTiles.Add(t);
             t.SelectableTile = true;
-            if (t.Distance < move)
+            if (t.Distance < move && t.IsPathable)
             {
                 foreach (TerrainGeneric tile in t.AdjacencyList)
                 {

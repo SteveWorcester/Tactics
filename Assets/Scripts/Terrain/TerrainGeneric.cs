@@ -101,7 +101,7 @@ public abstract class TerrainGeneric : MonoBehaviour
         foreach (Collider finder in tileFinders)
         {
             TerrainGeneric terrain = finder.GetComponent<TerrainGeneric>();
-            if (terrain != null && IsPathable)
+            if (terrain != null && terrain.IsPathable)
             {
                 RaycastHit tileOccupied;
                 if (!Physics.Raycast(terrain.transform.position, Vector3.up, out tileOccupied, 1.0f))
