@@ -18,7 +18,7 @@ public abstract class TerrainGeneric : MonoBehaviour
 
     // BFS VARS - DO NOT REMOVE/MODIFY
     [HideInInspector]
-    public int Distance = 0;
+    public float Distance = 0;
     [HideInInspector]
     public List<TerrainGeneric> AdjacencyList = new List<TerrainGeneric>();
     [HideInInspector]
@@ -39,6 +39,8 @@ public abstract class TerrainGeneric : MonoBehaviour
     public Color isNotSpecialColor;
     [HideInInspector]
     public Color isAttackableColor;
+    [HideInInspector]
+    public float addTileMoveDifficulty;
 
     //==========================================================================
 

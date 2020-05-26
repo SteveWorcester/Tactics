@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TerrainBasic : TerrainGeneric
 {
-    public float MoveDifficulty = 1.0f; //NYI
+    public float AddMoveDifficulty = 0.0f; //NYI
     public bool BlocksLineOfSight = false; //NYI
     public bool Pathable = true;
     public Color UnitLocationColor = Color.yellow;
@@ -23,5 +23,6 @@ public class TerrainBasic : TerrainGeneric
         isPathableColor = IsUnpathableColor;
         isNotSpecialColor = NotSpecialColor;
         isAttackableColor = AttackableColor;
+        addTileMoveDifficulty = AddMoveDifficulty;
     }
 }
