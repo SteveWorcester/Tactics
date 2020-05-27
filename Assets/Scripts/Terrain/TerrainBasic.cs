@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TerrainBasic : TerrainGeneric
 {
-    public float AddMoveDifficulty = 0.0f; //NYI
-    public bool BlocksLineOfSight = false; //NYI
+    [Header("Tile Movement Difficulty")]
+    public float AddMoveDifficulty = 0.0f;    
     public bool Pathable = true;
+
+    [Header("Tile Colors")]
     public Color UnitLocationColor = Color.yellow;
     public Color TargetLocationColor = Color.blue;
     public Color MoveSelectableTileColor = Color.cyan;
     public Color IsUnpathableColor = Color.white;
     public Color NotSpecialColor = Color.clear;
     public Color AttackableColor = Color.red;
+    
+    [Header("NYI")]
+    public bool BlocksLineOfSight = false; //NYI
 
     void Start()
     {

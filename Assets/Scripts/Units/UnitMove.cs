@@ -7,22 +7,34 @@ public class UnitMove : MonoBehaviour
 
     //==========Do not change these variables=============
     [HideInInspector]
-    public float halfUnitHeight = 0;
-    protected float _unitMoveSpeed = 2;
+    public float halfUnitHeight = 0.0f;
+    protected float _unitMoveSpeed = 2.0f;
+    protected float jumpMoveSlowdown = 3.0f;
+    protected float jumpHeightSlowdown = 2.0f;
+    public float jumpVelocity = 4.5f;
+    private float tileCenterFudge = .05f; // if you are this close to where you are supposed to be, then you "pop" to that location
+    private float hopBeforeFallingHeight = 1.5f;
 
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
-
+    
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
     public Vector3 moveHeading = new Vector3();
+    private Vector3 jumpPosition;
+    private bool fallingToTarget = false;
+    private bool jumpingToTarget = false;
+    private bool movingToEdge = false;    
+
     [HideInInspector]
     public bool _hasMoved = false;
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
+
+
     //=====================================================
 
     public void Init()
@@ -55,10 +67,19 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= .05f)
+            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge - .01f) // .01f because we want the unit to "get there" before anything else happens
             {
-                SetHeadingDirection(moveTarget);
-                SetMoveVelocity();
+                var jump = transform.position.y != moveTarget.y;
+                if (jump)
+                {
+                    Jump(moveTarget);
+                }
+                else
+                {
+                    SetHeadingDirection(moveTarget);
+                    SetMoveVelocity();
+                }
+
                 transform.forward = moveHeading;
                 transform.position += moveVelocity * Time.deltaTime;
             }
@@ -206,6 +227,95 @@ public class UnitMove : MonoBehaviour
     {
         moveHeading = targetDirection - transform.position;
         moveHeading.Normalize();
+    }
+
+    #endregion
+
+    #region Jump
+
+    public void Jump(Vector3 jumptile)
+    {
+        if (fallingToTarget)
+        {
+            FallToTarget(jumptile);
+        }
+        else if (jumpingToTarget)
+        {
+            JumpToTarget(jumptile);
+        }
+        else if (movingToEdge)
+        {
+            MoveToEdge();
+        }
+        else
+        {
+            PrepareToJump(jumptile);
+        }
+    }
+
+    private void PrepareToJump(Vector3 target)
+    {
+        var targetHeight = target.y;
+        target.y = transform.position.y;
+
+        SetHeadingDirection(target);
+        if (transform.position.y > targetHeight)
+        {
+            fallingToTarget = false;
+            jumpingToTarget = false;
+            movingToEdge = true;
+
+            jumpPosition = transform.position + ((target - transform.position) / jumpHeightSlowdown);
+        }
+        else
+        {
+            fallingToTarget = false;
+            jumpingToTarget = true;
+            movingToEdge = false;
+
+            moveVelocity = (moveHeading * _unitMoveSpeed) / jumpMoveSlowdown;
+            var jumpHeightDifference = targetHeight - transform.position.y;
+            moveVelocity.y = jumpVelocity * (0.5f + jumpHeightDifference / jumpHeightSlowdown);
+        }
+    }
+
+    private void MoveToEdge()
+    {
+        if (Vector3.Distance(transform.position, jumpPosition) >= tileCenterFudge)
+        {
+            SetMoveVelocity();
+        }
+        else
+        {
+            movingToEdge = false;
+            fallingToTarget = true;
+
+            moveVelocity /= jumpMoveSlowdown;
+            moveVelocity.y = hopBeforeFallingHeight; // the little hop before you fall.
+        }
+    }
+
+    private void JumpToTarget(Vector3 target)
+    {
+        moveVelocity += Physics.gravity * Time.deltaTime;
+        if (transform.position.y > target.y)
+        {
+            jumpingToTarget = false;
+            fallingToTarget = true;
+        }
+    }
+
+    private void FallToTarget(Vector3 target)
+    {
+        moveVelocity += Physics.gravity * Time.deltaTime;
+        if (transform.position.y <= target.y)
+        {
+            fallingToTarget = false;
+            var currentPosition = transform.position;
+            transform.position = currentPosition;
+
+            moveVelocity = new Vector3();
+        }
     }
 
     #endregion
