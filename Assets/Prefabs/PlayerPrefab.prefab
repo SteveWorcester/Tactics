@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2888226994924771873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.461, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579958489226321315}
@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 7211123534500507024}
   - component: {fileID: -1651686464592406313}
   - component: {fileID: 7057606813284863052}
+  - component: {fileID: 4579958489226321319}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player1
@@ -147,10 +148,102 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7211123534500507024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579958489226321314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5232016087af445a1f9b00175d079a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  halfUnitHeight: 0
+  currentlyMoving: 0
+  moveHeading: {x: 0, y: 0, z: 0}
+  _hasMoved: 0
+  unitCharacter: {fileID: 0}
+  MoveSpeed: 10
+--- !u!114 &-1651686464592406313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579958489226321314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22f3a2cf23c32e4db3892f5b77ee38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HasAttacked: 0
+  HotKeyAbility1: 103
+  Ability1HeightRestriction: 3
+  Ability1MaxRange: 3
+  Ability1MinRange: 0
+  Ability1Damage: 3
+  Ability1TurnCost: 10
+  HotKeyAbility2: 104
+  Ability2HeightRestriction: 10
+  Ability2MaxRange: 5
+  Ability2MinRange: 3
+  Ability2Damage: 25
+  Ability2TurnCost: 50
+--- !u!114 &7057606813284863052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4579958489226321314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ced876f1e7e9a4787d0594c376be48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CurrentHealth: 0
+  _Speed: 0
+  _JumpHeight: 0
+  _MoveDistance: 0
+  _DamageResistance: 0
+  _DamageBonus: 0
+  _FullTurnCounter: 0
+  _TurnCostStart: 10
+  _TurnCostMove: 20
+  _TurnCostAbility: 0
+  _AvailableAttacksPerTurn: 1
+  _AttacksLeftThisTurn: 0
+  _AvailableMovesPerTurn: 1
+  _MovesLeftThisTurn: 0
+  _CurrentlyTakingTurn: 0
+  _IsDead: 0
+  _InMovePhase: 0
+  _InAttackPhase: 0
+  _currentTile: {fileID: 0}
+  turnManager: {fileID: 0}
+  HotkeyMove: 109
+  HotkeyAttack: 97
+  HotkeyEndTurn: 101
+  StartingHealth: 10
+  Speed: 10
+  DamageBonus: 0
+  DamageResistance: 0
+  JumpHeight: 2
+  MoveDistance: 5
+  AttacksPerTurn: 1
+  StartingOfGameTurnCounter: 10
+  TurnCostToMove: 20
+  TurnCostToStartTurn: 10
+  InAttackPhase: 0
+  InMovePhase: 0
+  HasAttacked: 0
+  HasMoved: 0
 --- !u!114 &4579958489226321319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,12 +258,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfUnitHeight: 0
   currentlyMoving: 0
-  FullTurnCounter: 1
-  CurrentlyTakingTurn: 0
-  MoveDistance: 5
+  moveHeading: {x: 0, y: 0, z: 0}
+  _hasMoved: 0
+  unitCharacter: {fileID: 0}
   MoveSpeed: 2
-  JumpHeight: 2
-  TurnOrderSpeed: 10
 --- !u!1 &8153574802569733090
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,8 +287,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8153574802569733090}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -0.49, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalPosition: {x: 0, y: -0.98, z: 0}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_Children: []
   m_Father: {fileID: 4579958489226321315}
   m_RootOrder: 1
@@ -241,76 +332,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4579958489226321316
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579958489226321314}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7211123534500507024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579958489226321314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd5232016087af445a1f9b00175d079a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  halfUnitHeight: 0
-  currentlyMoving: 0
-  unitCharacter: {fileID: 0}
-  MoveSpeed: 10
---- !u!114 &-1651686464592406313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579958489226321314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22f3a2cf23c32e4db3892f5b77ee38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7057606813284863052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579958489226321314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69ced876f1e7e9a4787d0594c376be48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _CurrentHealth: 0
-  _Speed: 0
-  _DamageResistance: 0
-  _DamageBonus: 0
-  _FullTurnCounter: 0
-  _CurrentlyTakingTurn: 0
-  _HasMovedThisTurn: 0
-  _JumpHeight: 0
-  _HasAttackedThisTurn: 1
-  StartingHealth: 10
-  Speed: 10
-  DamageBonus: 0
-  DamageResistance: 0
-  StartingTurnCounterAdd: 10
-  JumpHeight: 2
-  MoveDistance: 5
   m_Sprite: {fileID: 21300000, guid: 69d08406e94a91946b6ef9592eea9803, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
