@@ -265,7 +265,7 @@ public class UnitMove : MonoBehaviour
             jumpingToTarget = false;
             movingToEdge = true;
 
-            jumpPosition = transform.position + ((target - transform.position) / jumpHeightSlowdown);
+            jumpPosition = transform.position + (target - transform.position) / jumpHeightSlowdown;
         }
         else
         {
