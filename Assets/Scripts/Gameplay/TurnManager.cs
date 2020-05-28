@@ -19,6 +19,7 @@ public class TurnManager : MonoBehaviour
     public bool Quit = false;
     [HideInInspector]
     public bool GameHasBeenWon = false;
+    [HideInInspector]
     public bool GameDone = false;
     private List<string> playerTagCheckList = new List<string>();
     [HideInInspector]
@@ -27,6 +28,7 @@ public class TurnManager : MonoBehaviour
     public static Queue<Tuple<string, UnitCharacter>> UnitTurnOrder = new Queue<Tuple<string, UnitCharacter>>();
     private static bool _creatingTurnQueue = false;
     private static bool turnInProgress = false;
+    [HideInInspector]
     public static CameraController MainCamera;
     private bool RunningTurnCountdown = false;
     [HideInInspector]
@@ -34,10 +36,13 @@ public class TurnManager : MonoBehaviour
     [HideInInspector]
     public static int _LivingUnits = 0;    
     public UnitCharacter _CurrentlyActiveUnit;
+    [HideInInspector]
+    CurrentCharacterInformation UiCharInfo;
     //=====================================================
 
     void Start()
     {
+        UiCharInfo = GameObject.FindGameObjectWithTag("Current Character Info").GetComponent<CurrentCharacterInformation>();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
         Init();
     }
@@ -77,8 +82,9 @@ public class TurnManager : MonoBehaviour
         if (!GameHasBeenWon)
         {
             if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
-            {
+            {                
                 StartTurn();
+                UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
             }
         }
     }

@@ -10,6 +10,8 @@ public class UnitCharacter : MonoBehaviour
     protected UnitAttack unitAttack;
 
     [HideInInspector]
+    public string _UnitName;
+    [HideInInspector]
     public float _CurrentHealth;
     [HideInInspector]
     public float _Speed;
