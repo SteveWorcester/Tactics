@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -19,6 +20,7 @@ public class TurnManager : MonoBehaviour
     public bool Quit = false;
     [HideInInspector]
     public bool GameHasBeenWon = false;
+    [HideInInspector]
     public bool GameDone = false;
     private List<string> playerTagCheckList = new List<string>();
     [HideInInspector]
@@ -27,6 +29,7 @@ public class TurnManager : MonoBehaviour
     public static Queue<Tuple<string, UnitCharacter>> UnitTurnOrder = new Queue<Tuple<string, UnitCharacter>>();
     private static bool _creatingTurnQueue = false;
     private static bool turnInProgress = false;
+    [HideInInspector]
     public static CameraController MainCamera;
     private bool RunningTurnCountdown = false;
     [HideInInspector]
@@ -34,10 +37,16 @@ public class TurnManager : MonoBehaviour
     [HideInInspector]
     public static int _LivingUnits = 0;    
     public UnitCharacter _CurrentlyActiveUnit;
+    [HideInInspector]
+    public CurrentCharacterInformation UiCharInfo;
+    [HideInInspector]
+    public UnitLists UiUnitLists;
     //=====================================================
 
     void Start()
     {
+        UiUnitLists = GameObject.FindObjectOfType<UnitLists>();
+        UiCharInfo = GameObject.FindObjectOfType<CurrentCharacterInformation>();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
         Init();
     }
@@ -46,6 +55,7 @@ public class TurnManager : MonoBehaviour
     {
         MainCamera.ZoomOut();
         MainCamera.TiltDown();
+        UpdateUiInfo();
     }
 
     void Update()
@@ -77,8 +87,9 @@ public class TurnManager : MonoBehaviour
         if (!GameHasBeenWon)
         {
             if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
-            {
+            {                
                 StartTurn();
+                UpdateUiInfo();
             }
         }
     }
@@ -179,6 +190,12 @@ public class TurnManager : MonoBehaviour
     }
 
     #endregion
+
+    public void UpdateUiInfo()
+    {
+        UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
+        UiUnitLists.UpdateAllLists(AllUnits);
+    }
 
     public IEnumerator<Coroutine> FadeImage(bool fadeAway, Image imageToFade)
     {
