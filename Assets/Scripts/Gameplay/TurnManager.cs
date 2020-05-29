@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -37,12 +38,15 @@ public class TurnManager : MonoBehaviour
     public static int _LivingUnits = 0;    
     public UnitCharacter _CurrentlyActiveUnit;
     [HideInInspector]
-    CurrentCharacterInformation UiCharInfo;
+    public CurrentCharacterInformation UiCharInfo;
+    [HideInInspector]
+    public UnitLists UiUnitLists;
     //=====================================================
 
     void Start()
     {
-        UiCharInfo = GameObject.FindGameObjectWithTag("Current Character Info").GetComponent<CurrentCharacterInformation>();
+        UiUnitLists = GameObject.FindObjectOfType<UnitLists>();
+        UiCharInfo = GameObject.FindObjectOfType<CurrentCharacterInformation>();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
         Init();
     }
@@ -51,6 +55,7 @@ public class TurnManager : MonoBehaviour
     {
         MainCamera.ZoomOut();
         MainCamera.TiltDown();
+        UpdateUiInfo();
     }
 
     void Update()
@@ -84,7 +89,7 @@ public class TurnManager : MonoBehaviour
             if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
             {                
                 StartTurn();
-                UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
+                UpdateUiInfo();
             }
         }
     }
@@ -185,6 +190,12 @@ public class TurnManager : MonoBehaviour
     }
 
     #endregion
+
+    public void UpdateUiInfo()
+    {
+        UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
+        UiUnitLists.UpdateAllLists(AllUnits);
+    }
 
     public IEnumerator<Coroutine> FadeImage(bool fadeAway, Image imageToFade)
     {

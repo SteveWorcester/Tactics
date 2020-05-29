@@ -7,6 +7,8 @@ public class CurrentCharacterInformation : MonoBehaviour
 {
     public UnitCharacter characterTakingTurn;
     public Text unitName;
+    public Text currentHealth;
+    public Text maximumHealth;
     public Text speed;
     public Text damageBonus;
     public Text damageResistance;
@@ -17,12 +19,6 @@ public class CurrentCharacterInformation : MonoBehaviour
     public Text currentTurnCounter;
     public Text moveCost;
     public Text startTurnCost;     
-
-    private void Start()
-    {
-        // GameObject.FindObjectOfType
-        
-    }
 
     public void UpdateCurrentCharacter(UnitCharacter currentUnit, bool updateWithCurrentCharacterInfo = true)
     {
@@ -35,7 +31,7 @@ public class CurrentCharacterInformation : MonoBehaviour
 
     public void UpdateStatBlock()
     {
-        unitName.text = characterTakingTurn._UnitName.ToString();
+        unitName.text = characterTakingTurn._UnitName;
         speed.text = characterTakingTurn._Speed.ToString();
         damageBonus.text = characterTakingTurn._DamageBonus.ToString();
         damageResistance.text = characterTakingTurn._DamageResistance.ToString();
@@ -46,5 +42,7 @@ public class CurrentCharacterInformation : MonoBehaviour
         currentTurnCounter.text = characterTakingTurn._FullTurnCounter.ToString();
         moveCost.text = characterTakingTurn._TurnCostMove.ToString();
         startTurnCost.text = characterTakingTurn._TurnCostStart.ToString();
+        currentHealth.text = characterTakingTurn._CurrentHealth.ToString();
+        maximumHealth.text = characterTakingTurn._MaximumHealth.ToString();
     }
 }

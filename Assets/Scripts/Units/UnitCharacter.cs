@@ -14,6 +14,8 @@ public class UnitCharacter : MonoBehaviour
     [HideInInspector]
     public float _CurrentHealth;
     [HideInInspector]
+    public float _MaximumHealth;
+    [HideInInspector]
     public float _Speed;
     [HideInInspector]
     public float _JumpHeight;

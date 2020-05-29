@@ -41,6 +41,7 @@ public class MeleeCharacter : UnitCharacter
         _FullTurnCounter= StartingOfGameTurnCounter;
         _DamageBonus = DamageBonus;
         _MoveDistance = MoveDistance;
+        _MaximumHealth = StartingHealth;
         Init();
     }
 
