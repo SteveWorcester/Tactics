@@ -13,8 +13,6 @@ public class MeleeMove : UnitMove
 
     void Start()
     {
-        jumpVelocity = JumpVelocity;
-        jumpHeightSlowdown = JumpSlowdownMultiplier;
         jumpMoveSlowdown = MoveSlowdownMultiplier;
         _unitMoveSpeed = MoveSpeed;
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");

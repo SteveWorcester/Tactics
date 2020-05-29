@@ -10,10 +10,8 @@ public class UnitMove : MonoBehaviour
     public float halfUnitHeight = 0.0f;
     protected float _unitMoveSpeed = 2.0f;
     protected float jumpMoveSlowdown = 3.0f;
-    protected float jumpHeightSlowdown = 2.0f;
-    public float jumpVelocity = 4.5f;
     private float tileCenterFudge = .05f; // if you are this close to where you are supposed to be, then you "pop" to that location
-    private float hopBeforeFallingHeight = 1.5f;
+    private float jumpWiggleRoom = .15f; // The distance before the tile when you jump; also the distance above the destination you jump over and fall back down
 
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
@@ -24,7 +22,7 @@ public class UnitMove : MonoBehaviour
     protected Vector3 moveVelocity = new Vector3();
     public Vector3 moveHeading = new Vector3();
     private Vector3 jumpPosition;
-    private bool fallingToTarget = false;
+    private Vector3 heightToJumpOrFall;
     private bool jumpingToTarget = false;
     private bool movingToEdge = false;    
 
@@ -33,7 +31,6 @@ public class UnitMove : MonoBehaviour
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
-
 
     //=====================================================
 
@@ -235,11 +232,7 @@ public class UnitMove : MonoBehaviour
 
     public void Jump(Vector3 jumptile)
     {
-        if (fallingToTarget)
-        {
-            FallToTarget(jumptile);
-        }
-        else if (jumpingToTarget)
+        if (jumpingToTarget)
         {
             JumpToTarget(jumptile);
         }
@@ -261,21 +254,18 @@ public class UnitMove : MonoBehaviour
         SetHeadingDirection(target);
         if (transform.position.y > targetHeight)
         {
-            fallingToTarget = false;
             jumpingToTarget = false;
             movingToEdge = true;
 
-            jumpPosition = transform.position + (target - transform.position) / jumpHeightSlowdown;
+            jumpPosition = transform.position + (target - transform.position) / jumpMoveSlowdown;
         }
         else
         {
-            fallingToTarget = false;
             jumpingToTarget = true;
             movingToEdge = false;
 
             moveVelocity = (moveHeading * _unitMoveSpeed) / jumpMoveSlowdown;
-            var jumpHeightDifference = targetHeight - transform.position.y;
-            moveVelocity.y = jumpVelocity * (0.5f + jumpHeightDifference / jumpHeightSlowdown);
+            moveVelocity.y = targetHeight - transform.position.y;
         }
     }
 
@@ -288,33 +278,19 @@ public class UnitMove : MonoBehaviour
         else
         {
             movingToEdge = false;
-            fallingToTarget = true;
+            jumpingToTarget = true;
 
             moveVelocity /= jumpMoveSlowdown;
-            moveVelocity.y = hopBeforeFallingHeight; // the little hop before you fall.
+            moveVelocity.y = jumpWiggleRoom; // the little hop before you fall.
         }
     }
 
     private void JumpToTarget(Vector3 target)
     {
-        moveVelocity += Physics.gravity * Time.deltaTime;
+        moveVelocity *= Time.deltaTime;
         if (transform.position.y > target.y)
         {
             jumpingToTarget = false;
-            fallingToTarget = true;
-        }
-    }
-
-    private void FallToTarget(Vector3 target)
-    {
-        moveVelocity += Physics.gravity * Time.deltaTime;
-        if (transform.position.y <= target.y)
-        {
-            fallingToTarget = false;
-            var currentPosition = transform.position;
-            transform.position = currentPosition;
-
-            moveVelocity = new Vector3();
         }
     }
 
