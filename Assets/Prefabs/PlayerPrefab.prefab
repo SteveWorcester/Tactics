@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 7211123534500507024}
   - component: {fileID: -1651686464592406313}
   - component: {fileID: 7057606813284863052}
-  - component: {fileID: 4579958489226321319}
   - component: {fileID: -804815421474997778}
   m_Layer: 0
   m_Name: PlayerPrefab
@@ -245,24 +244,6 @@ MonoBehaviour:
   InMovePhase: 0
   HasAttacked: 0
   HasMoved: 0
---- !u!114 &4579958489226321319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579958489226321314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd5232016087af445a1f9b00175d079a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  halfUnitHeight: 0
-  currentlyMoving: 0
-  moveHeading: {x: 0, y: 0, z: 0}
-  _hasMoved: 0
-  unitCharacter: {fileID: 0}
-  MoveSpeed: 2
 --- !u!54 &-804815421474997778
 Rigidbody:
   m_ObjectHideFlags: 0
