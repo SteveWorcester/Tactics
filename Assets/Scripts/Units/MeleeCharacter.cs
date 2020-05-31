@@ -8,6 +8,7 @@ public class MeleeCharacter : UnitCharacter
     public KeyCode HotkeyAttack = KeyCode.A;
     public KeyCode HotkeyEndTurn = KeyCode.E;
 
+    public string UnitName = "Default Name - Change Me";
     public float StartingHealth = 10;
     public float Speed = 10; // higher = faster turn counter
     public float DamageBonus = 0;
@@ -29,6 +30,7 @@ public class MeleeCharacter : UnitCharacter
 
     void Start()
     {
+        _UnitName = UnitName;
         _AvailableAttacksPerTurn = AttacksPerTurn;
         _AvailableMovesPerTurn = MovesPerTurn;
         _TurnCostStart = TurnCostToStartTurn;
@@ -39,6 +41,7 @@ public class MeleeCharacter : UnitCharacter
         _FullTurnCounter= StartingOfGameTurnCounter;
         _DamageBonus = DamageBonus;
         _MoveDistance = MoveDistance;
+        _MaximumHealth = StartingHealth;
         Init();
     }
 
