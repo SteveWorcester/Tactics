@@ -7,29 +7,36 @@ public class UnitMove : MonoBehaviour
 
     //==========Do not change these variables=============
     [HideInInspector]
-    public float halfUnitHeight = 0;
-    protected float _unitMoveSpeed = 2;
+    public float halfUnitHeight = 0.0f;
+    protected float _unitMoveSpeed = 2.0f;
+    private float tileCenterFudge = .05f; // if you are this close to where you are supposed to be, then you "pop" to that location
 
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
-
+    
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
+    [HideInInspector]
     public Vector3 moveHeading = new Vector3();
     [HideInInspector]
     public bool _hasMoved = false;
+    private Quaternion originalRotation;
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
+
     //=====================================================
+
+    #region Basic Functionality    
 
     public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
         halfUnitHeight = gameObject.GetComponent<Collider>().bounds.extents.y;
         unitCharacter = gameObject.GetComponent<UnitCharacter>();
+        originalRotation = transform.rotation;
     }
 
     public void StartMovePhase()
@@ -55,27 +62,32 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= .05f)
+            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge - .01f) // .01f because we want the unit to "get there" before anything else happens
             {
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
+
                 transform.forward = moveHeading;
                 transform.position += moveVelocity * Time.deltaTime;
             }
             else
-            {                
+            {
+                transform.rotation = originalRotation;
+                transform.forward = moveHeading;
                 transform.position = moveTarget;
                 _movePath.Pop();
             }
         }
         else
         {
+            
             ClearSelectableTiles();
             currentlyMoving = false;
             _hasMoved = true;
         }
     }
-    
+
+    #endregion
 
     #region Tile-specific
 
@@ -209,4 +221,5 @@ public class UnitMove : MonoBehaviour
     }
 
     #endregion
+
 }

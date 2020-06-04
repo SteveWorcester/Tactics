@@ -1,12 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MeleeMove : UnitMove
 {
-    // Edit these defaults
-
+    // Edit these defaults    
+    [Header("Moving")]
     public float MoveSpeed = 10.0f; // how fast the unit traverses the map. This has nothing to do with turn order speed.
+
+    [Header("Jumping")]
+    public float MoveSlowdownMultiplier = 1.0f; // higher = slower movement towards the jump
 
     void Start()
     {
