@@ -9,9 +9,7 @@ public class UnitMove : MonoBehaviour
     [HideInInspector]
     public float halfUnitHeight = 0.0f;
     protected float _unitMoveSpeed = 2.0f;
-    protected float jumpMoveSlowdown = 3.0f;
     private float tileCenterFudge = .05f; // if you are this close to where you are supposed to be, then you "pop" to that location
-    private float jumpWiggleRoom = .15f; // The distance before the tile when you jump; also the distance above the destination you jump over and fall back down
 
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
@@ -20,25 +18,25 @@ public class UnitMove : MonoBehaviour
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
+    [HideInInspector]
     public Vector3 moveHeading = new Vector3();
-    private Vector3 jumpPosition;
-    private Vector3 heightToJumpOrFall;
-    private bool jumpingToTarget = false;
-    private bool movingToEdge = false;    
-
     [HideInInspector]
     public bool _hasMoved = false;
+    private Quaternion originalRotation;
 
     [HideInInspector]
     public UnitCharacter unitCharacter;
 
     //=====================================================
 
+    #region Basic Functionality    
+
     public void Init()
     {
         allTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
         halfUnitHeight = gameObject.GetComponent<Collider>().bounds.extents.y;
         unitCharacter = gameObject.GetComponent<UnitCharacter>();
+        originalRotation = transform.rotation;
     }
 
     public void StartMovePhase()
@@ -66,34 +64,30 @@ public class UnitMove : MonoBehaviour
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
             if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge - .01f) // .01f because we want the unit to "get there" before anything else happens
             {
-                var jump = transform.position.y != moveTarget.y;
-                if (jump)
-                {
-                    Jump(moveTarget);
-                }
-                else
-                {
-                    SetHeadingDirection(moveTarget);
-                    SetMoveVelocity();
-                }
+                SetHeadingDirection(moveTarget);
+                SetMoveVelocity();
 
                 transform.forward = moveHeading;
                 transform.position += moveVelocity * Time.deltaTime;
             }
             else
-            {                
+            {
+                transform.rotation = originalRotation;
+                transform.forward = moveHeading;
                 transform.position = moveTarget;
                 _movePath.Pop();
             }
         }
         else
         {
+            
             ClearSelectableTiles();
             currentlyMoving = false;
             _hasMoved = true;
         }
     }
-    
+
+    #endregion
 
     #region Tile-specific
 
@@ -228,71 +222,4 @@ public class UnitMove : MonoBehaviour
 
     #endregion
 
-    #region Jump
-
-    public void Jump(Vector3 jumptile)
-    {
-        if (jumpingToTarget)
-        {
-            JumpToTarget(jumptile);
-        }
-        else if (movingToEdge)
-        {
-            MoveToEdge();
-        }
-        else
-        {
-            PrepareToJump(jumptile);
-        }
-    }
-
-    private void PrepareToJump(Vector3 target)
-    {
-        var targetHeight = target.y;
-        target.y = transform.position.y;
-
-        SetHeadingDirection(target);
-        if (transform.position.y > targetHeight)
-        {
-            jumpingToTarget = false;
-            movingToEdge = true;
-
-            jumpPosition = transform.position + (target - transform.position) / jumpMoveSlowdown;
-        }
-        else
-        {
-            jumpingToTarget = true;
-            movingToEdge = false;
-
-            moveVelocity = (moveHeading * _unitMoveSpeed) / jumpMoveSlowdown;
-            moveVelocity.y = targetHeight - transform.position.y;
-        }
-    }
-
-    private void MoveToEdge()
-    {
-        if (Vector3.Distance(transform.position, jumpPosition) >= tileCenterFudge)
-        {
-            SetMoveVelocity();
-        }
-        else
-        {
-            movingToEdge = false;
-            jumpingToTarget = true;
-
-            moveVelocity /= jumpMoveSlowdown;
-            moveVelocity.y = jumpWiggleRoom; // the little hop before you fall.
-        }
-    }
-
-    private void JumpToTarget(Vector3 target)
-    {
-        moveVelocity *= Time.deltaTime;
-        if (transform.position.y > target.y)
-        {
-            jumpingToTarget = false;
-        }
-    }
-
-    #endregion
 }
