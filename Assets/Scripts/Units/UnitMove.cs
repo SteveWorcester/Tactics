@@ -62,7 +62,7 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge - .01f) // .01f because we want the unit to "get there" before anything else happens
+            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge)
             {
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
@@ -72,15 +72,13 @@ public class UnitMove : MonoBehaviour
             }
             else
             {
-                transform.rotation = originalRotation;
-                transform.forward = moveHeading;
-                transform.position = moveTarget;
+                transform.position = moveTarget;                
                 _movePath.Pop();
             }
         }
         else
         {
-            
+            FixUnitRotation();
             ClearSelectableTiles();
             currentlyMoving = false;
             _hasMoved = true;
@@ -176,6 +174,13 @@ public class UnitMove : MonoBehaviour
     #endregion
 
     #region Move-specific
+
+    private void FixUnitRotation()
+    {       
+        
+        transform.rotation = originalRotation;
+        //transform.position.Normalize();
+    }
 
     public void SetMoveVelocity()
     {
