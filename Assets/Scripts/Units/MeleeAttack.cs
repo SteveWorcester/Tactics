@@ -12,7 +12,8 @@ public class MeleeAttack : UnitAttack
     public KeyCode HotKeyAbility1 = KeyCode.G;    
     public float Ability1HeightRestriction = 3f;
     public float Ability1MaxRange = 3f;
-    public float Ability1MinRange = 0f;
+    [HideInInspector]
+    public float Ability1MinRange = 0f;// hiding because NYI
     public float Ability1Damage = 3f;
     public float Ability1TurnCost = 10f;
 
@@ -20,7 +21,8 @@ public class MeleeAttack : UnitAttack
     public KeyCode HotKeyAbility2 = KeyCode.H;    
     public float Ability2HeightRestriction = 10f;
     public float Ability2MaxRange = 5f;
-    public float Ability2MinRange = 3f;
+    [HideInInspector]
+    public float Ability2MinRange = 3f;// hiding because NYI
     public float Ability2Damage = 25f;
     public float Ability2TurnCost = 50f;    
 

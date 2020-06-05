@@ -14,12 +14,14 @@ public class UnitMove : MonoBehaviour
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
+    private List<TerrainGeneric> moveTracking = new List<TerrainGeneric>();
     
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
     [HideInInspector]
     public Vector3 moveHeading = new Vector3();
+    private Quaternion lastRotation = new Quaternion();
     [HideInInspector]
     public bool _hasMoved = false;
     private Quaternion originalRotation;
@@ -69,10 +71,12 @@ public class UnitMove : MonoBehaviour
 
                 transform.forward = moveHeading;
                 transform.position += moveVelocity * Time.deltaTime;
+                
             }
             else
             {
-                transform.position = moveTarget;                
+                transform.position = moveTarget;
+                lastRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z);
                 _movePath.Pop();
             }
         }
@@ -176,10 +180,8 @@ public class UnitMove : MonoBehaviour
     #region Move-specific
 
     private void FixUnitRotation()
-    {       
-        
-        transform.rotation = originalRotation;
-        //transform.position.Normalize();
+    {
+        transform.rotation = lastRotation;        
     }
 
     public void SetMoveVelocity()
@@ -221,8 +223,8 @@ public class UnitMove : MonoBehaviour
 
     public void SetHeadingDirection(Vector3 targetDirection)
     {
-        moveHeading = targetDirection - transform.position;
-        moveHeading.Normalize();
+        moveHeading = targetDirection - transform.position;        
+        moveHeading.Normalize();        
     }
 
     #endregion
