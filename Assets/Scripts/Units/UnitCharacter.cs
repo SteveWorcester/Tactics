@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitCharacter : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class UnitCharacter : MonoBehaviour
     protected UnitMove unitMove;
     [HideInInspector]
     protected UnitAttack unitAttack;
+
+    public Image UnitPortraitAlive;
+    public Image UnitPortraitDead;
 
     [HideInInspector]
     public string _UnitName;
