@@ -21,6 +21,7 @@ public class UnitMove : MonoBehaviour
     protected Vector3 moveVelocity = new Vector3();
     [HideInInspector]
     public Vector3 moveHeading = new Vector3();
+    public Vector3 lastHeading = new Vector3();
     private Quaternion lastRotation = new Quaternion();
     [HideInInspector]
     public bool _hasMoved = false;
@@ -66,6 +67,7 @@ public class UnitMove : MonoBehaviour
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
             if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge)
             {
+                lastHeading = moveHeading;
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
 
@@ -76,16 +78,17 @@ public class UnitMove : MonoBehaviour
             else
             {
                 transform.position = moveTarget;
-                lastRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+                lastRotation = transform.rotation;                
                 _movePath.Pop();
             }
         }
         else
         {
-            FixUnitRotation();
+            
             ClearSelectableTiles();
             currentlyMoving = false;
             _hasMoved = true;
+            FixUnitRotation();
         }
     }
 
@@ -181,7 +184,8 @@ public class UnitMove : MonoBehaviour
 
     private void FixUnitRotation()
     {
-        transform.rotation = lastRotation;        
+        var rotDegrees = Quaternion.Euler(originalRotation.eulerAngles.x - lastRotation.eulerAngles.x, 0, 0);
+        transform.Rotate(rotDegrees.eulerAngles, Space.Self);
     }
 
     public void SetMoveVelocity()
