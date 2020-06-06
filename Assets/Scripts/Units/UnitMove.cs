@@ -14,12 +14,15 @@ public class UnitMove : MonoBehaviour
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
     protected GameObject[] allTiles;
+    private List<TerrainGeneric> moveTracking = new List<TerrainGeneric>();
     
     [HideInInspector]
     public bool currentlyMoving = false;
     protected Vector3 moveVelocity = new Vector3();
     [HideInInspector]
     public Vector3 moveHeading = new Vector3();
+    public Vector3 lastHeading = new Vector3();
+    private Quaternion lastRotation = new Quaternion();
     [HideInInspector]
     public bool _hasMoved = false;
     private Quaternion originalRotation;
@@ -62,19 +65,20 @@ public class UnitMove : MonoBehaviour
             TerrainGeneric nextTile = _movePath.Peek();         
             Vector3 moveTarget = nextTile.transform.position;
             moveTarget.y += halfUnitHeight + nextTile.GetComponent<Collider>().bounds.extents.y;
-            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge - .01f) // .01f because we want the unit to "get there" before anything else happens
+            if (Vector3.Distance(transform.position, moveTarget) >= tileCenterFudge)
             {
+                lastHeading = moveHeading;
                 SetHeadingDirection(moveTarget);
                 SetMoveVelocity();
 
                 transform.forward = moveHeading;
                 transform.position += moveVelocity * Time.deltaTime;
+                
             }
             else
             {
-                transform.rotation = originalRotation;
-                transform.forward = moveHeading;
                 transform.position = moveTarget;
+                lastRotation = transform.rotation;                
                 _movePath.Pop();
             }
         }
@@ -84,6 +88,7 @@ public class UnitMove : MonoBehaviour
             ClearSelectableTiles();
             currentlyMoving = false;
             _hasMoved = true;
+            FixUnitRotation();
         }
     }
 
@@ -177,6 +182,12 @@ public class UnitMove : MonoBehaviour
 
     #region Move-specific
 
+    private void FixUnitRotation()
+    {
+        var rotDegrees = Quaternion.Euler(originalRotation.eulerAngles.x - lastRotation.eulerAngles.x, 0, 0);
+        transform.Rotate(rotDegrees.eulerAngles, Space.Self);
+    }
+
     public void SetMoveVelocity()
     {
         moveVelocity = moveHeading * _unitMoveSpeed;
@@ -216,8 +227,8 @@ public class UnitMove : MonoBehaviour
 
     public void SetHeadingDirection(Vector3 targetDirection)
     {
-        moveHeading = targetDirection - transform.position;
-        moveHeading.Normalize();
+        moveHeading = targetDirection - transform.position;        
+        moveHeading.Normalize();        
     }
 
     #endregion

@@ -22,10 +22,14 @@ public class MeleeCharacter : UnitCharacter
     public float TurnCostToMove = 20f;
     public float TurnCostToStartTurn = 10f;
 
+    [HideInInspector]
     public bool InAttackPhase = false;
+    [HideInInspector]
     public bool InMovePhase = false;
 
+    [HideInInspector]
     public bool HasAttacked = false;
+    [HideInInspector]
     public bool HasMoved = false;
 
     void Start()

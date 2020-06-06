@@ -96,6 +96,5 @@ public class UnitCharacter : MonoBehaviour
             gameObject.transform.Rotate(rotate90Degrees, Space.Self);
             alreadyDied = true;
         }
-
     }
 }
