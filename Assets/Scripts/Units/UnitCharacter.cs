@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class UnitCharacter : MonoBehaviour
 {
     [HideInInspector]
-    protected UnitMove unitMove;
+    public UnitMove unitMove;
     [HideInInspector]
-    protected UnitAttack unitAttack;
+    public UnitAttack unitAttack;
 
     public Image UnitPortraitAlive;
     public Image UnitPortraitDead;
