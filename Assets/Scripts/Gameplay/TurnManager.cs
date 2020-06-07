@@ -41,6 +41,8 @@ public class TurnManager : MonoBehaviour
     public CurrentCharacterInformation UiCharInfo;
     [HideInInspector]
     public UnitLists UiUnitLists;
+    [HideInInspector]
+    public ActionButtons actionButtons;
     //=====================================================
 
     void Start()
@@ -48,6 +50,7 @@ public class TurnManager : MonoBehaviour
         UiUnitLists = GameObject.FindObjectOfType<UnitLists>();
         UiCharInfo = GameObject.FindObjectOfType<CurrentCharacterInformation>();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
+        actionButtons = GameObject.FindObjectOfType<ActionButtons>();
         Init();
     }
 
@@ -195,6 +198,7 @@ public class TurnManager : MonoBehaviour
     {
         UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
         UiUnitLists.UpdateAllLists(AllUnits);
+        actionButtons.currentUnit = _CurrentlyActiveUnit;
     }
 
     public IEnumerator<Coroutine> FadeImage(bool fadeAway, Image imageToFade)
