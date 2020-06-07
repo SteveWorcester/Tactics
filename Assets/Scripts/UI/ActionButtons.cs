@@ -7,6 +7,18 @@ public class ActionButtons : MonoBehaviour
     public UnitCharacter currentUnit;
     public MeleeAttack abilitySelection;
 
+    public TurnManager turnManager;
+
+    public void Start()
+    {
+        turnManager = FindObjectOfType<TurnManager>();
+    }
+
+    public void Update()
+    {
+        currentUnit = turnManager._CurrentlyActiveUnit;
+    }
+
     public void InitiateMove()
     {
         currentUnit.unitMove.StartMovePhase();
