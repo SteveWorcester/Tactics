@@ -2108,7 +2108,7 @@ GameObject:
   - component: {fileID: 189086518}
   m_Layer: 5
   m_Name: Side-6
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3744,7 +3744,7 @@ GameObject:
   - component: {fileID: 321384796}
   m_Layer: 5
   m_Name: Side-4
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7810,6 +7810,8 @@ MonoBehaviour:
   GameHasBeenWon: 0
   GameDone: 0
   _CurrentlyActiveUnit: {fileID: 0}
+  UiCharInfo: {fileID: 0}
+  UiUnitLists: {fileID: 0}
 --- !u!1001 &685349015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10051,7 +10053,7 @@ GameObject:
   - component: {fileID: 941085657}
   m_Layer: 5
   m_Name: Side-1
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11593,6 +11595,7 @@ GameObject:
   - component: {fileID: 1090910691}
   - component: {fileID: 1090910693}
   - component: {fileID: 1090910692}
+  - component: {fileID: 1090910694}
   m_Layer: 5
   m_Name: SidePanel
   m_TagString: Untagged
@@ -11661,6 +11664,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090910690}
   m_CullTransparentMesh: 0
+--- !u!114 &1090910694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090910690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff939f8fe593e648b5cf251b27d0b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TurnOrderList: []
+  AllDeadUnits: []
+  sidebarSections: []
+  sidebarUnitNames: []
+  sidebarUnitPortraits: []
+  sidebarUnitHealths: []
 --- !u!1001 &1092909782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11921,7 +11942,7 @@ GameObject:
   - component: {fileID: 1122140515}
   m_Layer: 5
   m_Name: Side-5
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17103,7 +17124,7 @@ GameObject:
   - component: {fileID: 1741992679}
   m_Layer: 5
   m_Name: Side-3
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21824,7 +21845,7 @@ GameObject:
   - component: {fileID: 2086380799}
   m_Layer: 5
   m_Name: Side-2
-  m_TagString: Untagged
+  m_TagString: SidebarUnitSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
