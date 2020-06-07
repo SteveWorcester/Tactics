@@ -60,6 +60,7 @@ public class UnitCharacter : MonoBehaviour
     public bool _InAttackPhase = false;
     [HideInInspector]
     public TerrainGeneric _currentTile;
+    [HideInInspector]
     public TurnManager turnManager;
 
     public void Init()
