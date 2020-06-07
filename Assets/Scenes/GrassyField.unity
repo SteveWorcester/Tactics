@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 710205}
   - component: {fileID: 710207}
   - component: {fileID: 710206}
+  - component: {fileID: 710208}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -194,6 +195,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710204}
   m_CullTransparentMesh: 0
+--- !u!223 &710208
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710204}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!4 &5253937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
@@ -498,6 +520,7 @@ GameObject:
   - component: {fileID: 40100055}
   - component: {fileID: 40100057}
   - component: {fileID: 40100056}
+  - component: {fileID: 40100058}
   m_Layer: 5
   m_Name: BottomPanel
   m_TagString: Untagged
@@ -525,7 +548,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -250, y: 140}
+  m_SizeDelta: {x: -220, y: 140}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &40100056
 MonoBehaviour:
@@ -541,7 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -563,6 +586,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40100054}
   m_CullTransparentMesh: 0
+--- !u!114 &40100058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6708805fd16a1468048501ac180ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterTakingTurn: {fileID: 0}
+  unitName: {fileID: 0}
+  currentHealth: {fileID: 0}
+  maximumHealth: {fileID: 0}
+  speed: {fileID: 0}
+  damageBonus: {fileID: 0}
+  damageResistance: {fileID: 0}
+  jumpHeight: {fileID: 0}
+  moveDistance: {fileID: 0}
+  attacksPerTurn: {fileID: 0}
+  movesPerTurn: {fileID: 0}
+  currentTurnCounter: {fileID: 0}
+  moveCost: {fileID: 0}
+  startTurnCost: {fileID: 0}
+  healthSlider: {fileID: 0}
 --- !u!1001 &40291363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2923,7 +2973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 2
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3651,7 +3701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200.9, y: -86.5}
+  m_AnchoredPosition: {x: -200, y: -86.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &321182994
@@ -4860,9 +4910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character2_Name
-
-'
+  m_Text: Fast Jones
 --- !u!222 &420315002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4882,6 +4930,7 @@ GameObject:
   - component: {fileID: 421098308}
   - component: {fileID: 421098310}
   - component: {fileID: 421098309}
+  - component: {fileID: 421098311}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -4944,6 +4993,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421098307}
   m_CullTransparentMesh: 0
+--- !u!223 &421098311
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421098307}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &432409429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5340,6 +5410,7 @@ GameObject:
   - component: {fileID: 478877648}
   - component: {fileID: 478877650}
   - component: {fileID: 478877649}
+  - component: {fileID: 478877651}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -5402,6 +5473,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478877647}
   m_CullTransparentMesh: 0
+--- !u!223 &478877651
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478877647}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &479552554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5487,6 +5579,7 @@ GameObject:
   - component: {fileID: 485408911}
   - component: {fileID: 485408913}
   - component: {fileID: 485408912}
+  - component: {fileID: 485408914}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -5549,6 +5642,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485408910}
   m_CullTransparentMesh: 0
+--- !u!223 &485408914
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485408910}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!4 &486874304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6728538280333866032, guid: e723ac4105b864647b3a2e25c42404ec,
@@ -6328,6 +6442,7 @@ GameObject:
   - component: {fileID: 545849026}
   - component: {fileID: 545849028}
   - component: {fileID: 545849027}
+  - component: {fileID: 545849029}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -6390,6 +6505,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545849025}
   m_CullTransparentMesh: 0
+--- !u!223 &545849029
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545849025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &556018936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6872,7 +7008,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597297764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1452287785}
+        m_MethodName: InitiateAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597297764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7205,9 +7352,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character4_Name
-
-'
+  m_Text: Burly Red
 --- !u!222 &631505387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7812,6 +7957,7 @@ MonoBehaviour:
   _CurrentlyActiveUnit: {fileID: 0}
   UiCharInfo: {fileID: 0}
   UiUnitLists: {fileID: 0}
+  actionButtons: {fileID: 0}
 --- !u!1001 &685349015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8733,9 +8879,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character3_Name
-
-'
+  m_Text: Burly Parley
 --- !u!222 &773103423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11625,8 +11769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -125, y: 0}
-  m_SizeDelta: {x: 250, y: 0}
+  m_AnchoredPosition: {x: -110, y: 0}
+  m_SizeDelta: {x: 220, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090910692
 MonoBehaviour:
@@ -12356,9 +12500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character6_Name
-
-'
+  m_Text: Heavy Andrew
 --- !u!222 &1167521327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14571,6 +14713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1452287784}
+  - component: {fileID: 1452287785}
   m_Layer: 5
   m_Name: Action Button Array
   m_TagString: Untagged
@@ -14601,6 +14744,21 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: -140}
   m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1452287785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452287783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267138dd6fd4a77409269d798204cc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentUnit: {fileID: 0}
+  abilitySelection: {fileID: 0}
+  turnManager: {fileID: 0}
 --- !u!1 &1454124219
 GameObject:
   m_ObjectHideFlags: 0
@@ -15541,9 +15699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character5_Name
-
-'
+  m_Text: Heavy Ayilu
 --- !u!222 &1525882814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15726,12 +15882,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 674421301}
-        m_MethodName: 
+      - m_Target: {fileID: 1452287785}
+        m_MethodName: InitiateMove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16242,6 +16398,7 @@ GameObject:
   - component: {fileID: 1610058461}
   - component: {fileID: 1610058463}
   - component: {fileID: 1610058462}
+  - component: {fileID: 1610058464}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -16304,6 +16461,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610058460}
   m_CullTransparentMesh: 0
+--- !u!223 &1610058464
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610058460}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1615169769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17716,7 +17894,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1810421909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1452287785}
+        m_MethodName: InitiateAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1810421909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18816,6 +19005,7 @@ GameObject:
   - component: {fileID: 1858372938}
   - component: {fileID: 1858372940}
   - component: {fileID: 1858372939}
+  - component: {fileID: 1858372941}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -18878,6 +19068,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858372937}
   m_CullTransparentMesh: 0
+--- !u!223 &1858372941
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858372937}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1858653756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19316,9 +19527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Character1_Name
-
-'
+  m_Text: Fast Elgamore
 --- !u!222 &1890352272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20016,8 +20225,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 674421303}
-        m_MethodName: 
+      - m_Target: {fileID: 1452287785}
+        m_MethodName: InitiatePass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
