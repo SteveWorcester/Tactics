@@ -21,14 +21,20 @@ public class ActionButtons : MonoBehaviour
 
     public void InitiateMove()
     {
-        currentUnit.unitMove.StartMovePhase();
+        if (currentUnit._MovesLeftThisTurn > 0)
+        {
+            currentUnit.unitMove.StartMovePhase();
+        }        
     }
 
     public void InitiateAttack()
     {
-        currentUnit.unitAttack.StartAttackPhase();
-        abilitySelection = currentUnit.GetComponent<MeleeAttack>();
-        abilitySelection.BasicAttack();
+        if (currentUnit._AttacksLeftThisTurn > 0)
+        {
+            currentUnit.unitAttack.StartAttackPhase();
+            abilitySelection = currentUnit.GetComponent<MeleeAttack>();
+            abilitySelection.BasicAttack();
+        }        
     }
 
     public void InitiateAbility()
