@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class ActionButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnitCharacter currentUnit;
+    public MeleeAttack abilitySelection;
+
+    public void InitiateMove()
     {
-        
+        currentUnit.unitMove.StartMovePhase();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InitiateAttack()
     {
-        
+        currentUnit.unitAttack.StartAttackPhase();
+        abilitySelection = currentUnit.GetComponent<MeleeAttack>();
+        abilitySelection.BasicAttack();
+    }
+
+    public void InitiateAbility()
+    {
+        //NOP: abilities NYI
+    }
+
+    public void InitiatePass()
+    {
+        currentUnit.EndTurn();
     }
 }
