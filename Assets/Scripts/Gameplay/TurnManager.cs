@@ -58,7 +58,6 @@ public class TurnManager : MonoBehaviour
     {
         MainCamera.ZoomOut();
         MainCamera.TiltDown();
-        UpdateUiInfo();
     }
 
     void Update()
@@ -92,14 +91,12 @@ public class TurnManager : MonoBehaviour
             if (UnitTurnOrder.Count == AllUnits.Count && !turnInProgress)
             {                
                 StartTurn();
-                UpdateUiInfo();
             }
         }
     }
 
     private void TurnCountdown()
     {
-        Debug.Log($"TurnManager running turn countdown...");
         RunningTurnCountdown = true;
         while (AllUnits.First().Item2._FullTurnCounter > 0)
         {
@@ -117,7 +114,6 @@ public class TurnManager : MonoBehaviour
 
     static void CreateTurnQueue()
     {
-        Debug.Log("TurnManager Creating Turn Queue...");
         _creatingTurnQueue = true;
 
         UnitTurnOrder.Clear();
@@ -151,7 +147,7 @@ public class TurnManager : MonoBehaviour
     public static void StartTurn()
     {
         turnInProgress = true;
-        var nextUnit = UnitTurnOrder.Peek();        
+        var nextUnit = UnitTurnOrder.Peek();
         Debug.Log($"TurnManager starting turn." +
             $"\nPlayer Tag: {nextUnit.Item1}");
         nextUnit.Item2.BeginTurn();
@@ -162,7 +158,6 @@ public class TurnManager : MonoBehaviour
     public static void EndTurn()
     {        
         var currentUnit = UnitTurnOrder.Dequeue();
-        Debug.Log($"TurnManager Ending turn for \n{currentUnit.Item1}\n{currentUnit.Item2}");
         _TurnCounter++;
         turnInProgress = false;
     }
