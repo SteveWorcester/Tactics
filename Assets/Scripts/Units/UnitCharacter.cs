@@ -62,12 +62,15 @@ public class UnitCharacter : MonoBehaviour
     public TerrainGeneric _currentTile;
     [HideInInspector]
     public TurnManager turnManager;
+    [HideInInspector]
+    public CurrentCharacterInformation _Ui;
 
     public void Init()
     {
         unitMove = gameObject.GetComponent<UnitMove>();
         unitAttack = gameObject.GetComponent<UnitAttack>();
-        turnManager = GameObject.FindObjectOfType<TurnManager>();
+        turnManager = FindObjectOfType<TurnManager>();
+        _Ui = FindObjectOfType<CurrentCharacterInformation>();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
@@ -82,6 +85,7 @@ public class UnitCharacter : MonoBehaviour
         _CurrentlyTakingTurn = true;
         turnManager._CurrentlyActiveUnit = this;
         unitMove.SetCurrentTile();
+        _Ui.UpdateCurrentCharacter(this);
     }
 
     public void EndTurn()
