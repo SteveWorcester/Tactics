@@ -8,33 +8,54 @@ using UnityEngine.UI;
 
 public class CurrentCharacterInformation : MonoBehaviour
 {
-    [Header("Displayed Stats (These should match what text is in the text box)")]
+    [HideInInspector]
     public string stat1DescriptionText = "Bonus Damage";
+    [HideInInspector]
     public string stat2DescriptionText = "Damage Resistance";
+    [HideInInspector]
     public string stat3DescriptionText = "Move";
+    [HideInInspector]
     public string stat4DescriptionText = "Speed";
 
+    [HideInInspector]
     public Text stat1Description;
+    [HideInInspector]
     public Text stat2Description;
+    [HideInInspector]
     public Text stat3Description;
+    [HideInInspector]
     public Text stat4Description;
 
+    [HideInInspector]
     public Text stat1Value;
+    [HideInInspector]
     public Text stat2Value;
+    [HideInInspector]
     public Text stat3Value;
+    [HideInInspector]
     public Text stat4Value;
 
+    [HideInInspector]
     public UnitCharacter characterTakingTurn;
+    [HideInInspector]
     public Text activeName;
+    [HideInInspector]
     public Image activePortrait;
+    [HideInInspector]
     public Slider healthSlider;
 
+    [HideInInspector]
     public UnitStats unitStats;
+    [HideInInspector]
     public UnitPortrait unitPortrait;
+    [HideInInspector]
     public UnitName unitName;
+    [HideInInspector]
     public UnitHealth unitHealth;
+    [HideInInspector]
     public TurnManager turnManager;
 
+    [HideInInspector]
     public event Action UpdateUI;
 
     public void Awake()

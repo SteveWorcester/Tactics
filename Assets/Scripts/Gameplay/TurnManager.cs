@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class TurnManager : MonoBehaviour
 {
     // Edit these
+    [HideInInspector]
     public float turnSpeedSensitivityMultiplier = 1f;
 
     public Image winnerScreenImage;

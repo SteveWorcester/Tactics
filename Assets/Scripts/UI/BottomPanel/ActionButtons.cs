@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ActionButtons : MonoBehaviour
 {
+    [HideInInspector]
     public UnitCharacter currentUnit;
+    [HideInInspector]
     public MeleeAttack abilitySelection;
-
+    [HideInInspector]
     public TurnManager turnManager;
 
     public void Start()
