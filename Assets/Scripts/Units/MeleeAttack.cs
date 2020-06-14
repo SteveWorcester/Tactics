@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeleeAttack : UnitAttack
 {
     // Can edit these
+    [Header("Ability Names")]
     public const string Ability1Name = "Basic Attack";
     public const string Ability2Name = "TEMP";
 

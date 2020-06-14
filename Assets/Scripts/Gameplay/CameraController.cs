@@ -31,21 +31,33 @@ public class CameraController : MonoBehaviour
     public float panToUnitTimeInSeconds = .25f;
 
     // ======do not modify these=====
+    [HideInInspector]
     private bool zoomedOut = false;
+    [HideInInspector]
     private Vector3 newZoomCameraLocation;
 
+    [HideInInspector]
     private Quaternion currentCameraRotationLocation;
+    [HideInInspector]
     private Quaternion newCameraRotationLocation;
 
+    [HideInInspector]
     private bool tiltedUp = false;
+    [HideInInspector]
     private Quaternion currentCameraTiltLocation;
+    [HideInInspector]
     private Quaternion newCameraTiltLocation;
 
+    [HideInInspector]
     private Vector3 mousePanStartLocation;
+    [HideInInspector]
     private Vector3 originalCameraLocation;
+    [HideInInspector]
     private Quaternion originalCameraRotation;
+    [HideInInspector]
     private Camera mainCamera;
     // ==============================
+
     private void Start()
     {
         originalCameraLocation = transform.position;

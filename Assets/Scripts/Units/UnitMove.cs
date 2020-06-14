@@ -8,23 +8,33 @@ public class UnitMove : MonoBehaviour
     //==========Do not change these variables=============
     [HideInInspector]
     public float halfUnitHeight = 0.0f;
+    [HideInInspector]
     protected float _unitMoveSpeed = 2.0f;
+    [HideInInspector]
     private float tileCenterFudge = .05f; // if you are this close to where you are supposed to be, then you "pop" to that location
 
+    [HideInInspector]
     protected List<TerrainGeneric> _selectableTiles = new List<TerrainGeneric>();
+    [HideInInspector]
     protected Stack<TerrainGeneric> _movePath = new Stack<TerrainGeneric>();
+    [HideInInspector]
     protected GameObject[] allTiles;
+    [HideInInspector]
     private List<TerrainGeneric> moveTracking = new List<TerrainGeneric>();
     
     [HideInInspector]
     public bool currentlyMoving = false;
+    [HideInInspector]
     protected Vector3 moveVelocity = new Vector3();
     [HideInInspector]
     public Vector3 moveHeading = new Vector3();
+    [HideInInspector]
     public Vector3 lastHeading = new Vector3();
+    [HideInInspector]
     private Quaternion lastRotation = new Quaternion();
     [HideInInspector]
     public bool _hasMoved = false;
+    [HideInInspector]
     private Quaternion originalRotation;
 
     [HideInInspector]

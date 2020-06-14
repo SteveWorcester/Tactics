@@ -13,8 +13,8 @@ public class TerrainBasic : TerrainGeneric
     public Color IsUnpathableColor = Color.white;
     public Color NotSpecialColor = Color.clear;
     public Color AttackableColor = Color.red;
-    
-    [Header("NYI")]
+
+    [HideInInspector]
     public bool BlocksLineOfSight = false; //NYI
 
     void Start()

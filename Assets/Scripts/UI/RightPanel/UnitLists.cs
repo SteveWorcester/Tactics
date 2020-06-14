@@ -8,12 +8,17 @@ using UnityEngine.UI;
 
 public class UnitLists : MonoBehaviour
 {
+    [HideInInspector]
     public List<UnitCharacter> TurnOrderList = new List<UnitCharacter>();
+    [HideInInspector]
     public List<UnitCharacter> AllDeadUnits = new List<UnitCharacter>();
-
+    [HideInInspector]
     public List<GameObject> sidebarSections;
-    public List<Text> sidebarUnitNames; 
+    [HideInInspector]
+    public List<Text> sidebarUnitNames;
+    [HideInInspector]
     public List<Image> sidebarUnitPortraits;
+    [HideInInspector]
     public List<Slider> sidebarUnitHealths;
 
     private void Start()

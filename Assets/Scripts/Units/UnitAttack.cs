@@ -6,24 +6,38 @@ using UnityEngine;
 public class UnitAttack : MonoBehaviour
 {
     // ===========Do not modify these===========
+    [HideInInspector]
     protected int _AvailableAttacks;
+    [HideInInspector]
     protected float abilityDamage = 0f;
+    [HideInInspector]
     protected float abilityTurnCost = 0f;
+    [HideInInspector]
     protected float abilityMinRange = 0f;
+    [HideInInspector]
     protected float abilityMaxRange = 0f;
+    [HideInInspector]
     protected float abilityHeightRestriction = 0f;
 
+    [HideInInspector]
     protected bool _IsCurrentlyAttacking = false;
+    [HideInInspector]
     protected bool _AttackSelected = false;
     [HideInInspector]
     public bool _HasAttacked = false;
 
+    [HideInInspector]
     protected UnitCharacter unitCharacter;
+    [HideInInspector]
     protected UnitMove unitMove;
+    [HideInInspector]
     protected TerrainGeneric attackLocation;
+    [HideInInspector]
     protected bool isAttackLocationOccupied = false;
 
+    [HideInInspector]
     protected List<TerrainGeneric> _AttackableTiles = new List<TerrainGeneric>();
+    [HideInInspector]
     protected GameObject[] _AllTiles;
 
     // ===========================================

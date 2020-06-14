@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MeleeCharacter : UnitCharacter
 {
+    [Header("Hotkeys")]
     public KeyCode HotkeyMove = KeyCode.M;
     public KeyCode HotkeyAttack = KeyCode.A;
     public KeyCode HotkeyEndTurn = KeyCode.E;
 
+    [Header("Character Stats")]
     public string UnitName = "Default Name - Change Me";
     public float StartingHealth = 10;
     public float Speed = 10; // higher = faster turn counter
@@ -16,8 +19,7 @@ public class MeleeCharacter : UnitCharacter
     public float JumpHeight = 2.0f;
     public int MoveDistance = 5;
     public int AttacksPerTurn = 1;
-    protected int MovesPerTurn = 1;
-
+    public int MovesPerTurn = 1;
     public float StartingOfGameTurnCounter = 10; // adds *once* at the beginning of the game
     public float TurnCostToMove = 20f;
     public float TurnCostToStartTurn = 10f;

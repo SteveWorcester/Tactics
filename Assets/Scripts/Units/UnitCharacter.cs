@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class UnitCharacter : MonoBehaviour
 {
-    [HideInInspector]
-    public UnitMove unitMove;
-    [HideInInspector]
-    public UnitAttack unitAttack;
-
     public Image UnitPortraitAlive;
     public Image UnitPortraitDead;
 
@@ -60,10 +55,16 @@ public class UnitCharacter : MonoBehaviour
     public bool _InAttackPhase = false;
     [HideInInspector]
     public TerrainGeneric _currentTile;
+
+    [HideInInspector]
+    public UnitMove unitMove;
+    [HideInInspector]
+    public UnitAttack unitAttack;
     [HideInInspector]
     public TurnManager turnManager;
     [HideInInspector]
     public CurrentCharacterInformation _Ui;
+
 
     public void Init()
     {
