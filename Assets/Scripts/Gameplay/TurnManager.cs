@@ -41,8 +41,8 @@ public class TurnManager : MonoBehaviour
     [HideInInspector]
     public CurrentCharacterInformation UiCharInfo;
     [HideInInspector]
-    public UnitLists UiUnitLists;
-    
+    private UnitLists UiUnitLists;
+    [HideInInspector]
     public ActionButtons actionButtons;
     //=====================================================
 
@@ -150,10 +150,15 @@ public class TurnManager : MonoBehaviour
         turnInProgress = true;
         var nextUnit = UnitTurnOrder.Peek();
         Debug.Log($"TurnManager starting turn." +
-            $"\nPlayer Tag: {nextUnit.Item1}");
+            $"\nPlayer Tag: {nextUnit.Item1}");        
         nextUnit.Item2.BeginTurn();
         Debug.Log($"auto-panning camera to {nextUnit.Item2}");
         MainCamera.PanCameraToLocation(nextUnit.Item2.transform.position);
+    }
+
+    public void UpdateSidebarUi()
+    {
+        UiUnitLists.UpdateAllLists(AllUnits);
     }
 
     public static void EndTurn()
@@ -189,12 +194,6 @@ public class TurnManager : MonoBehaviour
     }
 
     #endregion
-
-    public void UpdateUiInfo()
-    {
-        UiCharInfo.UpdateCurrentCharacter(_CurrentlyActiveUnit);
-        UiUnitLists.UpdateAllLists(AllUnits);
-    }
 
     public IEnumerator<Coroutine> FadeImage(bool fadeAway, Image imageToFade)
     {

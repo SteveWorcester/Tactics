@@ -39,6 +39,8 @@ public class UnitAttack : MonoBehaviour
     protected List<TerrainGeneric> _AttackableTiles = new List<TerrainGeneric>();
     [HideInInspector]
     protected GameObject[] _AllTiles;
+    [HideInInspector]
+    protected TurnManager turnManager;
 
     // ===========================================
 
@@ -47,6 +49,7 @@ public class UnitAttack : MonoBehaviour
         unitCharacter = gameObject.GetComponent<UnitCharacter>();
         unitMove = gameObject.GetComponent<UnitMove>();
         _AllTiles = GameObject.FindGameObjectsWithTag("Terrain Tile");
+        turnManager = FindObjectOfType<TurnManager>();
     }
 
     public void StartAttackPhase()
@@ -104,6 +107,7 @@ public class UnitAttack : MonoBehaviour
         _IsCurrentlyAttacking = false;
         _HasAttacked = true;
         ClearAttackableTiles();
+        turnManager.UpdateSidebarUi();
     }
 
     public void EndAttackPhase()

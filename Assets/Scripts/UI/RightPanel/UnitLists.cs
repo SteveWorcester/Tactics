@@ -9,58 +9,51 @@ using UnityEngine.UI;
 public class UnitLists : MonoBehaviour
 {
     [HideInInspector]
+    public List<Tuple<string, UnitCharacter>> allUnits;
+
+    [HideInInspector]
     public List<UnitCharacter> TurnOrderList = new List<UnitCharacter>();
     [HideInInspector]
     public List<UnitCharacter> AllDeadUnits = new List<UnitCharacter>();
+
     [HideInInspector]
     public List<GameObject> sidebarSections;
+
     [HideInInspector]
-    public List<Text> sidebarUnitNames;
-    [HideInInspector]
-    public List<Image> sidebarUnitPortraits;
-    [HideInInspector]
-    public List<Slider> sidebarUnitHealths;
+    public List<Tuple<Text, Image, Slider>> sideBarDisplay = new List<Tuple<Text, Image, Slider>>();
 
     private void Start()
     {
         sidebarSections = GameObject.FindGameObjectsWithTag("SidebarUnitSection").ToList();
-        UpdateSidebarUi();
+        foreach (var section in sidebarSections)
+        {
+            var name = section.GetComponentInChildren<Text>();
+            var sprite = section.GetComponentsInChildren<Image>().First();
+            var health = section.GetComponentInChildren<Slider>();
+            sideBarDisplay.Add(new Tuple<Text, Image, Slider>(name, sprite, health));
+        }
     }
 
-    public void UpdateAllLists(List<Tuple<string, UnitCharacter>> allUnitsInGame, bool updateSidebar = true)
+    public void UpdateAllLists(List<Tuple<string, UnitCharacter>> allUnitsInGame)
     {
+        allUnits = allUnitsInGame;
         UpdateTurnOrderList(allUnitsInGame);
         UpdateDeadUnitsList(allUnitsInGame);
-
-        if (updateSidebar)
-        {
-            UpdateSidebarUi();
-        }        
+        UpdateSidebarUi();       
     }
 
     private void UpdateSidebarUi()
     {
-        sidebarUnitNames.Clear();
-        sidebarUnitHealths.Clear();
-        sidebarUnitPortraits.Clear();
-
-        sidebarSections.ForEach(s => sidebarUnitNames.Add(s.GetComponentInChildren<Text>()));
-        sidebarSections.ForEach(s => sidebarUnitPortraits.Add(s.GetComponentInChildren<Image>()));
-        sidebarSections.ForEach(s => sidebarUnitHealths.Add(s.GetComponentInChildren<Slider>()));
-        
-        //foreach (var unitPlacement in sidebarSections)
-        //{
-        //    sidebarUnitNames.Add(unitPlacement.GetComponentInChildren<Text>());
-        //    sidebarUnitPortraits.Add(unitPlacement.GetComponentInChildren<Image>());
-        //    sidebarUnitHealths.Add(unitPlacement.GetComponentInChildren<Slider>());
-        //}
-        for (int i = 0; i < TurnOrderList.Count ; i++)
-        {            
-            sidebarUnitNames.ElementAt(i).text = TurnOrderList[i]._UnitName;
-            sidebarUnitPortraits.ElementAt(i).sprite = TurnOrderList[i].UnitPortraitAlive.sprite;
-            sidebarUnitHealths.ElementAt(i).maxValue = TurnOrderList[i]._MaximumHealth;
-            sidebarUnitHealths.ElementAt(i).minValue = 0;
-            sidebarUnitHealths.ElementAt(i).value = TurnOrderList[i]._CurrentHealth;
+        var aliveDeadList = new List<UnitCharacter>();
+        TurnOrderList.ForEach(u => aliveDeadList.Add(u));
+        AllDeadUnits.ForEach(u => aliveDeadList.Add(u));
+        for (int i = 0; i < aliveDeadList.Count; i++)
+        {
+            sideBarDisplay[i].Item1.text = aliveDeadList[i]._UnitName;
+            sideBarDisplay[i].Item2.sprite = i < TurnOrderList.Count ? aliveDeadList[i].UnitPortraitAlive.sprite : aliveDeadList[i].UnitPortraitDead.sprite;
+            sideBarDisplay[i].Item3.minValue = 0;
+            sideBarDisplay[i].Item3.maxValue = aliveDeadList[i]._MaximumHealth;
+            sideBarDisplay[i].Item3.value = aliveDeadList[i]._CurrentHealth;
         }
     }
 
@@ -79,6 +72,8 @@ public class UnitLists : MonoBehaviour
 
     private void UpdateDeadUnitsList(List<Tuple<string, UnitCharacter>> allUnitsInGame)
     {
+        AllDeadUnits.Clear();
+
         foreach (var deadUnit in allUnitsInGame)
         {
             if (deadUnit.Item2._IsDead && !AllDeadUnits.Contains(deadUnit.Item2))
