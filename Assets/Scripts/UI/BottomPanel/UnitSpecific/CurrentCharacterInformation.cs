@@ -120,6 +120,5 @@ public class CurrentCharacterInformation : MonoBehaviour
         stat4Value.text = characterTakingTurn._Speed.ToString();
 
         Debug.Log($"Updating UI to reflect {characterTakingTurn}");
-        UpdateUI();
     }
 }

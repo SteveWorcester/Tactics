@@ -87,6 +87,7 @@ public class UnitCharacter : MonoBehaviour
         turnManager._CurrentlyActiveUnit = this;
         unitMove.SetCurrentTile();
         _Ui.UpdateCurrentCharacter(this);
+        turnManager.UpdateSidebarUi();
     }
 
     public void EndTurn()
