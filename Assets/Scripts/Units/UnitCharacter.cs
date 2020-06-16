@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -72,6 +73,8 @@ public class UnitCharacter : MonoBehaviour
         unitAttack = gameObject.GetComponent<UnitAttack>();
         turnManager = FindObjectOfType<TurnManager>();
         _Ui = FindObjectOfType<CurrentCharacterInformation>();
+        UnitPortraitAlive = gameObject.GetComponents<Image>().First();
+        UnitPortraitDead = gameObject.GetComponents<Image>().Last();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
