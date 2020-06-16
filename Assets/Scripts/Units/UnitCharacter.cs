@@ -73,8 +73,6 @@ public class UnitCharacter : MonoBehaviour
         unitAttack = gameObject.GetComponent<UnitAttack>();
         turnManager = FindObjectOfType<TurnManager>();
         _Ui = FindObjectOfType<CurrentCharacterInformation>();
-        UnitPortraitAlive = gameObject.GetComponentsInChildren<Image>().First();
-        UnitPortraitDead = gameObject.GetComponentsInChildren<Image>().Last();
         TurnManager.AddUnitToGame(gameObject.tag, this);
     }
 
