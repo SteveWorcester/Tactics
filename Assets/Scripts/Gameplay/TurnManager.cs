@@ -39,8 +39,6 @@ public class TurnManager : MonoBehaviour
     public static int _LivingUnits = 0;    
     public UnitCharacter _CurrentlyActiveUnit;
     [HideInInspector]
-    public CurrentCharacterInformation UiCharInfo;
-    [HideInInspector]
     private UnitLists UiUnitLists;
     [HideInInspector]
     public ActionButtons actionButtons;
@@ -49,7 +47,6 @@ public class TurnManager : MonoBehaviour
     void Start()
     {
         UiUnitLists = GameObject.FindObjectOfType<UnitLists>();
-        UiCharInfo = GameObject.FindObjectOfType<CurrentCharacterInformation>();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<CameraController>();
         actionButtons = GameObject.FindObjectOfType<ActionButtons>();
         Init();
@@ -150,7 +147,7 @@ public class TurnManager : MonoBehaviour
         turnInProgress = true;
         var nextUnit = UnitTurnOrder.Peek();
         Debug.Log($"TurnManager starting turn." +
-            $"\nPlayer Tag: {nextUnit.Item1}");        
+            $"\nPlayer Tag: {nextUnit.Item1}");
         nextUnit.Item2.BeginTurn();
         Debug.Log($"auto-panning camera to {nextUnit.Item2}");
         MainCamera.PanCameraToLocation(nextUnit.Item2.transform.position);
