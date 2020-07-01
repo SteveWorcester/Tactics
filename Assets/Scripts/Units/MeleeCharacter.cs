@@ -53,33 +53,33 @@ public class MeleeCharacter : UnitCharacter
 
     void Update()
     {
-        if (_CurrentHealth <= 0)
+        if (_CurrentHealth <= 0 && !alreadyDied)
         {
             _CurrentHealth = 0;
-            _IsDead = true;
-        }
-        if (_IsDead)
-        {
             ActivateDeath();
         }
-        if (!_CurrentlyTakingTurn)
+        else if (_IsDead && alreadyDied && _CurrentlyTakingTurn)
+        {
+            EndTurn();
+        }
+        else if (!_CurrentlyTakingTurn)
         {
             return;
         }
-        if (_InMovePhase || _InAttackPhase)
+        else if (_InMovePhase || _InAttackPhase)
         {
             return;
         }
-        if (Input.GetKeyUp(HotkeyMove) && _MovesLeftThisTurn > 0)
+        else if (Input.GetKeyUp(HotkeyMove) && _MovesLeftThisTurn > 0)
         {
             
             unitMove.StartMovePhase();
         }
-        if (Input.GetKeyUp(HotkeyAttack) && _AttacksLeftThisTurn > 0)
+        else if (Input.GetKeyUp(HotkeyAttack) && _AttacksLeftThisTurn > 0)
         {
             unitAttack.StartAttackPhase();
         }
-        if (Input.GetKeyUp(HotkeyEndTurn))
+        else if (Input.GetKeyUp(HotkeyEndTurn))
         {
             EndTurn();
         }

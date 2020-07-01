@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -49,7 +50,7 @@ public class UnitCharacter : MonoBehaviour
     [HideInInspector]
     public bool _IsDead = false;
     [HideInInspector]
-    private bool alreadyDied = false;
+    public bool alreadyDied = false;
     [HideInInspector]
     public bool _InMovePhase = false;
     [HideInInspector]
@@ -78,17 +79,31 @@ public class UnitCharacter : MonoBehaviour
 
     public void BeginTurn()
     {
-        Debug.Log($"UnitCharacter starting turn for {this.tag}");
-        _FullTurnCounter += _TurnCostStart;
-        _InMovePhase = false;
-        _InAttackPhase = false;
-        _AttacksLeftThisTurn = _AvailableAttacksPerTurn;
-        _MovesLeftThisTurn = _AvailableMovesPerTurn;
-        _CurrentlyTakingTurn = true;
-        turnManager._CurrentlyActiveUnit = this;
-        unitMove.SetCurrentTile();
-        _Ui.UpdateCurrentCharacter(this);
-        turnManager.UpdateSidebarUi();
+        if (_IsDead)
+        {
+            _InMovePhase = false;
+            _InAttackPhase = false;
+            _AttacksLeftThisTurn = 0;
+            _MovesLeftThisTurn = 0;
+            _CurrentlyTakingTurn = true;
+            turnManager._CurrentlyActiveUnit = this;
+            _FullTurnCounter += 1000;
+            turnManager.UpdateSidebarUi();
+        }
+        else
+        {
+            Debug.Log($"UnitCharacter starting turn for {this.tag}");
+            _FullTurnCounter += _TurnCostStart;
+            _InMovePhase = false;
+            _InAttackPhase = false;
+            _AttacksLeftThisTurn = _AvailableAttacksPerTurn;
+            _MovesLeftThisTurn = _AvailableMovesPerTurn;
+            _CurrentlyTakingTurn = true;
+            turnManager._CurrentlyActiveUnit = this;
+            unitMove.SetCurrentTile();
+            _Ui.UpdateCurrentCharacter(this);
+            turnManager.UpdateSidebarUi();
+        }
     }
 
     public void EndTurn()
@@ -104,8 +119,11 @@ public class UnitCharacter : MonoBehaviour
     {
         if (!alreadyDied)
         {
-            var rotate90Degrees = new Vector3(transform.rotation.x + 90, transform.rotation.y, transform.rotation.z);
+            var rotate90Degrees = Quaternion.Euler(transform.rotation.x - 90, transform.rotation.y, transform.rotation.z).eulerAngles;
             gameObject.transform.Rotate(rotate90Degrees, Space.Self);
+            //gameObject.transform.position -= new Vector3(0, 0, Math.Abs(transform.position.y - unitMove.halfUnitHeight + .1f));
+            _IsDead = true;
+            _FullTurnCounter += 1000;
             alreadyDied = true;
         }
     }

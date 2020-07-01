@@ -50,10 +50,20 @@ public class UnitLists : MonoBehaviour
         for (int i = 0; i < aliveDeadList.Count; i++)
         {
             sideBarDisplay[i].Item1.text = aliveDeadList[i]._UnitName;
-            sideBarDisplay[i].Item2.sprite = i < TurnOrderList.Count ? aliveDeadList[i].UnitPortraitAlive.sprite : aliveDeadList[i].UnitPortraitDead.sprite;
             sideBarDisplay[i].Item3.minValue = 0;
             sideBarDisplay[i].Item3.maxValue = aliveDeadList[i]._MaximumHealth;
             sideBarDisplay[i].Item3.value = aliveDeadList[i]._CurrentHealth;
+            if (aliveDeadList[i]._IsDead)
+            {
+                sideBarDisplay[i].Item2.enabled = true;
+                sideBarDisplay[i].Item2.sprite = aliveDeadList[i].UnitPortraitDead.sprite;
+                
+            }
+            else if (!aliveDeadList[i]._IsDead)
+            {
+                sideBarDisplay[i].Item2.enabled = true;
+                sideBarDisplay[i].Item2.sprite = aliveDeadList[i].UnitPortraitAlive.sprite;
+            }
         }
     }
 
