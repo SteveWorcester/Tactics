@@ -120,11 +120,8 @@ public class TurnManager : MonoBehaviour
         _LivingUnits = 0;
         foreach (var unit in AllUnits)
         {
-            if (!unit.Item2._IsDead)
-            {
-                _LivingUnits++;
-                UnitTurnOrder.Enqueue(unit);
-            }
+            _LivingUnits++;
+            UnitTurnOrder.Enqueue(unit);
         }
         _creatingTurnQueue = false;        
     }
@@ -160,7 +157,7 @@ public class TurnManager : MonoBehaviour
 
     public static void EndTurn()
     {        
-        var currentUnit = UnitTurnOrder.Dequeue();
+        var unit = UnitTurnOrder.Dequeue();
         _TurnCounter++;
         turnInProgress = false;
     }
@@ -176,7 +173,7 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    #region ClickableActions
+    #region Debug Clickable Actions
     
     public void DisplayWinnerScreen()
     {
