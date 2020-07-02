@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 5305353571261515179}
   m_Layer: 0
   m_Name: P1-Light
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   _MovesLeftThisTurn: 0
   _CurrentlyTakingTurn: 0
   _IsDead: 0
+  alreadyDied: 0
   _InMovePhase: 0
   _InAttackPhase: 0
   _currentTile: {fileID: 0}
