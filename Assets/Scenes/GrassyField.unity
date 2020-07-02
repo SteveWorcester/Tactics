@@ -6522,8 +6522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1Color: {r: 0, g: 0, b: 1, a: 1}
   Player2Color: {r: 1, g: 0, b: 0, a: 1}
-  Team1Name: ChangeMe1
-  Team2Name: ChangeMe2
+  Team1Name: Blue
+  Team2Name: Red
   playerTurnText: {fileID: 0}
   turnManager: {fileID: 0}
 --- !u!4 &573830032 stripped
@@ -12390,7 +12390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216825325}
   m_Layer: 5
-  m_Name: TurnPanel
+  m_Name: TopTurnPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22056,7 +22056,7 @@ PrefabInstance:
     - target: {fileID: 4703965667887799840, guid: d546b75477a6ce248b1a5f57024dc294,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 4703965667887799840, guid: d546b75477a6ce248b1a5f57024dc294,
         type: 3}
@@ -22175,7 +22175,7 @@ PrefabInstance:
     - target: {fileID: 6741521133907581706, guid: e7ede9416d5d25649b9b12b0e7b6bec8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.434
       objectReference: {fileID: 0}
     - target: {fileID: 6741521133907581706, guid: e7ede9416d5d25649b9b12b0e7b6bec8,
         type: 3}
@@ -22294,7 +22294,7 @@ PrefabInstance:
     - target: {fileID: 6699854979259231167, guid: fc8ffccc39b6aa64abc22dae1399bf0a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.25
+      value: -0.224
       objectReference: {fileID: 0}
     - target: {fileID: 6699854979259231167, guid: fc8ffccc39b6aa64abc22dae1399bf0a,
         type: 3}
@@ -22408,7 +22408,7 @@ PrefabInstance:
     - target: {fileID: 3160879155655941591, guid: d8602f2291daec74e9a099ecb2ca9aff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 1.121
       objectReference: {fileID: 0}
     - target: {fileID: 3160879155655941591, guid: d8602f2291daec74e9a099ecb2ca9aff,
         type: 3}
@@ -22527,7 +22527,7 @@ PrefabInstance:
     - target: {fileID: 3987468734623589808, guid: ad1c5c9c5339f0047b1670fda1428e67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.441
       objectReference: {fileID: 0}
     - target: {fileID: 3987468734623589808, guid: ad1c5c9c5339f0047b1670fda1428e67,
         type: 3}
@@ -22646,7 +22646,7 @@ PrefabInstance:
     - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.553
+      value: 1.172
       objectReference: {fileID: 0}
     - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
         type: 3}
@@ -22657,36 +22657,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 723932740035810253, guid: e087ddf22edc66c46a1a065e8b4ddb44,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6823966037957374776, guid: e087ddf22edc66c46a1a065e8b4ddb44,
         type: 3}
