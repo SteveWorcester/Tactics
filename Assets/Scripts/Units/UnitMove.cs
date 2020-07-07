@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UnitMove : MonoBehaviour
 {
@@ -205,7 +206,7 @@ public class UnitMove : MonoBehaviour
 
     public void CheckMouseToMove()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray mouseCheck = Camera.main.ScreenPointToRay(Input.mousePosition);
 
