@@ -377,8 +377,8 @@ MonoBehaviour:
   StartingHealth: 10
   Speed: 10
   DamageBonus: 0
-  DamageResistance: 0
-  JumpHeight: 3
+  DamageResistance: -1
+  JumpHeight: 2
   MoveDistance: 5
   AttacksPerTurn: 1
   MovesPerTurn: 1

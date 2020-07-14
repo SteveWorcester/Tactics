@@ -150,7 +150,7 @@ MonoBehaviour:
   Speed: 8
   DamageBonus: 1
   DamageResistance: 0
-  JumpHeight: 2
+  JumpHeight: 1
   MoveDistance: 4
   AttacksPerTurn: 1
   MovesPerTurn: 1
